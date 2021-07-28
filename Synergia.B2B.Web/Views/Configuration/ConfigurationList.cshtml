@@ -1,0 +1,87 @@
+﻿@model  ConfigurationViewModel
+@Scripts.Render("~/bundles/configuration/configurationList")
+@{
+    ViewBag.Title = "Konfiguracja";
+}
+
+@using (Html.BeginForm("SaveConfiguration", "Configuration", FormMethod.Post, new { id = "configurationSave" }))
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <!-- Trigger the modal with a button -->
+
+            <div class="card">
+                @*<div class="card-header card-header-icon" data-background-color="blueSynergia">
+                        <i class="material-icons">build</i>
+                    </div>*@
+                <div class="card-header card-header-text" data-background-color="blueSynergia">
+                    <h4 class="card-title">Konfiguracja systemu</h4>
+                </div>
+                <div class="card-content">
+                    <div class="row">
+                        <div class="col-md-10"></div>
+                        <div class="col-md-2">
+                            <button type="button" onclick="configurationList.save();" class="btn btn-info">Zapisz zmiany</button>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group label-floating">
+                                @Html.LabelFor(model => model.WelcomeText, new { @class = "control-label" })
+                                @Html.TextAreaFor(model => model.WelcomeText, new { @class = "form-control configuration", rows = "1", id = "welcomeText" })
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="checkbox">
+                                <label>
+                                    @Html.CheckBoxAwesomeFor(model => model.OverrideUserWelcomeText, new { @class = "control-label", id = "overrideUserWelcomeText" })
+                                    @Html.DisplayNameFor(m => m.OverrideUserWelcomeText)
+                                </label>
+                            </div>
+                            @Html.HiddenFor(m => m.Id, new { @id = "configurationId" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group label-floating">
+                                @Html.LabelFor(model => model.BigBirthdayText, new { @class = "control-label" })
+                                @Html.TextAreaFor(model => model.BigBirthdayText, new { @class = "form-control configuration", rows = "1", id = "bigBirthdayText" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group label-floating">
+                                @Html.LabelFor(model => model.SmallBirthdayText, new { @class = "control-label" })
+                                @Html.TextAreaFor(model => model.SmallBirthdayText, new { @class = "form-control configuration", rows = "1", id = "smallBirthdayText" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group label-floating">
+                                @Html.LabelFor(model => model.OrderEmailRecipients, new { @class = "control-label" })
+                                @Html.TextBoxFor(model => model.OrderEmailRecipients, new { @class = "form-control configuration" })
+                            </div>
+                        </div>
+                    </div>
+                    @*<div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group label-floating">
+                                @Html.LabelFor(model => model.HoodOrderEmailRecipients, new { @class = "control-label" })
+                                @Html.TextBoxFor(model => model.HoodOrderEmailRecipients, new { @class = "form-control configuration" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group label-floating">
+                                @Html.LabelFor(model => model.SubmittedMonthlyReportEmailRecipients, new { @class = "control-label" })
+                                @Html.TextBoxFor(model => model.SubmittedMonthlyReportEmailRecipients, new { @class = "form-control configuration" })
+                            </div>
+                        </div>
+                    </div>*@
+                </div>
+            </div>
+        </div>
+    </div>
+}
+

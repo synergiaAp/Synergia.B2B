@@ -1,0 +1,736 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AnsulOkapWyposazonyWSystemPrzeciwpozarowy" xml:space="preserve">
+    <value>Ansul - okap wyposażony w system przeciwpożarowy do okapów ANSUL R-102</value>
+  </data>
+  <data name="AnsulSystemPrzeciwpozarowyDoOkapow" xml:space="preserve">
+    <value>Ansul - system przeciwpożarowy do okapów</value>
+  </data>
+  <data name="AnsulUkladOpis" xml:space="preserve">
+    <value>{0} (maksymalna liczba wypływu {1}FN)</value>
+  </data>
+  <data name="AnsulUkladOpisNieWymagany" xml:space="preserve">
+    <value>System Ansul nie jest wymagany do tego okapu</value>
+  </data>
+  <data name="BilansPowietrzaWyciaganegoPrzezOkap" xml:space="preserve">
+    <value>Bilans powietrza wyciąganego przez okap</value>
+  </data>
+  <data name="DaneElektryczne" xml:space="preserve">
+    <value>Dane elektryczne</value>
+  </data>
+  <data name="DaneTechniczneDobranegoOkapu" xml:space="preserve">
+    <value>Dane techniczne dobranego okapu</value>
+  </data>
+  <data name="Data" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="DataDoboru" xml:space="preserve">
+    <value>Data doboru</value>
+  </data>
+  <data name="DlugoscKasetyDobranegoFiltra" xml:space="preserve">
+    <value>Długość kasety dobranego filtra</value>
+  </data>
+  <data name="DlugoscOkapu" xml:space="preserve">
+    <value>Długość okapu</value>
+  </data>
+  <data name="DoborNr" xml:space="preserve">
+    <value>Dobór nr</value>
+  </data>
+  <data name="DobranyFiltr" xml:space="preserve">
+    <value>Dobrany filtr</value>
+  </data>
+  <data name="DobranyNawiew" xml:space="preserve">
+    <value>Dobrany nawiew</value>
+  </data>
+  <data name="DobranyOkap" xml:space="preserve">
+    <value>Dobrany okap</value>
+  </data>
+  <data name="DobranyWywiew" xml:space="preserve">
+    <value>Dobrany wywiew</value>
+  </data>
+  <data name="DoDoboruNr" xml:space="preserve">
+    <value>Do doboru nr</value>
+  </data>
+  <data name="Ekperci" xml:space="preserve">
+    <value>Eksperci</value>
+  </data>
+  <data name="FiltrSadzy" xml:space="preserve">
+    <value>Filtr sadzy</value>
+  </data>
+  <data name="FiltrTurboSwing" xml:space="preserve">
+    <value>Filtr TurboSwing</value>
+  </data>
+  <data name="FiltrUVCombilux" xml:space="preserve">
+    <value>Filtr UV-Combilux UV600</value>
+  </data>
+  <data name="FiltrUVTurbo" xml:space="preserve">
+    <value>Filtr UV-Turbo</value>
+  </data>
+  <data name="Filtry" xml:space="preserve">
+    <value>Filtry</value>
+  </data>
+  <data name="FiltrySadzySmokiJuniorOpis" xml:space="preserve">
+    <value>Smoki Junior to urządzenie, które eliminuje do 95% cząsteczek sadzy powstających w piecach do pizzy opalanych drewnem, jednocześnie redukując zapachy. Zastosowanie systemu filtracji Smoki Junior zapobiega zabrudzeniu kanałów dymowych oraz znacząco obniża ryzyko pożaru poprzez schłodzenie temperatury dymu.
+W przypadku instalacji, gdzie nie ma możliwości odprowadzenia dymu grawitacyjnie, istnieje możliwość wyposażenia Smoki Junior w wentylator wspomagający ciąg naturalny.
+Smoki Junior jest praktycznym rozwiązaniem wszędzie tam, gdzie występują problemy ze zbyt gorącym wywiewem, zapachami oraz w wypadku, gdy należy spełnić wymagania bezpieczeństwa przeciwpożarowego.</value>
+  </data>
+  <data name="FiltrySadzySmokiMaxiOpis" xml:space="preserve">
+    <value>Smoki Maxi Grill to urządzenie specjalnie zaprojektowane do filtracji sadzy i tłuszczów z wywiewanego powietrza przez okap zlokalizowany nad grillami opalanymi drewnem lub węglem drzewnym. System Smoki Maxi Grill eliminuje do 95% cząsteczek sadzy i tłuszczu w powietrzu wyciąganym, jednocześnie redukując zapachy oraz znacząco obniżając temperaturę powietrza wywiewanego. Zastosowanie systemu filtracji Smoki Maxi Grill zapobiega zabrudzeniu kanałów dymowych oraz znacząco obniża ryzyko pożaru poprzez schłodzenie temperatury dymu.
+Smoki Maxi Grill jest praktycznym rozwiązaniem wszędzie tam, gdzie występują problemy ze zbyt gorącym wywiewem, zapachami oraz w wypadku, gdy należy spełnić wymagania bezpieczeństwa przeciwpożarowego.
+</value>
+  </data>
+  <data name="Glosnosc" xml:space="preserve">
+    <value>Głośność</value>
+  </data>
+  <data name="Ilosc" xml:space="preserve">
+    <value>Ilość
+[szt]</value>
+  </data>
+  <data name="IloscKasetFiltrow" xml:space="preserve">
+    <value>Ilość kaset filtrów</value>
+  </data>
+  <data name="IloscKroccowNawiewnych" xml:space="preserve">
+    <value>Ilość króćców nawiewnych</value>
+  </data>
+  <data name="IloscKroccowWywiewnych" xml:space="preserve">
+    <value>Ilość króćców wywiewnych</value>
+  </data>
+  <data name="IloscModułow" xml:space="preserve">
+    <value>Ilość modułów</value>
+  </data>
+  <data name="JednostkaSterujaca" xml:space="preserve">
+    <value>Jednostka sterująca/kontrolująca pracę okapu</value>
+  </data>
+  <data name="SynergiaAdresLinia1" xml:space="preserve">
+    <value>ul. Logistyczna 23, Sady</value>
+  </data>
+  <data name="SynergiaAdresLinia2" xml:space="preserve">
+    <value>62-080 Tarnowo Podgórne</value>
+  </data>
+  <data name="SynergiaSpZoo" xml:space="preserve">
+    <value>Synergia Sp. z.o.o.</value>
+  </data>
+  <data name="SynergiaStopka" xml:space="preserve">
+    <value>Synergia Sp. z o.o. • ul. Logistyczna 23, Sady • 62-080 Tarnowo Podgórne</value>
+  </data>
+  <data name="SynergiaUrl" xml:space="preserve">
+    <value>www.synergia.pl</value>
+  </data>
+  <data name="KartaDoboruFiltraSadzySmoki" xml:space="preserve">
+    <value>Karta doboru filtra sadzy SMOKI</value>
+  </data>
+  <data name="KartaDoboruNawiewnikow" xml:space="preserve">
+    <value>Karta doboru nawiewników</value>
+  </data>
+  <data name="KartaDoboruOkapuSynergia" xml:space="preserve">
+    <value>Karta doboru okapu synergia</value>
+  </data>
+  <data name="KartaDoboruSystemuAnsulR102" xml:space="preserve">
+    <value>Karta doboru systemu ANSUL R-102</value>
+  </data>
+  <data name="KrociecPodlaczeniowy" xml:space="preserve">
+    <value>Króciec podłączeniowy
+&amp;Phi;[mm]</value>
+  </data>
+  <data name="LacznaMocElektrycznaFiltrow" xml:space="preserve">
+    <value>Łączna moc elektryczna filtrów</value>
+  </data>
+  <data name="LacznaMocElektrycznaOswietlenia" xml:space="preserve">
+    <value>Łączna moc elektryczna oświetelenia</value>
+  </data>
+  <data name="LacznaMocElektrycznaWentylatorow" xml:space="preserve">
+    <value>Łączna moc elektryczna wentylatorów</value>
+  </data>
+  <data name="Legenda" xml:space="preserve">
+    <value>Legenda</value>
+  </data>
+  <data name="LegendaKe" xml:space="preserve">
+    <value>wkaźnik wyposażenia - opisuje ilośc zanieczyszczeń wydzielanych przez urządzenia</value>
+  </data>
+  <data name="LegendaMp" xml:space="preserve">
+    <value>strumień powietrza wyciąganego</value>
+  </data>
+  <data name="LegendaP" xml:space="preserve">
+    <value>moc zainstalowana</value>
+  </data>
+  <data name="LegendaS" xml:space="preserve">
+    <value>współczynnik jednoczesności pracy urządzeń</value>
+  </data>
+  <data name="LiczbaDobranychFiltrow" xml:space="preserve">
+    <value>Liczba dobranych filtrów</value>
+  </data>
+  <data name="LiczbaSlepychFiltrow" xml:space="preserve">
+    <value>Liczba ślepych filtrów</value>
+  </data>
+  <data name="LokalizacjaOkapu" xml:space="preserve">
+    <value>Lokalizacja okapu</value>
+  </data>
+  <data name="MaterialWykonania" xml:space="preserve">
+    <value>Materiał wykonania</value>
+  </data>
+  <data name="MaterialWykonaniaStalNierdzewna" xml:space="preserve">
+    <value>Stal nierdzewna AISI 304</value>
+  </data>
+  <data name="MaterialWykonaniaSzklo" xml:space="preserve">
+    <value>Szkło</value>
+  </data>
+  <data name="MetodaObliczenStrumieniPowietrzaWyciaganego" xml:space="preserve">
+    <value>Metoda obliczeń strumieni powietrza wyciąganego</value>
+  </data>
+  <data name="MetodaObliczenStrumieniPowietrzaWyciaganegoLinia1" xml:space="preserve">
+    <value>Obliczenia SYNERGIA zostały przeprowadzone w oparciu o:</value>
+  </data>
+  <data name="MetodaObliczenStrumieniPowietrzaWyciaganegoLinia2" xml:space="preserve">
+    <value>VDI 2052 Raumlufttechnische Anlagen fur Kuchen</value>
+  </data>
+  <data name="MetodaObliczenStrumieniPowietrzaWyciaganegoLinia3" xml:space="preserve">
+    <value>fińskie badania dot. zachowania się oparów dla różych urządzeń kuchennych</value>
+  </data>
+  <data name="MetodaObliczenStrumieniPowietrzaWyciaganegoLinia4" xml:space="preserve">
+    <value>Konvektiovirtaukset, Virtual Space 4D Loppuraportti, Tyoterveyslaitos, 2006</value>
+  </data>
+  <data name="MetodaObliczenStrumieniPowietrzaWyciaganegoLinia5" xml:space="preserve">
+    <value>PN-EN 16282-1:2017 Wyposażenie kuchni przemysłowych</value>
+  </data>
+  <data name="Miejscowosc" xml:space="preserve">
+    <value>Miejscowość</value>
+  </data>
+  <data name="Moc" xml:space="preserve">
+    <value>Moc</value>
+  </data>
+  <data name="Nap" xml:space="preserve">
+    <value>Napięcie</value>
+  </data>
+  <data name="NawiewnikiWyporoweJRSNaglowek" xml:space="preserve">
+    <value>Nawiewniki wyporowe JRS</value>
+  </data>
+  <data name="NawiewnikiWyporoweJRSOpis" xml:space="preserve">
+    <value>Nawiewniki wyporowe JRS przeznaczone są do wyporowej dystrybucji powietrza. Przystosowane zostały do wentylacji pomieszczeń kuchennych, gdzie występują duże zyski ciepła. 
+Nawiewniki wyporowe JRS dostarczają powietrze do strefy przebywania ludzi z małą prędkością. Wewnątrz znajdują się deflektory, które zapewniają równomierne rozprowadzenie powietrza na całej powierzchni perforowanej płyty czołowej nawiewników. 
+Zalecana temperatura nawiewanego powietrza przez nawiewniki powinna być niższa o 3-6°C 
+od temperatury powietrza w pomieszczeniu.
+Nawiewniki JRS przystosowane są do montażu sufitowego.</value>
+  </data>
+  <data name="NazwaUrzadzenia" xml:space="preserve">
+    <value>Nazwa urządzenia</value>
+  </data>
+  <data name="Obiekt" xml:space="preserve">
+    <value>Obiekt</value>
+  </data>
+  <data name="ObliczenieStrumieniaPowietrzaWyciaganego" xml:space="preserve">
+    <value>Obliczenie strumienia powietrza wyciąganego</value>
+  </data>
+  <data name="ObliczonyMinimalnyStrumienPowietrzaWywiewanego" xml:space="preserve">
+    <value>Obliczony minimalny strumień powietrza wywiewanego</value>
+  </data>
+  <data name="Okap" xml:space="preserve">
+    <value>Okap</value>
+  </data>
+  <data name="OkapNr" xml:space="preserve">
+    <value>Okap nr</value>
+  </data>
+  <data name="OpisOkapuJKI" xml:space="preserve">
+    <value>Okap JKI wyciągowy typu kondensacyjnego z płytami ociekowymi. Wykonanie okapu ze stali nierdzewnej AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJLI-R-FF" xml:space="preserve">
+    <value>Okap JLI-R-FF wyciągowy z filtrami cyklonowymi cylindrycznymi typu JCE o stałych oporach przepływu powietrza oraz z filtrem siatkowym FF. Całkowita sprawność filtrów do 95%. Opory przepływu powietrza na poziomie 80-85 Pa. Wykonanie okapu ze stali nierdzewnej AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJLI-R-JCE" xml:space="preserve">
+    <value>Okap JLI-R wyciągowy z filtrami cyklonowymi cylindrycznymi typu JCE o stałych oporach przepływu powietrza na poziomie 50-65 Pa. Sprawność filtra do 93%. Wykonanie okapu ze stali nierdzewnej AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJLI-R-Turbo" xml:space="preserve">
+    <value>Okap JLI-R-Turbo wyciągowy z filtrem TurboSwing o sprawności do 98%, umożliwiającym również regulacją wydatku powietrza w zakresie od 0m3/h do #MaxWydatekPowietrza#m3/h bez spadku sprawności filtracji. Opory przepływu powietrza do 60 Pa. Wykonanie okapu ze stali nierdzewnej AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJLI-R-UV" xml:space="preserve">
+    <value>Okap JLI-R-UV wyciągowy z filtrami cyklonowymi cylindrycznymi typu JCE o stałych oporach przepływu powietrza, z filtrem siatkowym FF oraz z filtrem ultrafioletowym UV Combilux. Całkowita sprawność filtrów do 99.9%. Opory przepływu powietrza na poziomie 85-90 Pa. Wykonanie okapu ze stali nierdzewnej AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJLI-R-UV-Turbo" xml:space="preserve">
+    <value>Okap JLI-R-UV-Turbo wyciągowy z filtrem UV-Turbo o sprawności usuwania tłuszczu do 98% i redukującym zapachy, umożliwiającym również regulacją wydatku powietrza w zakresie od 0m3/h do #MaxWydatekPowietrza#m3/h bez spadku sprawności filtracji. Opory przepływu powietrza do 60 Pa. Wykonanie okapu ze stali nierdzewnej AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJLI-S-FF" xml:space="preserve">
+    <value>Okap szklany JLI-S-FF wyciągowy z filtrami cyklonowymi cylindrycznymi typu JCE o stałych oporach przepływu powietrza oraz z filtrem siatkowym FF. Całkowita sprawność filtrów do 95%. Opory przepływu powietrza na poziomie 80-85 Pa. Wykonanie okapu ze stali nierdzewnej AISI 304 i szkło laminowane.</value>
+  </data>
+  <data name="OpisOkapuJLI-S-JCE" xml:space="preserve">
+    <value>Okap szklany JLI-S wyciągowy z filtrami cyklonowymi cylindrycznymi typu JCE o stałych oporach przepływu powietrza na poziomie 50-65 Pa. Sprawność filtra do 93%. Wykonanie okapu ze stali nierdzewnej AISI 304 i szkło laminowane.</value>
+  </data>
+  <data name="OpisOkapuJLI-S-Turbo" xml:space="preserve">
+    <value>Okap szklany JLI-S-Turbo wyciągowy z filtrem TurboSwing o sprawności do 98%, umożliwiającym również regulacją wydatku powietrza w zakresie od 0m3/h do #MaxWydatekPowietrza#m3/h bez spadku sprawności filtracji. Opory przepływu powietrza do 60 Pa. Wykonanie okapu ze stali nierdzewnej AISI 304 i szkło laminowane.</value>
+  </data>
+  <data name="OpisOkapuJLI-S-UV" xml:space="preserve">
+    <value>Okap szklany JLI-S-UV wyciągowy z filtrami cyklonowymi cylindrycznymi typu JCE o stałych oporach przepływu powietrza, z filtrem siatkowym FF oraz z filtrem ultrafioletowym UV Combilux. Całkowita sprawność filtrów do 99.9%. Opory przepływu powietrza na poziomie 85-90 Pa. Wykonanie okapu ze stali nierdzewnej AISI 304 i szkło laminowane.</value>
+  </data>
+  <data name="OpisOkapuJLI-S-UV-Turbo" xml:space="preserve">
+    <value>Okap szklany JLI-S-UV-Turbo wyciągowy z filtrem UV-Turbo o sprawności usuwania tłuszczu do 98% i redukującym zapachy, umożliwiającym również regulacją wydatku powietrza w zakresie od 0m3/h do #MaxWydatekPowietrza#m3/h bez spadku sprawności filtracji. Opory przepływu powietrza do 60 Pa. Wykonanie okapu ze stali nierdzewnej AISI 304 i szkło laminowane.</value>
+  </data>
+  <data name="OpisOkapuJSI-R-FF" xml:space="preserve">
+    <value>Okap JSI-R-FF wyciągowo-nawiewny z nawiewnikami świeżego powietrza, z komorami ciśnieniowymi formującymi wiązki powietrza wspomagające kierowanie wywiewanego powietrza do wnętrza okapu. Kaseta filtracyjna z filtrami cyklonowymi cylindrycznymi typu JCE o stałych oporach przepływu powietrza oraz z filtrem siatkowym FF. Całkowita sprawność filtrów do 95%. Opory przepływu powietrza na poziomie 80-85 Pa. Wykonanie okapu ze stali nierdzewnej AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJSI-R-JCE" xml:space="preserve">
+    <value>Okap JSI-R wyciągowo-nawiewny z nawiewnikami świeżego powietrza, z komorami ciśnieniowymi formującymi wiązki powietrza wspomagające kierowanie wywiewanego powietrza do wnętrza okapu. Kaseta filtracyjna z filtrami cyklonowymi cylindrycznymi typu JCE o sprawności do 93% i stałymi oporami przepływu powietrza na poziomie 50-65 Pa. Wykonanie okapu ze stali nierdzewnej AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJSI-R-Turbo" xml:space="preserve">
+    <value>Okap JSI-R-Turbo wyciągowo-nawiewny z nawiewnikami świeżego powietrza, z komorami ciśnieniowymi formującymi wiązki powietrza wspomagające kierowanie wywiewanego powietrza do wnętrza okapu, z filtrem TurboSwing o sprawności do 98%, umożliwiającym regulację wydatku powietrza w zakresie od 0m3/h do #MaxWydatekPowietrza#m3/h bez spadku sprawności filtracji. Opory przepływu powietrza do 60 Pa. Wykonanie okapu ze stali nierdzewnej AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJSI-R-UV" xml:space="preserve">
+    <value>Okap JSI-R-UV wyciągowo-nawiewny z nawiewnikami świeżego powietrza, z komorami ciśnieniowymi formującymi wiązki powietrza wspomagające kierowanie wywiewanego powietrza do wnętrza okapu. Kaseta filtracyjna z filtrami cyklonowymi cylindrycznymi typu JCE o stałych oporach przepływu powietrza, z filtrem siatkowym FF oraz z filtrem ultrafioletowym UV Combilux. Całkowita sprawność filtrów do 99.9%. Opory przepływu powietrza na poziomie 85-90 Pa. Wykonanie okapu ze stali nierdzewnej AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJSI-R-UV-Turbo" xml:space="preserve">
+    <value>Okap JSI-R-UV-Turbo wyciągowo-nawiewny z nawiewnikami świeżego powietrza, z komorami ciśnieniowymi formującymi wiązki powietrza wspomagające kierowanie wywiewanego powietrza do wnętrza okapu, z filtrem UV-Turbo o sprawności usuwania tłuszczu do 98% i redukującym zapachy, umożliwiającym regulację wydatku powietrza w zakresie od 0m3/h do #MaxWydatekPowietrza#m3/h bez spadku sprawności filtracji. Opory przepływu powietrza do 60 Pa. Wykonanie okapu ze stali nierdzewnej AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJSI-S-FF" xml:space="preserve">
+    <value>Okap szklany JSI-S-FF wyciągowo-nawiewny z nawiewnikami świeżego powietrza, z komorami ciśnieniowymi formującymi wiązki powietrza wspomagające kierowanie wywiewanego powietrza do wnętrza okapu. Kaseta filtracyjna z filtrami cyklonowymi cylindrycznymi typu JCE o stałych oporach przepływu powietrza oraz z filtrem siatkowym FF. Całkowita sprawność filtrów do 95%. Opory przepływu powietrza na poziomie 80-85 Pa. Wykonanie okapu ze stali nierdzewnej AISI 304 i szkło laminowane.</value>
+  </data>
+  <data name="OpisOkapuJSI-S-JCE" xml:space="preserve">
+    <value>Okap szklany JSI-S wyciągowo-nawiewny z nawiewnikami świeżego powietrza, z komorami ciśnieniowymi formującymi wiązki powietrza wspomagające kierowanie wywiewanego powietrza do wnętrza okapu. Kaseta filtracyjna z filtrami cyklonowymi cylindrycznymi typu JCE o sprawności do 93% i stałymi oporami przepływu powietrza na poziomie 50-65 Pa. Wykonanie okapu ze stali nierdzewnej AISI 304 i szkło laminowane.</value>
+  </data>
+  <data name="OpisOkapuJSI-S-Turbo" xml:space="preserve">
+    <value>Okap szklany JSI-S-Turbo wyciągowo-nawiewny z nawiewnikami świeżego powietrza, z komorami ciśnieniowymi formującymi wiązki powietrza wspomagające kierowanie wywiewanego powietrza do wnętrza okapu, z filtrem TurboSwing o sprawności do 98%, umożliwiającym regulację wydatku powietrza w zakresie od 0m3/h do #MaxWydatekPowietrza#m3/h bez spadku sprawności filtracji. Opory przepływu powietrza do 60 Pa. Wykonanie okapu ze stali nierdzewnej AISI 304 i szkło laminowane.</value>
+  </data>
+  <data name="OpisOkapuJSI-S-UV" xml:space="preserve">
+    <value>Okap szklany JSI-S-UV wyciągowo-nawiewny z nawiewnikami świeżego powietrza, z komorami ciśnieniowymi formującymi wiązki powietrza wspomagające kierowanie wywiewanego powietrza do wnętrza okapu. Kaseta filtracyjna z filtrami cyklonowymi cylindrycznymi typu JCE o stałych oporach przepływu powietrza, z filtrem siatkowym FF oraz z filtrem ultrafioletowym UV Combilux. Całkowita sprawność filtrów do 99.9%. Opory przepływu powietrza na poziomie 85-90 Pa. Wykonanie okapu ze stali nierdzewnej AISI 304 i szkło laminowane.</value>
+  </data>
+  <data name="OpisOkapuJSI-S-UV-Turbo" xml:space="preserve">
+    <value>Okap szklany JSI-S-UV-Turbo wyciągowo-nawiewny z nawiewnikami świeżego powietrza, z komorami ciśnieniowymi formującymi wiązki powietrza wspomagające kierowanie wywiewanego powietrza do wnętrza okapu, z filtrem UV-Turbo o sprawności usuwania tłuszczu do 98% i redukującym zapachy, umożliwiającym regulację wydatku powietrza w zakresie od 0m3/h do #MaxWydatekPowietrza#m3/h bez spadku sprawności filtracji. Opory przepływu powietrza do 60 Pa. Wykonanie okapu ze stali nierdzewnej AISI 304 i szkło laminowane.</value>
+  </data>
+  <data name="OpisOkapuJSKI" xml:space="preserve">
+    <value>Okap JSKI wyciągowo-nawiewny wyciągowy typu kondensacyjnego z nawiewnikami świeżego powietrza oraz płytami ociekowymi. Wykonanie okapu ze stali nierdzewnej AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJSVI-R-FF" xml:space="preserve">
+    <value>Okap JSVI-R-FF wyciągowo-nawiewny z nawiewnikami świeżego powietrza, z komorami ciśnieniowymi formującymi wiązki powietrza wspomagające kierowanie wywiewanego powietrza do wnętrza okapu. Kaseta filtracyjna z filtrami cyklonowymi cylindrycznymi typu JCE o stałych oporach przepływu powietrza oraz z filtrem siatkowym FF. Całkowita sprawność filtrów do 95%. Opory przepływu powietrza na poziomie 80-85 Pa. Wykonanie okapu ze stali nierdzewnej AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJSVI-R-JCE" xml:space="preserve">
+    <value>Okap JSVI-R wyciągowo-nawiewny z nawiewnikami świeżego powietrza, z komorami ciśnieniowymi formującymi wiązki powietrza wspomagające kierowanie wywiewanego powietrza do wnętrza okapu. Kaseta filtracyjna z filtrami cyklonowymi cylindrycznymi typu JCE o sprawności do 93% i stałymi oporami przepływu powietrza na poziomie 50-65 Pa. Wykonanie okapu ze stali nierdzewnej AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJSVI-R-Turbo" xml:space="preserve">
+    <value>Okap JSVI-R-Turbo wyciągowo-nawiewny z nawiewnikami świeżego powietrza, z komorami ciśnieniowymi formującymi wiązki powietrza wspomagające kierowanie wywiewanego powietrza do wnętrza okapu, z filtrem TurboSwing o sprawności do 98%, umożliwiającym regulację wydatku powietrza w zakresie od 0m3/h do #MaxWydatekPowietrza#m3/h bez spadku sprawności filtracji. Opory przepływu powietrza do 60 Pa. Wykonanie okapu ze stali nierdzewnej AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJSVI-R-UV" xml:space="preserve">
+    <value>Okap JSVI-R-UV wyciągowo-nawiewny z nawiewnikami świeżego powietrza, z komorami ciśnieniowymi formującymi wiązki powietrza wspomagające kierowanie wywiewanego powietrza do wnętrza okapu. Kaseta filtracyjna z filtrami cyklonowymi cylindrycznymi typu JCE o stałych oporach przepływu powietrza, z filtrem siatkowym FF oraz z filtrem ultrafioletowym UV Combilux. Całkowita sprawność filtrów do 99.9%. Opory przepływu powietrza na poziomie 85-90 Pa. Wykonanie okapu ze stali nierdzewnej AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJSVI-R-UV-Turbo" xml:space="preserve">
+    <value>Okap JSVI-R-UV-Turbo wyciągowo-nawiewny z nawiewnikami świeżego powietrza, z komorami ciśnieniowymi formującymi wiązki powietrza wspomagające kierowanie wywiewanego powietrza do wnętrza okapu, z filtrem UV-Turbo o sprawności usuwania tłuszczu do 98% i redukującym zapachy, umożliwiającym regulację wydatku powietrza w zakresie od 0m3/h do #MaxWydatekPowietrza#m3/h bez spadku sprawności filtracji. Opory przepływu powietrza do 60 Pa. Wykonanie okapu ze stali nierdzewnej AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJVI-R-FF" xml:space="preserve">
+    <value>Okap JVI-R-FF wyciągowy z komorami ciśnieniowymi formującymi wiązki powietrza wspomagające kierowanie wywiewanego powietrza do wnętrza okapu. Kaseta filtracyjna z filtrami cyklonowymi cylindrycznymi typu JCE o stałych oporach przepływu powietrza oraz z filtrem siatkowym FF. Całkowita sprawność filtrów do 95%. Opory przepływu powietrza na poziomie 80-85 Pa. Wykonanie okapu ze stali nierdzewnej AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJVI-R-JCE" xml:space="preserve">
+    <value>Okap JVI-R wyciągowy z komorami ciśnieniowymi formującymi wiązki powietrza wspomagające kierowanie wywiewanego powietrza do wnętrza okapu oraz filtrami cyklonowymi cylindrycznymi typu JCE o sprawności do 93% i stałych oporach przepływu powietrza na poziomie 50-65 Pa. Wykonanie okapu ze stali nierdzewnej AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJVI-R-Turbo" xml:space="preserve">
+    <value>Okap JVI-R-Turbo z komorami ciśnieniowymi formującymi wiązki powietrza wspomagające kierowanie wywiewanego powietrza do wnętrza okapu, z filtrem TurboSwing o sprawności do 98%, umożliwiającym również regulację wydatku powietrza w zakresie od 0m3/h do #MaxWydatekPowietrza#m3/h bez spadku sprawności filtracji. Opory przepływu powietrza do 60 Pa. Wykonanie okapu ze stali nierdzewnej AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJVI-R-UV" xml:space="preserve">
+    <value>Okap JVI-R-UV wyciągowy z komorami ciśnieniowymi formującymi wiązki powietrza wspomagające kierowanie wywiewanego powietrza do wnętrza okapu. Kaseta filtracyjna z filtrami cyklonowymi cylindrycznymi typu JCE o stałych oporach przepływu powietrza, z filtrem siatkowym FF oraz z filtrem ultrafioletowym UV Combilux. Całkowita sprawność filtrów do 99.9%. Opory przepływu powietrza na poziomie 85-90 Pa. Wykonanie okapu ze stali nierdzewnej AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJVI-R-UV-Turbo" xml:space="preserve">
+    <value>Okap JVI-R-UV-Turbo z komorami ciśnieniowymi formującymi wiązki powietrza wspomagające kierowanie wywiewanego powietrza do wnętrza okapu z filtrem UV-Turbo o sprawności usuwania tłuszczu do 98% i redukującym zapachy, umożliwiającym również regulację wydatku powietrza w zakresie od 0m3/h do #MaxWydatekPowietrza#m3/h bez spadku sprawności filtracji. Opory przepływu powietrza do 60 Pa. Wykonanie okapu ze stali nierdzewnej AISI 304.</value>
+  </data>
+  <data name="Oswietlenie" xml:space="preserve">
+    <value>Oświetlenie</value>
+  </data>
+  <data name="OswietlenieLedowePunktowe" xml:space="preserve">
+    <value>Oświetlenie ledowe punktowe</value>
+  </data>
+  <data name="OznaczenieOkapu" xml:space="preserve">
+    <value>Oznaczenie okapu</value>
+  </data>
+  <data name="Plyta" xml:space="preserve">
+    <value>Płyta</value>
+  </data>
+  <data name="PojWodna" xml:space="preserve">
+    <value>Poj. wodna</value>
+  </data>
+  <data name="Profesjonalistom" xml:space="preserve">
+    <value>Projesjonalistom</value>
+  </data>
+  <data name="PrzegrodaNaSkropliny" xml:space="preserve">
+    <value>Przegroda na skropliny</value>
+  </data>
+  <data name="PrzeplywPowietrza" xml:space="preserve">
+    <value>Przepływ powietrza
+[m&lt;sup&gt;3&lt;/sup&gt;/h]</value>
+  </data>
+  <data name="PrzyjetyStrumienPowietrzaWywiewanego" xml:space="preserve">
+    <value>Przyjęty strumień powietrza wywiewanego</value>
+  </data>
+  <data name="PrzykladoweZestawienieNawiewnikow" xml:space="preserve">
+    <value>Przykładowe zestawienie nawiewników zapewniających zbilansowenie strumienia nawiewnego i wywiewnego w kuchni.</value>
+  </data>
+  <data name="Przyscienny" xml:space="preserve">
+    <value>Przyścienny</value>
+  </data>
+  <data name="RegionPolnocny" xml:space="preserve">
+    <value>Oddział Gdańsk</value>
+  </data>
+  <data name="RegionPolnocnyTelefon" xml:space="preserve">
+    <value>661-501-797</value>
+  </data>
+  <data name="RegionPoludniowy" xml:space="preserve">
+    <value>Oddział Kraków</value>
+  </data>
+  <data name="RegionPoludniowyTelefon" xml:space="preserve">
+    <value>795-560-827</value>
+  </data>
+  <data name="RegionWroclaw" xml:space="preserve">
+    <value>Oddział Wrocław</value>
+  </data>
+  <data name="RegionWroclawTelefon" xml:space="preserve">
+    <value>785-559-958</value>
+  </data>
+  <data name="RegionWschodni" xml:space="preserve">
+    <value>Oddział Warszawa</value>
+  </data>
+  <data name="RegionWschodniTelefon" xml:space="preserve">
+    <value>661-363-918</value>
+  </data>
+  <data name="RegionZachodni" xml:space="preserve">
+    <value>Oddział Poznań</value>
+  </data>
+  <data name="RegionZachodniTelefon" xml:space="preserve">
+    <value>662-332-817</value>
+  </data>
+  <data name="SrednicaKroccowNawiewnych" xml:space="preserve">
+    <value>Średnica króćców nawiewnych</value>
+  </data>
+  <data name="SrednicaKroccowWywiewnych" xml:space="preserve">
+    <value>Średnica króćców wywiewnych</value>
+  </data>
+  <data name="StrumienPowietrzaWyciaganegoPrzezOkap" xml:space="preserve">
+    <value>Strumień powietrza wyciąganego przez okap</value>
+  </data>
+  <data name="StrumienPrzeplywuPowietrzaPrzyGlosnosci" xml:space="preserve">
+    <value>strumień przepływu powietrza przy poziome głośności 35 dB(A)</value>
+  </data>
+  <data name="StrumienWymiewu" xml:space="preserve">
+    <value>Strumień wywiewu</value>
+  </data>
+  <data name="SystemAnsulR102SystemPrzeciwopozarowyNaglowek" xml:space="preserve">
+    <value>System przeciwpożarowy Ansul R-102</value>
+  </data>
+  <data name="SystemAnsulR102SystemPrzeciwopozarowyOpis" xml:space="preserve">
+    <value>Zabezpieczenie urządzeń gastronomicznych w profesjonalnych kuchniach systemami przeciwpożarowymi pozwala uniknąć poważnych konsekwencji związanych z wybuchem pożaru. System ANSUL to ochrona zdrowia i życia ludzkiego, cennego sprzętu oraz pomieszczeń. System pozwala na zmniejszenie ryzyka związanego z brakiem możliwości prowadzenia działalności spowodowanego konsekwencjami pożaru. Zabezpieczenia przeciwpożarowe urządzeń kuchennych są brane pod uwagę przez towarzystwa ubezpieczeniowe, co powoduje obniżenie kosztów ubezpieczenia.
+System ANSUL stosowany jest w okapach Synergia posiadających filtry tłuszczowe, czyli w okapach typu JSI, JVI i JLI.</value>
+  </data>
+  <data name="SystemAnsulR102WariantyCzynnikGasniczy" xml:space="preserve">
+    <value>Stosowany czynnik gaśniczy to ANSULEX, w jedym zbiorniku znajduje się 11,4l</value>
+  </data>
+  <data name="SystemAnsulR102WariantyDedykowany" xml:space="preserve">
+    <value>&lt;b&gt;Dedykowany&lt;/b&gt; – każda dysza poniżej sufitu okapu chroni tylko urządzenie dla którego jest przeznaczona – w przypadku zamiany urządzeń lub przestawienia urządzeń system należy dostosować/przerobić.</value>
+  </data>
+  <data name="SystemAnsulR102WariantyNaglowek" xml:space="preserve">
+    <value>System Ansul R-102 jest dostępny w dwóch opcjach rozmieszczenia dysz</value>
+  </data>
+  <data name="SystemAnsulR102WariantyNakladajacySie" xml:space="preserve">
+    <value>&lt;b&gt;Nakładający się&lt;/b&gt; – zasięgi dysz nakładają się i zabezpieczony jest cały obszar wymagający ochrony – urządzenia można dowolnie przestawiać lub zamieniać na całej długości obszaru chronionego.</value>
+  </data>
+  <data name="SystemAnsulR102WymaganiaNaglowek" xml:space="preserve">
+    <value>Wymagania konieczne do spełnienia po stronie zamawiającego, w celu zapewnienia gwarancji skutecznego działania.</value>
+  </data>
+  <data name="SystemAnsulR102WymaganiaOpis1" xml:space="preserve">
+    <value>System ANSUL R-102 w przypadku aktywacji musi odciąć zasilanie urządzeń pod okapem (gazowych i elektrycznych). W szafce sterującej systemem ANSUL R-102 znajdują się styki rozwierno/zwierne.</value>
+  </data>
+  <data name="SystemAnsulR102WymaganiaOpis2" xml:space="preserve">
+    <value>Dlatego należy doprowadzić w pobliże skrzynki przewód/y 3x1mm2 (max 3) z zaworów gazowych i/lub przekaźników odcinających zasilanie elektryczne &lt;b&gt;(zawory i przekaźniki oraz doprowadzenie przewodów do skrzynki poza zakresem Synergia).&lt;/b&gt;
+W przypadku konieczności podłączenia do systemu alarmowego w budynku należy doprowadzić kolejny przewód 3x1mm2 &lt;b&gt;(doprowadzenie przewodu poza zakresem Synergia).&lt;/b&gt;
+W przypadku aktywacji systemu ANSUL R-102 wentylacja wywiewna musi pozostać włączona, natomiast wentylacja nawiewna powinna zostać zatrzymana.
+Spełnienie powyższych wymagań jest warunkiem koniecznym udzielenia gwarancji skutecznego działania systemu ANSUL R-102.</value>
+  </data>
+  <data name="SystemyWentylacjiKuchni" xml:space="preserve">
+    <value>Systemy wentylacji kuchni</value>
+  </data>
+  <data name="SzerokoscElementuNawiewnego" xml:space="preserve">
+    <value>Szerokość elementu nawiewnego</value>
+  </data>
+  <data name="SzerokoscOkapu" xml:space="preserve">
+    <value>Szerokość okapu</value>
+  </data>
+  <data name="Szt" xml:space="preserve">
+    <value>szt.</value>
+  </data>
+  <data name="TypFiltra" xml:space="preserve">
+    <value>Typ filtra</value>
+  </data>
+  <data name="TypFiltraJCE" xml:space="preserve">
+    <value>JCE – filtr cyklonowo-cylindryczny - filtracja jednostopniowa</value>
+  </data>
+  <data name="TypFiltraJFF" xml:space="preserve">
+    <value>JFF – filtr cyklonowo-cylindryczny wraz z filtrem siatkowym - filtracja dwustopniowa</value>
+  </data>
+  <data name="TypFiltraTurboSwing" xml:space="preserve">
+    <value>TurboSwing – filtr TurboSwing z szybkoobrotową płytą filtracyjną – filtracja jednostopniowa</value>
+  </data>
+  <data name="TypFiltraUV" xml:space="preserve">
+    <value>UV-Combilux – filtr cyklonowo-cylindryczny wraz z filtrem siatkowym i filtrem UV - filtracja trzystopniowa</value>
+  </data>
+  <data name="TypFiltraUVTurbo" xml:space="preserve">
+    <value>UV-Turbo – filtr TurboSwing z szybkoobrotową płytą filtracyjną i filtrem UV – filtracja dwustopniowa</value>
+  </data>
+  <data name="TypOkapu" xml:space="preserve">
+    <value>Typ okapu</value>
+  </data>
+  <data name="TypOkapuJKI" xml:space="preserve">
+    <value>Okap kondensacyjny wyciągowy</value>
+  </data>
+  <data name="TypOkapuJLI-R" xml:space="preserve">
+    <value>Okap wyciągowy</value>
+  </data>
+  <data name="TypOkapuJSI-R" xml:space="preserve">
+    <value>Okap wyciągowo – nawiewny z wiązką wychwytującą</value>
+  </data>
+  <data name="TypOkapuJSKI" xml:space="preserve">
+    <value>Okap kondensacyjny wyciągowo - nawiewny</value>
+  </data>
+  <data name="TypOkapuJVI-R" xml:space="preserve">
+    <value>Okap wyciągowy z wiązką wychwytującą</value>
+  </data>
+  <data name="TypWielkoscNawiewnika" xml:space="preserve">
+    <value>Typ/Wielkość nawiewnika</value>
+  </data>
+  <data name="UkladDedykowany" xml:space="preserve">
+    <value>Układ dedykowany</value>
+  </data>
+  <data name="UkladNakladajacySie" xml:space="preserve">
+    <value>Układ nakładający się</value>
+  </data>
+  <data name="UrzadzenieBemar" xml:space="preserve">
+    <value>Bemar</value>
+  </data>
+  <data name="UrzadzenieFrytkownica" xml:space="preserve">
+    <value>Frytkownica</value>
+  </data>
+  <data name="UrzadzenieKociolWarzelny" xml:space="preserve">
+    <value>Kocioł warzelny</value>
+  </data>
+  <data name="UrzadzenieOpiekaczGastronomiczny" xml:space="preserve">
+    <value>Opiekacz gastronomiczny</value>
+  </data>
+  <data name="UrzadzeniePatelnia" xml:space="preserve">
+    <value>Patelnia</value>
+  </data>
+  <data name="UrzadzeniePatelniaWok" xml:space="preserve">
+    <value>Patelnia Wok</value>
+  </data>
+  <data name="UrzadzeniePiecDoPizzy" xml:space="preserve">
+    <value>Piec do pizzy</value>
+  </data>
+  <data name="UrzadzeniePiecKombi" xml:space="preserve">
+    <value>Piec kombi</value>
+  </data>
+  <data name="UrzadzeniePiecKonwekcyjnoParowy" xml:space="preserve">
+    <value>Piec konwekcyjno-parowy</value>
+  </data>
+  <data name="UrzadzeniePlytaGrillowa" xml:space="preserve">
+    <value>Płyta grillowa</value>
+  </data>
+  <data name="UrzadzeniePlytaIndukcyjna" xml:space="preserve">
+    <value>Płyta indukcyjna</value>
+  </data>
+  <data name="UrzadzenieSalamander" xml:space="preserve">
+    <value>Salamander</value>
+  </data>
+  <data name="UrzadzenieSzybkowar" xml:space="preserve">
+    <value>Szybkowar</value>
+  </data>
+  <data name="UrzadzenieTaboretGrzewczy" xml:space="preserve">
+    <value>Taboret grzewczy</value>
+  </data>
+  <data name="UrzadzenieTrzonKuchenny" xml:space="preserve">
+    <value>Trzon kuchenny</value>
+  </data>
+  <data name="UrzadzenieWarnik" xml:space="preserve">
+    <value>Warnik</value>
+  </data>
+  <data name="UrzadzenieZmywarka" xml:space="preserve">
+    <value>Zmywarka</value>
+  </data>
+  <data name="Uwagi" xml:space="preserve">
+    <value>Uwagi</value>
+  </data>
+  <data name="Waga" xml:space="preserve">
+    <value>Ciężar</value>
+  </data>
+  <data name="WagaPustegoUrzadzenia" xml:space="preserve">
+    <value>Waga pustego urządzenia</value>
+  </data>
+  <data name="WentrylatoryWiązki" xml:space="preserve">
+    <value>Wentylatory wiązki</value>
+  </data>
+  <data name="WOparciuOOkapOrazGrillWeglowyDobranoNastępująceUrządzenie" xml:space="preserve">
+    <value>W oparciu o okap oraz grill węglowy dobrano następujące urządzenie</value>
+  </data>
+  <data name="WOparciuOTechnologięGastronomiczną" xml:space="preserve">
+    <value>W oparciu o technologię gastronomiczną, dobrane okapy oraz opcję rozmieszczenia dysz wybrano następującą wielkość systemu</value>
+  </data>
+  <data name="WOparciuOWybranyPiecDoPizzyDobranoNastępująceUrządzenie" xml:space="preserve">
+    <value>W oparciu o wybrany piec do pizzy dobrano następujące urządzenie</value>
+  </data>
+  <data name="WrazZPanelemDotykowym" xml:space="preserve">
+    <value>wraz z panelem dotykowym FC</value>
+  </data>
+  <data name="Wspolczynnik063Info" xml:space="preserve">
+    <value>W obliczonym minimalnym strumieniu powietrza wywiewanego uwzględniono współczynnik redukcyjny 0,63 dla okapu usytuowanego przyściennie.</value>
+  </data>
+  <data name="WyposazenieDodatkowe" xml:space="preserve">
+    <value>Wyposażenie dodatkowe</value>
+  </data>
+  <data name="WysokoscOkapu" xml:space="preserve">
+    <value>Wysokość okapu</value>
+  </data>
+  <data name="Wyspowy" xml:space="preserve">
+    <value>Wyspowy</value>
+  </data>
+  <data name="WytyczneProjektowe" xml:space="preserve">
+    <value>Wytyczne projektowe</value>
+  </data>
+  <data name="WytyczneProjektoweSmokiJuniorOpis" xml:space="preserve">
+    <value>&lt;li&gt;Podłączenia kanałów z SMOKI Junior należy traktować, jak kanały dymowe i stosować nierdzewne dwuścienne systemy kominowe.&lt;/li&gt;						
+&lt;li&gt;Ze względu na dużą wilgotność dymu opuszającego SMOKI i samą obecność dymu, kanały muszą być szczelne oraz należy układać je ze spadkiem w kierunku urządzenia. W przypadku braku możliwości ułożenia kanałów ze spadkiem w kierunku SMOKI, w najniższym miejscu instalacji zamontować kształtkę z możliwością odwodnienia. Kanał dymowy wyprowadzić ponad dach zgodnie z obowiązującymi przepisami dotyczącymi kominów.&lt;/li&gt;	
+&lt;li&gt;NIE WOLNO PODŁĄCZAĆ SMOKI JUNIOR DO UKŁADU WENTYLACJI&lt;/li&gt;				
+&lt;li&gt;Do urządzenia SMOKI Junior należy doprowadzić zimną wodę wodociągową i podłączyć na stałe. Urządzenie pobiera automatycznie odpowiednią ilość wody. W urządzeniu zamontowany jest filtr wody.&lt;/li&gt;
+&lt;li&gt;Do urządzenie SMOKI Junior należy podłączyć kanalizację sanitarną. Odpływ powinien przechodzić przez separator tłuszczy.&lt;/li&gt;							
+&lt;li&gt;Do urządzenia SMOKI Junior należy doprowadzić zasilanie elektryczne o mocy i napięciu zgodnym z kartą produktu.&lt;/li&gt;						
+&lt;li&gt;Urządzenie SMOKI Junior należy lokalizować jak najbliżej pieca do pizzy, powyżej paleniska. Zapewnia to krótki odcinek kanału narażony na osadzanie się sady i wysoką temperaturę. Urządzenie może być zarówno postawione na podłożu jak i przymocowanie do ściany lub stropu za pomocą ramy podtrzymującej.&lt;/li&gt;</value>
+  </data>
+  <data name="WytyczneProjektoweSmokiMaxiOpis" xml:space="preserve">
+    <value>&lt;li&gt;Podłączenia kanałów z SMOKI Maxi Grill między grillem, a urządzeniem należy traktować jak kanały dymowe i stosować nierdzewne dwuśćienne systemy kominowe.&lt;/li&gt;						
+&lt;li&gt;Zalecane jest wykonanie kanałów za SMOKI Maxi Grill również w systemie kominowym, dopuszcza się stosowanie kształtek wentylacyjnych nierdzewnych.&lt;/li&gt;						
+&lt;li&gt;Ze względu na dużą wilgotność dymu opuszającego SMOKI kanały muszą być szczelne oraz należy układać je ze spadkiem w kierunku urządzenia. W przypadku braku możliwości ułożenia kanałów ze spadkiem w kierunku SMOKI, w najniższym miejscu instalacji zamontować kształtkę z możliwością odwodnienia. Kanał wyrzutowy wyprowadzić ponad dach zgodnie z obowiązującymi przepisami.&lt;/li&gt;					
+&lt;li&gt;NIE NALEŻY ŁĄCZYĆ WYWIEWU ZE SMOKI MAXI GRILL Z INNYMI UKŁADAMI WENTYLACJI&lt;/li&gt;				
+&lt;li&gt;Do urządzenia SMOKI Maxi Grill należy doprowadzić zimną wodę wodociągową i podłączyć na stałe. Urządzenie pobiera automatycznie odpowiednią ilość wody. W urządzeniu zamontowany jest filtr wody.&lt;/li&gt;		
+&lt;li&gt;Do urządzenie SMOKI Maxi Grill należy podłączyć kanalizację sanitarną. Odpływ powinien przechodzić przez separator tłuszczy.&lt;/li&gt;						
+&lt;li&gt;Do urządzenia SMOKI Maxi Grill należy doprowadzić zasilanie elektryczne o mocy i napięciu zgodnym z kartą produktu.&lt;/li&gt;						
+&lt;li&gt;Urządzenie SMOKI Maxi Grill należy lokalizować jak najbliżej grilla, zapewnia to krótki odcinek kanału narażony na osadzanie sady i wysoką temperaturę. Urządzenie może być zarówno postawione na podłożu jak i przymocowanie do ściany lub stropu.&lt;/li&gt;</value>
+  </data>
+  <data name="Zalacznik" xml:space="preserve">
+    <value>Załącznik</value>
+  </data>
+  <data name="ZalacznikNr" xml:space="preserve">
+    <value>Załącznik nr</value>
+  </data>
+  <data name="Zapytanie" xml:space="preserve">
+    <value>Zapytanie</value>
+  </data>
+  <data name="Zbiornikowy" xml:space="preserve">
+    <value>Zbiornikowy</value>
+  </data>
+  <data name="ZuzycieWody" xml:space="preserve">
+    <value>Zużycie wody</value>
+  </data>
+</root>

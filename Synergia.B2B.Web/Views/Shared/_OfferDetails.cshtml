@@ -1,0 +1,406 @@
+﻿@Scripts.Render("~/bundles/shared/offerDetails")
+@model OffersViewModel
+
+@*<script>
+        offerDetails.installationObjectList = JSON.parse('@Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.OfferInstallationObjectDataItems))');
+    </script>*@
+<!-- Modal -->
+<div class="modal fade" id="modalOfferDetails" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        @using (Html.BeginForm("AddUser", "Users", FormMethod.Post, new { id = "formSaveOfferDetails" }))
+        {
+            <!-- Modal content-->
+            <div class="modal-content">
+
+                @*<div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            <i class="material-icons">clear</i>
+                        </button>
+                        <h4 class="modal-title">&nbsp;</h4>
+                    </div>*@
+                <div class="modal-body">
+
+                    <div class="card">
+                        <div class="card-header card-header-icon" data-background-color="rose">
+                            <i class="material-icons">border_color</i>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <h4> Oferta </h4>
+                                <ul class="nav nav-pills nav-pills-warning">
+                                    <li class="active" style="width:180px">
+                                        <a href="#pillOffer" data-toggle="tab">Dane podstawowe</a>
+                                    </li>
+                                    <li style="width:180px">
+                                        <a href="#pillOfferElements" data-toggle="tab">Produkty</a>
+                                    </li>
+                                </ul>
+                                <div class="row" id="rowOfferNumber">
+                                    <div class="col-md-12">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.OfferNumber, new { @class = "required control-label" })
+                                            @Html.TextBoxFor(model => model.OfferNumber, new { @class = "form-control form-control-disabled", disabled = "disabled" })
+                                        </div>
+                                    </div>
+                                </div>
+                                @*<div id="divIsPrepayment">
+                                        <div class="form-group label-floating">
+                                            <div class="checkbox">
+                                                <label>
+                                                    @Html.CheckBoxAwesomeFor(model => model.IsPrepayment, new { @class = "control-label" })
+                                                    @Html.LabelFor(model => model.IsPrepayment, "Przedpłata (2%)")
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>*@
+                                <table id="offerElementsTableSummary" class="table">
+                                    <thead class="text-primary">
+                                        <tr>
+                                            <th style="width: 220px">Opis wartości</th>
+                                            <th>Netto PLN</th>
+                                            <th>VAT PLN</th>
+                                            <th>Brutto PLN</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Łączna wartość katalogowa</td>
+                                            <td><span id="CatalogValueNet"></span></td>
+                                            <td><span id="CatalogValueVat"></span></td>
+                                            <td><span id="CatalogValueGross"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Wartość po rabacie podstawowym</td>
+                                            <td><span id="ValueAfterPrimatyDiscountNet"></span></td>
+                                            <td><span id="ValueAfterPrimatyDiscountVat"></span></td>
+                                            <td><span id="ValueAfterPrimatyDiscountGross"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Wartość z premią za przedpłatę</td>
+                                            <td><span id="FinalValueAfterAllDiscountsNet"></span></td>
+                                            <td><span id="FinalValueAfterAllDiscountsVat"></span></td>
+                                            <td><span id="FinalValueAfterAllDiscountsGross"></span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="pillOffer">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="text-center">
+                                                        <div id="dropzoneOfferLogo" class="dropzone dz-clickable" style="margin-bottom: 1em;">
+                                                        </div>
+                                                    </div>
+                                                    @*<div class="form-group label-floating">
+                                                            @Html.LabelFor(model => model.Logo, new { @class = "control-label" })
+                                                            @Html.TextBoxFor(model => model.Logo, new { @class = "form-control" })
+                                                        </div>*@
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-10">
+                                            @*<div class="panel panel-success" style="margin-top:20px">
+                                                <div class="panel-heading">Dane podstawowe</div>
+                                                <div class="panel-body">*@
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                    <div class="form-group label-floating">
+                                                        @Html.LabelFor(model => model.OfferDate, new { @class = "control-label datepickerLabel" })
+                                                        @Html.TextBoxFor(model => model.OfferDate, new { @class = "form-control datepicker" })
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group label-floating">
+                                                        @Html.LabelFor(model => model.SellerName, new { @class = "required control-label" })
+                                                        @Html.TextBoxFor(model => model.SellerName, new { @class = "form-control form-control-disabled", disabled = "disabled" })
+                                                        @Html.HiddenFor(model => model.SellerFirmaId)
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="form-group label-floating">
+                                                        @Html.LabelFor(model => model.City, new { @class = "control-label" })
+                                                        @Html.TextBoxFor(model => model.City, new { @class = "form-control" })
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 col-md-offset-3">
+                                                    <div class="form-group label-floating">
+                                                        @Html.LabelFor(model => model.StatusText, new { @class = "control-label" })
+                                                        @Html.TextBoxFor(model => model.StatusText, new { @class = "form-control form-control-disabled", disabled = "disabled" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            @*</div>
+                                                </div>*@
+                                            <div class="panel panel-info" style="margin-top:20px">
+                                                <div class="panel-heading">Dane klienta</div>
+                                                <div class="panel-body">
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <div class="form-group label-floating">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        @Html.CheckBoxAwesome("ChBAddNewOfferCompany", new { @class = "control-label" })
+                                                                        @Html.Label("Dodaj nowego klienta")
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3" id="ColOfferCompaniesDropDown">
+                                                            <div class="form-group label-floating">
+                                                                @Html.LabelFor(model => model.OfferCompanyName, new { @class = "control-label" })
+                                                                @*@Html.DropDownListFor(model => model.OfferCompanyId, Model.OfferCompanyNames, "Wybierz klienta", new { @class = "selectpicker", data_style = "select-with-transition" })*@
+                                                                <input id="OfferSearchCompany" class="form-control autocompleteSearch">
+                                                                <button type="button" class="btn btn-white btn-round btn-just-icon btn-round-small" id="btnClearOfferSearchCompany">
+                                                                    <i class="material-icons">clear</i>
+                                                                    <div class="ripple-container"></div>
+                                                                </button>
+                                                                @Html.HiddenFor(model => model.OfferCompanyId)
+                                                                @Html.Hidden("OfferCompanyTempName")
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3 hidden" id="ColOfferCompanyName">
+                                                            <div class="form-group label-floating">
+                                                                @Html.LabelFor(model => model.OfferCompanyName, new { @class = "control-label" })
+                                                                @Html.TextBoxFor(model => model.OfferCompanyName, new { @class = "form-control" })
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group label-floating">
+                                                                @Html.LabelFor(model => model.OfferCompanyAddress, new { @class = "control-label" })
+                                                                @Html.TextBoxFor(model => model.OfferCompanyAddress, new { @class = "form-control" })
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group label-floating">
+                                                                @Html.LabelFor(model => model.OfferCompanyCity, new { @class = "control-label" })
+                                                                @Html.TextBoxFor(model => model.OfferCompanyCity, new { @class = "form-control" })
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-1">
+                                                            <div class="form-group label-floating">
+                                                                @Html.LabelFor(model => model.OfferCompanyPostalCode, new { @class = "control-label" })
+                                                                @Html.TextBoxFor(model => model.OfferCompanyPostalCode, new { @class = "form-control", data_mask = "99-999" })
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group label-floating">
+                                                                @Html.LabelFor(model => model.OfferCompanyNIP, new { @class = "control-label" })
+                                                                @Html.TextBoxFor(model => model.OfferCompanyNIP, new { @class = "form-control", data_mask = "999-99-99-999" })
+                                                            </div>
+                                                        </div>
+                                                        @Html.HiddenFor(model => model.OfferId)
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-success" style="margin-top:20px" id="pnlInstallationObjectDetails">
+                                                <div class="panel-heading">Dane obiektu</div>
+                                                <div class="panel-body">
+                                                    <div class="row">
+                                                        <div class="col-md-2" style="padding-right: 0;">
+                                                            <div class="form-group label-floating">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        @Html.CheckBoxAwesome("ChBAddNewInstallationObject", new { @class = "control-label" })
+                                                                        @Html.Label("Dodaj nowy obiekt")
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3" id="ColInstallationObjectsDropDown">
+                                                            <div class="form-group label-floating">
+                                                                @Html.LabelFor(model => model.InstallationObjectName, new { @class = "control-label" })
+                                                                @*@Html.DropDownListFor(model => model.InstallationObjectId, new List<SelectListItem>(), "Wybierz obiekt", new { @class = "selectpicker", data_style = "select-with-transition" })*@
+                                                                <input id="OfferSearchInstallationObject" class="form-control autocompleteSearch">
+                                                                <button type="button" class="btn btn-white btn-round btn-just-icon btn-round-small" id="btnClearOfferSearchInstallationObject">
+                                                                    <i class="material-icons">clear</i>
+                                                                    <div class="ripple-container"></div>
+                                                                </button>
+                                                                @Html.HiddenFor(model => model.InstallationObjectId)
+                                                                @Html.Hidden("OfferInstallationObjectTempName")
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3 hidden" id="ColInstallationObjectName">
+                                                            <div class="form-group label-floating">
+                                                                @Html.LabelFor(model => model.InstallationObjectName, new { @class = "control-label" })
+                                                                @Html.TextBoxFor(model => model.InstallationObjectName, new { @class = "form-control" })
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group label-floating">
+                                                                @Html.LabelFor(model => model.InstallationObjectAddress, new { @class = "control-label" })
+                                                                @Html.TextBoxFor(model => model.InstallationObjectAddress, new { @class = "form-control" })
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group label-floating">
+                                                                @Html.LabelFor(model => model.InstallationObjectCity, new { @class = "control-label" })
+                                                                @Html.TextBoxFor(model => model.InstallationObjectCity, new { @class = "form-control" })
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-1">
+                                                            <div class="form-group label-floating">
+                                                                @Html.LabelFor(model => model.InstallationObjectPostalCode, new { @class = "control-label" })
+                                                                @Html.TextBoxFor(model => model.InstallationObjectPostalCode, new { @class = "form-control", data_mask = "99-999" })
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group label-floating">
+                                                                @Html.LabelFor(model => model.InstallationObjectCountry, new { @class = "control-label" })
+                                                                @Html.TextBoxFor(model => model.InstallationObjectCountry, new { @class = "form-control" })
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <div class="form-group label-floating">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        @Html.CheckBoxAwesomeFor(x => x.WithEmptyInstallationObjectObiektyId, new { @class = "control-label" })
+                                                                        @Html.LabelFor(x => x.WithEmptyInstallationObjectObiektyId)
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3 ">
+                                                            <div class="form-group label-floating">
+                                                                @Html.LabelFor(model => model.InstallationObjectType, new { @class = "control-label" })
+                                                                @Html.DropDownListFor(model => model.InstallationObjectType, Model.InstallationObjectTypes, "Wybierz typ obiektu", new { @class = "selectpicker", data_style = "select-with-transition" })
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                @*<div class="col-md-3">
+                                                        <div class="form-group label-floating">
+                                                            <label class="control-label">Typ oferty</label>
+                                                            <select class="selectpicker" data-style="select-with-transition">
+                                                                <option>Synergia</option>
+                                                                <option>Mareno</option>
+                                                                <option>Przepustnice</option>
+                                                                <option>Smoki</option>
+                                                                <option>Nawiewniki</option>
+                                                                <option>Ansul</option>
+                                                                <option>KES</option>
+                                                                <option>Cookair</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>*@
+                                                <div class="col-md-2">
+                                                    <div class="form-group label-static">
+                                                        @Html.LabelFor(model => model.GuaranteeYears, new { @class = "required control-label" })
+                                                        @Html.TextBoxFor(model => model.GuaranteeYears, new { @class = "form-control form-control-disabled", disabled = "disabled" })
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-1">
+                                                    <div class="form-group label-static">
+                                                        @Html.LabelFor(model => model.PrepaymentPercent, new { @class = "required control-label nowrap" })
+                                                        <div style="width:45px;" class="touchSpinWrapper">
+                                                            @Html.TextBoxFor(model => model.PrepaymentPercent, new
+                                                            {
+                                                                @class = "touchSpin",
+                                                                data_min = "0",
+                                                                data_max = "100"
+                                                            })
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group label-static">
+                                                        @Html.LabelFor(model => model.PaymentType, new { @class = "control-label" })
+                                                        @Html.DropDownListFor(model => model.PaymentType, Model.PaymentTypes, new { @class = "selectpicker", data_style = "select-with-transition" })
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="form-group label-static">
+                                                        @Html.LabelFor(model => model.DeliveryTimeDays, new { @class = "required control-label" })
+                                                        <div style="width:45px;" class="touchSpinWrapper">
+                                                            @Html.TextBoxFor(model => model.DeliveryTimeDays, new
+                                                       {
+                                                           @class = "touchSpin",
+                                                           data_min = "1",
+                                                           data_max = "100"
+                                                       })
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="form-group label-static">
+                                                        @Html.LabelFor(model => model.DeliveryType, new { @class = "control-label" })
+                                                        @Html.DropDownListFor(model => model.DeliveryType, Model.DeliveryTypes, new { @class = "selectpicker", data_style = "select-with-transition" })
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="form-group label-floating">
+                                                        @Html.LabelFor(model => model.DeliveryCost, new { @class = "control-label" })
+                                                        @Html.TextBoxFor(model => model.DeliveryCost, new { @class = "form-control text-right" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="pillOfferElements">
+                                    <div class="row" id="pnlSearchProductsForOffer">
+                                        <div class="col-sm-2">
+                                            <div class="form-group" style="padding-top: 8px;">
+                                                @Html.DropDownList("SearchProductsForOfferGroupId", Model.Groups, "DOWOLNY TYP PRODUKTU", new { @class = "selectpicker", data_style = "select-with-transition" })
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <input id="SearchProductsForOffer" class="form-control" placeholder="Wyszukaj, aby dodać nowy produkt">
+                                                <button type="button" class="btn btn-white btn-round btn-just-icon btn-round-small">
+                                                    <i class="material-icons">clear</i>
+                                                    <div class="ripple-container"></div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="offerElementsTableWrapper" class="material-datatables" style="opacity:0">
+                                        <table id="offerElementsTable" class="table table-striped table-no-bordered table-hover dataTable" cellspacing="0" style="width:100%;display: none;">
+                                            <thead>
+                                                <tr>
+                                                    <th>LP</th>
+                                                    <th>Kod</th>
+                                                    <th>Nazwa</th>
+                                                    <th>Gabaryt (mm)<br /> (dł/szer/wys)</th>
+                                                    <th>Szt</th>
+                                                    <th>
+                                                        Czas<br /> realizacji
+                                                    </th>
+                                                    <th>Przyłącze</th>
+                                                    <th>Moc<br /> gaz</th>
+                                                    <th>Moc<br /> gaz<br /> SUMA</th>
+                                                    <th>Moc<br /> prąd</th>
+                                                    <th>Moc<br /> prąd<br /> SUMA</th>
+                                                    <th>Cena<br /> katalogowa<br /> netto</th>
+                                                    <th>Rabat</th>
+                                                    <th>Cena<br /> po rabacie<br /> netto</th>
+                                                    <th>Wartość netto</th>
+                                                    <th>Zdjęcie</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="btnFinishOffer" class="btn btn-warning hidden" style="width:150px; margin-right: 50px">Zakończ</button>
+                    <button type="button" id="btnOrderOffer" class="btn btn-danger hidden" style="width:150px; margin-right: 50px">Zamów</button>
+                    <button type="button" class="btn btn-success" style="width:150px; margin-right: 50px" data-dismiss="modal">Zamknij</button>
+                    @*<button type="button" onclick="usersList.save();" class="btn btn-success">Zapisz ofertę</button>*@
+                </div>
+            </div>
+        }
+    </div>
+</div>

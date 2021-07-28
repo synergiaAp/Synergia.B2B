@@ -1,0 +1,56 @@
+﻿@model HoodSelectionOfferDetailsViewModel
+
+<style>
+    .rowHoodOfferNumber {
+        position: absolute;
+        top: -30px;
+        right: 25px;
+        width: 350px;
+    }
+</style>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header card-header-text" data-background-color="blueSynergia">
+                <h4 class="card-title">Szczegóły oferty doborów</h4>
+            </div>
+            <div class="card-content">
+                <ul class="nav nav-pills nav-pills-warning" style="position: absolute; top: -39px; left: 280px;">
+                    <li class="active">
+                        <a href="#pillHoodOffer" data-toggle="tab">Dane podstawowe</a>
+                    </li>
+                    <li>
+                        <a href="#pillHoodOfferElements" data-toggle="tab">Okapy</a>
+                    </li>
+                </ul>
+                <div class="row rowHoodOfferNumber">
+                    <div class="col-md-6">
+                        <div class="form-group label-floating">
+                            @Html.LabelFor(model => model.HoodStatusText, new { @class = "control-label" })
+                            @Html.TextBoxFor(model => model.HoodStatusText, new { @class = "form-control form-control-disabled", disabled = "disabled" })
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <form id="formHoodOfferNumber">
+                            <div class="form-group label-floating">
+                                @Html.LabelFor(model => model.HoodOfferNumber, new { @class = "required control-label" })
+                                @Html.TextBoxFor(model => model.HoodOfferNumber, new { @class = "form-control" })
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="pillHoodOffer">
+                        @Html.Partial("_HoodSelectionOfferDetailsForm", new HoodSelectionOfferDetailsFormViewModel())
+                    </div>
+                    <div class="tab-pane" id="pillHoodOfferElements">
+                        @Html.Partial("_HoodSelectionOfferDetailsHoodList", new HoodSelectionOfferDetailsHoodListViewModel())
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@Html.HiddenFor(x => x.HoodOfferId)
+@Html.Partial("_HoodSelectionOfferHoodDetailsModal", new HoodSelectionOfferHoodDetailsModalViewModel())
+

@@ -1,0 +1,439 @@
+﻿@using Synergia.B2B.Web.Models
+@model MonthlyReportsViewModel
+@Scripts.Render("~/bundles/monthlyReports/monthlyReportsList")
+@Scripts.Render("~/bundles/monthlyReports/monthlyReportDetails")
+
+@{
+    ViewBag.Title = "Złożone raporty";
+}
+
+@if (Model.Id.HasValue)
+{
+    <script>
+        monthlyReportsList.monthlyReportId = '@Model.Id';
+    </script>
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <!-- Trigger the modal with a button -->
+
+        <div class="card">
+            @*<div class="card-header card-header-icon" data-background-color="blueSynergia">
+                    <i class="material-icons">assignment</i>
+                </div>*@
+            <div class="card-header card-header-text" data-background-color="blueSynergia">
+                <h4 class="card-title">Lista raportów miesięcznych</h4>
+            </div>
+            <div class="card-content">
+                @*<h4 class="card-title">Tabela użytkowników systemu</h4>*@
+                <div class="toolbar">
+                    <!--        Here you can write extra buttons/actions for the toolbar              -->
+                </div>
+                <div class="col-md-10"></div>
+                @*<div class="col-md-2" style="padding-bottom:10px;">
+                        <button type="button" onclick="monthlyReportsList.newMonthlyReportData();" class="btn btn-info" data-toggle="modal" data-target="#modalAddMonthlyReport">Dodaj raport</button>
+                    </div>*@
+                <div class="material-datatables">
+                    <table id="monthlyReportsTable" class="table table-striped table-no-bordered table-hover dataTable" cellspacing="0" style="width:100%; display:none">
+                        <thead>
+                            <tr>
+                                <th>Miesiąc</th>
+                                <th>Osoba</th>
+                                <th>Region</th>
+                                <th>Suma zamówień</th>
+                                <th>Suma planowanych zamówień</th>
+                                <th>Ostatnia edycja</th>
+                                <th>Status</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                    </table>
+                    @Html.Hidden("ShowAllReports", "true")
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="modalAddMonthlyReport" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg">
+        @using (Html.BeginForm("AddMonthlyReport", "MonthlyReports", FormMethod.Post, new { id = "formAddMonthlyReport" }))
+        {
+
+            <!-- Modal content-->
+            <div class="modal-content">
+
+                @*<div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            <i class="material-icons">clear</i>
+                        </button>
+                        <h4 class="modal-title">&nbsp;</h4>
+                    </div>*@
+                <div class="modal-body">
+
+                    <div class="card">
+                        <div class="card-header card-header-icon" data-background-color="rose">
+                            <i class="material-icons">account_box</i>
+                        </div>
+                        <div class="card-content" style="padding-left:20px; padding-right: 3px">
+                            <h4 class="card-title">
+                                Dane raportu
+                            </h4>
+                            @*<div class="row" data-informationType="1">
+                                    <div class="col-md-11">
+                                        <div class="form-group label-floating">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <div class="form-group">
+                                            <a href="javascript:monthlyReportDetails.removeInformation(1)" style="color:red" data-informationType="1"><i class="material-icons">close</i></a>
+                                        </div>
+                                    </div>
+                                </div>*@
+                            @*<div class="row addInformation" data-informationType="1">
+                                    <div class=" col-md-12">
+                                        <a href="javascript:monthlyReportDetails.addInformation(this)" style="color:green" data-informationType="1"><i class="material-icons">add</i></a>
+                                    </div>
+                                </div>*@
+                            <div id="modalAddMonthlyReportScrollableContent" class="scrollableContent">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.WorkerName, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.WorkerName, new { @class = "form-control", disabled = "true" })
+                                        </div>
+                                        @Html.HiddenFor(m => m.WorkerId)
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.Boss, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.Boss, new { @class = "form-control", disabled = "true" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.RegionCode, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.RegionCode, new { @class = "form-control", disabled = "true" })
+                                        </div>
+                                        @Html.HiddenFor(m => m.RegionId)
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.Date, new { @class = "control-label datepickerLabel required" })
+                                            @Html.TextBoxFor(model => model.Date, new { @class = "form-control monthpicker" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-md-offset-1">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.President, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.President, new { @class = "form-control", disabled = "true" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <div class="col-md-8">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.Provinces, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.Provinces, new { @class = "form-control", disabled = "true" })
+                                        </div>
+                                    </div>
+                                </div>
+                                @*<div class="row">
+                                        <div class="col-md-12">
+                                            <table id="provincesTable" class="" style="margin : 10px 0 15px">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>
+                                                                Województwa:
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr><td><strong>Województwa: </strong></td></tr>
+                                                    </tbody>
+                                                </table>
+                                        </div>
+                                    </div>*@
+                                <h4>Spotkania</h4>
+                                <hr />
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.MeetingsKitchenTechnologist, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.MeetingsKitchenTechnologist, new { @class = "form-control meetings" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.MeetingsArchitect, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.MeetingsArchitect, new { @class = "form-control meetings" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.MeetingsConsultingCompany, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.MeetingsConsultingCompany, new { @class = "form-control meetings" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.MeetingsGastronomyCompany, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.MeetingsGastronomyCompany, new { @class = "form-control meetings" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.MeetingsGeneralContractor, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.MeetingsGeneralContractor, new { @class = "form-control meetings" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.MeetingsInstallationContractor, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.MeetingsInstallationContractor, new { @class = "form-control meetings" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.MeetingsSynergiaDealer, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.MeetingsSynergiaDealer, new { @class = "form-control meetings" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.MeetingsMarenoDealer, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.MeetingsMarenoDealer, new { @class = "form-control meetings" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.MeetingsNetworkInvestor, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.MeetingsNetworkInvestor, new { @class = "form-control meetings" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.MeetingsSingleInvestor, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.MeetingsSingleInvestor, new { @class = "form-control meetings" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.MeetingsSanepid, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.MeetingsSanepid, new { @class = "form-control meetings" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.MeetingsVentilationDesigner, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.MeetingsVentilationDesigner, new { @class = "form-control meetings" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.MeetingsVentilationWholesaler, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.MeetingsVentilationWholesaler, new { @class = "form-control meetings" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.MeetingsKitchentChef, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.MeetingsKitchentChef, new { @class = "form-control meetings" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.MeetingsSupervisionInspector, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.MeetingsSupervisionInspector, new { @class = "form-control meetings" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.MeetingsQuantity, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.MeetingsQuantity, new { @class = "form-control", disabled = "true" })
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h4>Oferty</h4>
+                                <hr />
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.HoodOffers, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.HoodOffers, new { @class = "form-control offers" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.CentralOffers, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.CentralOffers, new { @class = "form-control offers" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.SmokiOffers, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.SmokiOffers, new { @class = "form-control offers" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.AnsulOffers, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.AnsulOffers, new { @class = "form-control offers" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.MarenoOffers, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.MarenoOffers, new { @class = "form-control offers" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.VentilatorOffers, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.VentilatorOffers, new { @class = "form-control offers" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.KesOffers, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.KesOffers, new { @class = "form-control offers" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.CentralTechnicalSelections, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.CentralTechnicalSelections, new { @class = "form-control technicalSelections" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.SmokiTechnicalSelections, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.SmokiTechnicalSelections, new { @class = "form-control technicalSelections" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.HoodTechnicalSelections, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.HoodTechnicalSelections, new { @class = "form-control technicalSelections" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.Agreements, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.Agreements, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.OffersSum, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.OffersSum, new { @class = "form-control", disabled = "true" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.TechnicalSelectionsSum, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.TechnicalSelectionsSum, new { @class = "form-control", disabled = "true" })
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h4>Wartość zamówień</h4>
+                                <hr />
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.OrdersValueSum, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.OrdersValueSum, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.PlannedOrdersValueSum, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.PlannedOrdersValueSum, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h4>Marketing</h4>
+                                <hr />
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.NewContacts, new { @class = "control-label controlLabelTextArea" })
+                                            @Html.TextAreaFor(model => model.NewContacts, new { @class = "form-control", rows = "4" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.MarketingActivities, new { @class = "control-label controlLabelTextArea" })
+                                            @Html.TextAreaFor(model => model.MarketingActivities, new { @class = "form-control", rows = "6" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.MarketingPlans, new { @class = "control-label controlLabelTextArea" })
+                                            @Html.TextAreaFor(model => model.MarketingPlans, new { @class = "form-control", rows = "6" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.Troubles, new { @class = "control-label controlLabelTextArea" })
+                                            @Html.TextAreaFor(model => model.Troubles, new { @class = "form-control", rows = "6" })
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h4>Urlopy i podsumowanie</h4>
+                                <hr />
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.Holidays, new { @class = "control-label controlLabelTextArea" })
+                                            @Html.TextAreaFor(model => model.Holidays, new { @class = "form-control", rows = "4" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.Summary, new { @class = "control-label controlLabelTextArea" })
+                                            @Html.TextAreaFor(model => model.Summary, new { @class = "form-control", rows = "6" })
+                                        </div>
+                                    </div>
+                                    @Html.HiddenFor(m => m.Id)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Zamknij</button>
+                    @*<button type="button" onclick="monthlyReportsList.save();" class="btn btn-success">Zapisz raport</button>*@
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+

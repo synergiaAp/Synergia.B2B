@@ -1,0 +1,123 @@
+﻿@model HoodSelectionOfferDetailsFormViewModel
+@Scripts.Render("~/bundles/hoodSelection/_HoodSelectionOfferDetailsForm")
+
+<form id="formSaveHoodOfferDetails">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="form-group label-floating">
+                @Html.LabelFor(model => model.HoodOfferContactPerson, new { @class = "control-label" })
+                @Html.TextBoxFor(model => model.HoodOfferContactPerson, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group label-floating">
+                @Html.LabelFor(model => model.HoodOfferContactEmail, new { @class = "control-label" })
+                @Html.TextBoxFor(model => model.HoodOfferContactEmail, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group label-floating">
+                @Html.LabelFor(model => model.HoodOfferContactPhone, new { @class = "control-label" })
+                @Html.TextBoxFor(model => model.HoodOfferContactPhone, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group label-floating">
+                @Html.LabelFor(model => model.HoodOfferRegionId, new { @class = "control-label" })
+                @Html.DropDownListFor(model => model.HoodOfferRegionId, Model.Regions, "Wybierz region", new { @class = "selectpicker", data_style = "select-with-transition" })
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group label-floating">
+                @Html.LabelFor(model => model.LanguageId, new { @class = "control-label", style = "color: #ff9800; font-weight: bold", })
+                @Html.DropDownListFor(model => model.LanguageId, Model.Languages, new { @class = "selectpicker", data_style = "select-with-transition" })
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-success" style="margin-top:20px">
+        <div class="panel-heading">Dane obiektu</div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="form-group label-floating">
+                        <div class="checkbox">
+                            <label>
+                                @Html.CheckBoxAwesome("ChBHoodAddNewInstallationObject", new { @class = "control-label" })
+                                @Html.Label("Dodaj obiekt", new { @for = "ChBHoodAddNewInstallationObject" })
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" id="ColHoodInstallationObjectsDropDown">
+                    <div class="form-group label-floating">
+                        @Html.LabelFor(model => model.HoodInstallationObjectName, new { @class = "control-label" })
+
+                        <input id="HoodOfferSearchObject" class="form-control autocompleteSearch">
+                        <button type="button" class="btn btn-white btn-round btn-just-icon btn-round-small" id="btnClearSearchObject">
+                            <i class="material-icons">clear</i>
+                            <div class="ripple-container"></div>
+                        </button>
+                        @Html.HiddenFor(model => model.HoodInstallationObjectId)
+                        @Html.Hidden("HoodInstallationObjectTempName")
+                    </div>
+                </div>
+                <div class="col-md-4 hidden" id="ColHoodInstallationObjectName">
+                    <div class="form-group label-floating">
+                        @Html.LabelFor(model => model.HoodInstallationObjectName, new { @class = "control-label" })
+                        @Html.TextBoxFor(model => model.HoodInstallationObjectName, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group label-floating">
+                        @Html.LabelFor(model => model.HoodInstallationObjectAddress, new { @class = "control-label" })
+                        @Html.TextBoxFor(model => model.HoodInstallationObjectAddress, new { @class = "form-control" })
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-md-offset-2">
+                    <div class="form-group label-floating">
+                        @Html.LabelFor(model => model.HoodInstallationObjectCity, new { @class = "control-label" })
+                        @Html.TextBoxFor(model => model.HoodInstallationObjectCity, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group label-floating">
+                        @Html.LabelFor(model => model.HoodInstallationObjectPostalCode, new { @class = "control-label" })
+                        @Html.TextBoxFor(model => model.HoodInstallationObjectPostalCode, new { @class = "form-control", data_mask = "99-999" })
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group label-floating">
+                        @Html.LabelFor(model => model.HoodInstallationObjectCountry, new { @class = "control-label" })
+                        @Html.TextBoxFor(model => model.HoodInstallationObjectCountry, new { @class = "form-control" })
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-md-offset-2">
+                    <div class="form-group label-floating">
+                        @Html.LabelFor(model => model.HoodInstallationObjectType, new { @class = "control-label" })
+                        @Html.DropDownListFor(model => model.HoodInstallationObjectType, Model.InstallationObjectTypes, "Wybierz typ obiektu", new { @class = "selectpicker", data_style = "select-with-transition" })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group label-static">
+                @Html.LabelFor(model => model.Comment, new { @class = "control-label"})
+                @Html.TextAreaFor(x => x.Comment, new { @class = "form-control", rows = "2" })
+            </div>
+        </div>
+    </div>
+</form>
+<div class="row">
+    <div class="col-md-12 text-right">
+        <button type="button" id="btnFinishHoodOffer" class="btn btn-warning hidden" style="width:150px; margin-right: 50px">Zakończ</button>
+        <button type="button" id="btnOfferHoodOffer" class="btn btn-danger hidden" style="width:150px; margin-right: 50px">Zaofertuj</button>
+        <a href="@Url.Action("HoodSelectionOfferList", "HoodSelection")" class="btn btn-default">Cofnij do listy ofert</a>
+        <button type="button" class="btn btn-success" id="btnSaveHoodOffer">Zapisz</button>
+    </div>
+</div>

@@ -1,0 +1,196 @@
+﻿@model ProductsViewModel
+@Scripts.Render("~/bundles/products/productDetails")
+@*@model int?*@
+
+@{
+    ViewBag.Title = "Produkty";
+}
+<style>
+    /*.main-panel > .content {
+        padding: 0px 15px;
+    }*/
+</style>
+<script>
+    productDetails.productId = "@Model.GroupId";
+</script>
+<div class="row">
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-header card-header-icon" data-background-color="blueSynergia">
+                <i class="material-icons">assignment</i>
+            </div>
+            <div class="card-content" style="min-height: 307px">
+                @*<h4 class="card-title">Szczegóły produktu</h4>*@
+                <img id="productPhoto" style="max-width:320px; max-height:250px" src="#" alt="" />
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="card">
+            <div style="position:absolute; right:25px; top:10px">
+                <table>
+                    <tr>
+                        <td>
+
+                             @Html.LabelFor(model => model.ProdQuantityDesc, new { @class = "control-label" })
+                            @Html.TextBoxFor(model => model.ProdQuantityDesc, new { @class = "form-control", disabled = "true" })
+                        </td>
+                        <td>
+                            <i title="Dodaj do zamówienia" data-toggle="tooltip" class="addOfferElement material-icons btn btn-simple btn-icon edit" style="font-size:30pt; padding:0; z-index:2">local_grocery_store</i>
+                        </td>
+                        <td>
+                            <div style="width:80px; display:inline-block" class="touchSpinWrapper">
+                                <input id="offerElementsCount" type="text" value="" data-min="1" data-max="9999" class="touchSpin">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="card-header card-header-text" data-background-color="blueSynergia">
+                <h4 class="card-title">Szczegóły produktu</h4>
+                @*<p class="category">New employees on 15th September, 2016</p>*@
+            </div>
+            <div class="card-content">
+                <div class="row">
+                    <div class="col-md-11">
+                        <div class="form-group label-floating">
+                            @Html.LabelFor(model => model.Name, new { @class = "control-label" })
+                            @Html.TextBoxFor(model => model.Name, new { @class = "form-control", disabled = "true" })
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 ">
+                        <div class="form-group label-floating">
+                            @Html.LabelFor(model => model.Code, new { @class = "control-label" })
+                            @Html.TextBoxFor(model => model.Code, new { @class = "form-control", disabled = "true" })
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-md-offset-2">
+                        <div class="form-group label-floating">
+                            @Html.LabelFor(model => model.Dimensions, new { @class = "control-label" })
+                            @Html.TextBoxFor(model => model.Dimensions, new { @class = "form-control", disabled = "true" })
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-md-offset-2">
+                        <div class="form-group label-floating">
+                            @Html.LabelFor(model => model.Currency, new { @class = "control-label" })
+                            @Html.TextBoxFor(model => model.Currency, new { @class = "form-control", disabled = "true" })
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 ">
+                        <div class="form-group label-floating">
+                            @Html.LabelFor(model => model.Group, new { @class = "control-label" })
+                            @Html.TextBoxFor(model => model.Group, new { @class = "form-control", disabled = "true" })
+                        </div>
+                    </div>
+                    <div class="col-md-2 ">
+                        <div class="form-group label-floating">
+                            @Html.LabelFor(model => model.ProdPack, new { @class = "control-label" })
+                            @Html.TextBoxFor(model => model.ProdPack, new { @class = "form-control", disabled = "true" })
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-md-offset-2">
+                        <div class="form-group label-floating">
+                            @Html.LabelFor(model => model.PriceNet, new { @class = "control-label" })
+                            @Html.TextBoxFor(model => model.PriceNet, new { @class = "form-control", disabled = "true" })
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 ">
+                        <div class="form-group label-floating">
+                            @Html.LabelFor(model => model.Um, new { @class = "control-label" })
+                            @Html.TextBoxFor(model => model.Um, new { @class = "form-control", disabled = "true" })
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-md-offset-2">
+                        <div class="form-group label-floating">
+                            @Html.LabelFor(model => model.Weight, new { @class = "control-label" })
+                            @Html.TextBoxFor(model => model.Weight, new { @class = "form-control", disabled = "true" })
+                        </div>
+                    </div>
+                    @*<div class="col-md-2 col-md-offset-2">
+                        <div class="form-group label-floating">
+                            @Html.LabelFor(model => model.PriceNet, new { @class = "control-label" })
+                            @Html.TextBoxFor(model => model.PriceNet, new { @class = "form-control", disabled = "true" })
+                        </div>
+                    </div>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-content">
+                <ul class="nav nav-pills nav-pills-warning">
+                    <li class="active" style="width:49%">
+                        <a href="#pillDocuments" data-toggle="tab">Dokumenty</a>
+                    </li>
+                    <li style="width:49%">
+                        <a href="#pillAccessories" data-toggle="tab">Powiązane</a>
+                    </li>
+                    @*<li style="width:33%">
+                        <a href="#pillParts" data-toggle="tab">Części zamienne</a>
+                    </li>*@
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="pillDocuments">
+                        <div class="material-datatables col-sm-6">
+                            <table id="documentsTable" class="table table-striped table-no-bordered table-hover dataTable" cellspacing="0" style="width:100%;">
+                                <thead>
+                                    <tr>
+                                        <th>Typ pliku</th>
+                                        <th>Nazwa pliku</th>
+                                        @*<th>Typ dokumentu</th>*@
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="pillAccessories">
+                        <div class="material-datatables">
+                            <table id="accessoriesTable" class="table table-striped table-no-bordered table-hover dataTable" cellspacing="0" style="width:100%;">
+                                <thead>
+                                    <tr>
+                                        <th>Kod</th>
+                                        <th>Nazwa</th>
+                                        <th>Grupa</th>
+                                        <th>Jm</th>
+                                        <th>Opakowanie</th>
+                                        <th>Wymiary</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                    @*<div class="tab-pane" id="pillParts">
+                        <div class="material-datatables">
+                            <table id="partsTable" class="table table-striped table-no-bordered table-hover dataTable" cellspacing="0" style="width:100%; display:none">
+                                <thead>
+                                    <tr>
+                                        <th>Kod</th>
+                                        <th>Nazwa</th>
+                                        <th>Grupa</th>
+                                        <th>Linia</th>
+                                        <th>Model</th>
+                                        <th>Przyłącze</th>
+                                        <th>Gabaryty</th>
+                                        <th>Moc gaz</th>
+                                        <th>Moc prąd</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

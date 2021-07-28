@@ -1,0 +1,96 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Synergia B2B</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/js")
+    @RenderSection("scripts", required: false)
+
+    @*<link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">*@
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="~/Scripts/TinyMCE/tinymce.min.js"></script>
+    <script src="~/Scripts/TinyMCE/jquery.tinymce.min.js"></script>
+
+    <script>
+        $.validator.setDefaults({
+            highlight: function (element) {
+                $(element).closest('.form-group').addClass('has-error');
+            },
+            unhighlight: function (element) {
+                $(element).closest('.form-group').removeClass('has-error');
+            },
+            //errorElement: 'span',
+            //errorClass: 'help-block',
+            errorPlacement: function (error, element) {
+                $(element).closest('div').addClass('has-error');
+            }
+            //errorPlacement: function (error, element) {
+            //    if (element.parent('.input-group').length) {
+            //        error.insertAfter(element.parent());
+            //    } else {
+            //        error.insertAfter(element);
+            //    }
+            //}
+        });
+
+        $.validator.methods.range = function (value, element, param) {
+            var globalizedValue = value.replace(",", ".");
+            return this.optional(element) || (globalizedValue >= param[0] && globalizedValue <= param[1]);
+        }
+
+        $.validator.methods.number = function (value, element) {
+            return this.optional(element) || /^-?(?:\d+|\d{1,3}(?:[\s\.,]\d{3})+)(?:[\.,]\d+)?$/.test(value);
+        }
+
+        Dropzone.autoDiscover = false;
+
+        $(document).ready(function () {
+            $.extend($.fn.dataTable.defaults, {
+                "language": {
+                    "emptyTable": "Brak danych",
+                    "info": "Pozycje _START_ do _END_ z _TOTAL_",
+                    "infoEmpty": "Pozycje od 0 do _END_ z _TOTAL_ łącznie",
+                    "infoFiltered": "(filtered from _MAX_ total entries)",
+                    "infoPostFix": "",
+                    "thousands": ",",
+                    "lengthMenu": "Pokaż _MENU_ rekordów",
+                    "loadingRecords": "Wczytywanie...",
+                    "processing": "Wczytywanie...",
+                    "search": "Szukaj: ",
+                    "zeroRecords": "No matching records found",
+                    "paginate": {
+                        "first": "Pierwsza",
+                        "last": "Ostatnia",
+                        "next": "Następna",
+                        "previous": "Poprzednia"
+                    },
+                },
+                "processing": false,
+                "serverSide": true,
+                "stateSave": true,
+                "stateSaveParams": function (settings, data) {
+                    if (data.length > 100) {
+                        data.length = 10;
+                    }
+                }
+                // "autoWidth": false,
+            });
+
+            $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar();
+
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+</head>
+<body>
+    @RenderBody()
+</body>
+</html>

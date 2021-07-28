@@ -1,0 +1,203 @@
+﻿@using Synergia.B2B.Web.Models
+@model WeeklyPlansViewModel
+@Scripts.Render("~/bundles/weeklyPlans/weeklyPlansList")
+@Scripts.Render("~/bundles/weeklyPlans/weeklyPlanDetails")
+
+@{
+    ViewBag.Title = "Złożone plany";
+}
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <!-- Trigger the modal with a button -->
+
+        <div class="card">
+            @*<div class="card-header card-header-icon" data-background-color="blueSynergia">
+                    <i class="material-icons">assignment</i>
+                </div>*@
+            <div class="card-header card-header-text" data-background-color="blueSynergia">
+                <h4 class="card-title">Lista złożonych planów tygodniowych</h4>
+            </div>
+            <div class="card-content">
+                @*<h4 class="card-title">Tabela użytkowników systemu</h4>*@
+                <div class="toolbar">
+                    <!--        Here you can write extra buttons/actions for the toolbar              -->
+                </div>
+                @*<div class="col-md-10"></div>
+                <div class="col-md-2" style="padding-bottom:10px;">
+                    <button type="button" onclick="weeklyPlansList.newWeeklyPlanData();" class="btn btn-info" data-toggle="modal" data-target="#modalAddWeeklyPlan">Dodaj plan</button>
+                </div>*@
+                <div class="material-datatables">
+                    <table id="weeklyPlansTable" class="table table-striped table-no-bordered table-hover dataTable" cellspacing="0" style="width:100%; display:none">
+                        <thead>
+                            <tr>
+                                <th>Data utworzenia</th>
+                                <th>Osoba</th>
+                                <th>Region</th>
+                                <th>Tydzień</th>
+                                <th>Ostatnia edycja</th>
+                                <th>Status</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                    </table>
+                    @Html.Hidden("ShowAllReports", "true")
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="modalAddWeeklyPlan" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg">
+        @using (Html.BeginForm("AddWeeklyPlan", "WeeklyPlans", FormMethod.Post, new { id = "formAddWeeklyPlan" }))
+        {
+
+            <!-- Modal content-->
+            <div class="modal-content">
+
+                @*<div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            <i class="material-icons">clear</i>
+                        </button>
+                        <h4 class="modal-title">&nbsp;</h4>
+                    </div>*@
+                <div class="modal-body">
+
+                    <div class="card">
+                        <div class="card-header card-header-icon" data-background-color="rose">
+                            <i class="material-icons">account_box</i>
+                        </div>
+                        <div class="card-content" style="padding-left:20px; padding-right: 3px">
+                            <h4 class="card-title">
+                                Plan tygodniowy
+                            </h4>
+                            @*<div class="row" data-informationType="1">
+                                    <div class="col-md-11">
+                                        <div class="form-group label-floating">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <div class="form-group">
+                                            <a href="javascript:monthlyReportDetails.removeInformation(1)" style="color:red" data-informationType="1"><i class="material-icons">close</i></a>
+                                        </div>
+                                    </div>
+                                </div>*@
+                            @*<div class="row addInformation" data-informationType="1">
+                                    <div class=" col-md-12">
+                                        <a href="javascript:monthlyReportDetails.addInformation(this)" style="color:green" data-informationType="1"><i class="material-icons">add</i></a>
+                                    </div>
+                                </div>*@
+                        <div id="modalAddWeeklyPlanScrollableContent" class="scrollableContent">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.WorkerName, new { @class = "control-label" })
+                                        @Html.TextBoxFor(model => model.WorkerName, new { @class = "form-control form-control-disabled", disabled = "true" })
+                                    </div>
+                                    @Html.HiddenFor(m => m.WorkerId)
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.Boss, new { @class = "control-label" })
+                                        @Html.TextBoxFor(model => model.Boss, new { @class = "form-control form-control-disabled", disabled = "true" })
+                                    </div>
+                                </div>
+                                <div class="col-md-1">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.RegionCode, new { @class = "control-label" })
+                                        @Html.TextBoxFor(model => model.RegionCode, new { @class = "form-control form-control-disabled", disabled = "true" })
+                                    </div>
+                                    @Html.HiddenFor(m => m.RegionId)
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.CreatedOn, new { @class = "control-label required" })
+                                        @Html.TextBoxFor(model => model.CreatedOn, new { @class = "form-control form-control-disabled", disabled = "true" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+
+                                <div class="col-md-8">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.Provinces, new { @class = "control-label" })
+                                        @Html.TextBoxFor(model => model.Provinces, new { @class = "form-control form-control-disabled", disabled = "true" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.Monday, new { @class = "control-label controlLabelTextArea" })
+                                        @Html.TextAreaFor(model => model.Monday, new { @class = "form-control", rows = "6" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.Tuesday, new { @class = "control-label controlLabelTextArea" })
+                                        @Html.TextAreaFor(model => model.Tuesday, new { @class = "form-control", rows = "6" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.Wednesday, new { @class = "control-label controlLabelTextArea" })
+                                        @Html.TextAreaFor(model => model.Wednesday, new { @class = "form-control", rows = "6" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.Thursday, new { @class = "control-label controlLabelTextArea" })
+                                        @Html.TextAreaFor(model => model.Thursday, new { @class = "form-control", rows = "6" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.Friday, new { @class = "control-label controlLabelTextArea" })
+                                        @Html.TextAreaFor(model => model.Friday, new { @class = "form-control", rows = "6" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.Saturday, new { @class = "control-label controlLabelTextArea" })
+                                        @Html.TextAreaFor(model => model.Saturday, new { @class = "form-control", rows = "6" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.Sunday, new { @class = "control-label controlLabelTextArea" })
+                                        @Html.TextAreaFor(model => model.Sunday, new { @class = "form-control", rows = "6" })
+                                    </div>
+                                </div>
+                                @Html.HiddenFor(m => m.Id)
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Zamknij</button>
+                    @*<button type="button" id="btnSavePlan" onclick="weeklyPlansList.save();" class="btn btn-success">Zapisz plan</button>
+                    <button type="button" id="btnMakeSubmitted" onclick="weeklyPlansList.makeSubmitted();" class="btn btn-warning">Zakończ i wyślij plan</button>*@
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+

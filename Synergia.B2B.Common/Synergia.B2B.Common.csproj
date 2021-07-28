@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{96694761-4566-4867-856A-606620822BDE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Synergia.B2B.Common</RootNamespace>
+    <AssemblyName>Synergia.B2B.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=7.0.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.7.0.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ionic.Zip.1.9.1.8\lib\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.4.12\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dto\Api\Campaign\AddCampaignContactsParametersDto.cs" />
+    <Compile Include="Dto\Api\Charts\ChartGetMeetingsQuantityParametersDto.cs" />
+    <Compile Include="Dto\Api\Charts\ChartResultDto.cs" />
+    <Compile Include="Dto\Api\Common\AutocompleteParametersDto.cs" />
+    <Compile Include="Dto\Api\Common\AutocompleteResultDto.cs" />
+    <Compile Include="Dto\Api\Customers\SearchCustomerResultDto.cs" />
+    <Compile Include="Dto\Api\DataTables\ActivitiesAnalysisGridParametersDto.cs" />
+    <Compile Include="Dto\Api\DataTables\AvailableContactsCampaignGridParametersDto.cs" />
+    <Compile Include="Dto\Api\DataTables\CampaignContactsGridParametersDto.cs" />
+    <Compile Include="Dto\Api\DataTables\CampaignFilesGridParametersDto.cs" />
+    <Compile Include="Dto\Api\DataTables\CustomersListGridParametersDto.cs" />
+    <Compile Include="Dto\Api\DataTables\DetailedAnalysisGridParametersDto.cs" />
+    <Compile Include="Dto\Api\DataTables\GridParametersDto.cs" />
+    <Compile Include="Dto\Api\DataTables\GridResultDto.cs" />
+    <Compile Include="Dto\Api\DataTables\HoodFinalOfferDetailsListGridParametersDto.cs" />
+    <Compile Include="Dto\Api\DataTables\HoodFinalOfferListGridParametersDto.cs" />
+    <Compile Include="Dto\Api\DataTables\HoodOfferElementsListGridParametersDto.cs" />
+    <Compile Include="Dto\Api\DataTables\HoodOffersListGridParametersDto.cs" />
+    <Compile Include="Dto\Api\DataTables\HoodOrderDetailsListGridParametersDto.cs" />
+    <Compile Include="Dto\Api\DataTables\HoodOrderListGridParametersDto.cs" />
+    <Compile Include="Dto\Api\DataTables\OfferDetailsListGridParametersDto.cs" />
+    <Compile Include="Dto\Api\DataTables\OffersListGridParametersDto.cs" />
+    <Compile Include="Dto\Api\DataTables\OrderDetailsListGridParametersDto.cs" />
+    <Compile Include="Dto\Api\DataTables\ProductsListGridParametersDto.cs" />
+    <Compile Include="Dto\Api\File\FileDownloadResultDto.cs" />
+    <Compile Include="Dto\Api\HoodFinalOffer\SaveHoodFinalOfferElementPriceFactorParametersDto.cs" />
+    <Compile Include="Dto\Api\HoodFinalOffer\SaveHoodFinalOfferFixedValueAfterAllDiscountsParametersDto.cs" />
+    <Compile Include="Dto\Api\HoodFinalOffer\SetHoodFinalOfferStatusParametersDto.cs" />
+    <Compile Include="Dto\Api\HoodOffer\GetHoodOfferElementAirCalculationDevicesResultDto.cs" />
+    <Compile Include="Dto\Api\HoodOffer\SaveHoodOfferElementQuantityModelDto.cs" />
+    <Compile Include="Dto\Api\HoodOffer\SetHoodOfferElementOrderNoModelDto.cs" />
+    <Compile Include="Dto\Api\HoodOffer\SetHoodOfferStatusParametersDto.cs" />
+    <Compile Include="Dto\Api\InstallationObject\SearchObjectResultDto.cs" />
+    <Compile Include="Dto\Api\OfferCompany\SearchOfferCompanyResultDto.cs" />
+    <Compile Include="Dto\Api\InstallationObject\SearchObjectParametersDto.cs" />
+    <Compile Include="Dto\Api\HoodFinalOffer\SaveHoodFinalOfferDeliveryTimeParametersDto.cs" />
+    <Compile Include="Dto\Api\HoodFinalOffer\SaveHoodFinalOfferElementDiscountParametersDto.cs" />
+    <Compile Include="Dto\Api\Offer\SaveOfferElementDeliveryTimeDaysParametersDto.cs" />
+    <Compile Include="Dto\Api\Offer\SaveOfferElementDiscountParametersDto.cs" />
+    <Compile Include="Dto\Api\Offer\SaveOfferLogoResultDto.cs" />
+    <Compile Include="Dto\Api\Offer\SearchProductsForOfferParametersDto.cs" />
+    <Compile Include="Dto\Api\Offer\SetOfferIsPrepaymentParametersDto.cs" />
+    <Compile Include="Dto\Api\Offer\SetOfferPaymentTypeParametersDto.cs" />
+    <Compile Include="Dto\Api\Offer\SetOfferStatusParametersDto.cs" />
+    <Compile Include="Dto\Api\Products\GetProductsParametersDto.cs" />
+    <Compile Include="Dto\Api\Products\GetProductsResultDto.cs" />
+    <Compile Include="Dto\Api\DataTables\ProductDocumentsListGridParametersDto.cs" />
+    <Compile Include="Dto\Api\Products\SearchProductsForOfferResultDto.cs" />
+    <Compile Include="Dto\DB\GetUsersWithReportItemDto.cs" />
+    <Compile Include="Dto\Web\Offer\InstallationObjectItemDto.cs" />
+    <Compile Include="Entities\Campaign.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CampaignContact.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CampaignFile.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Configuration.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Contact.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Customer.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CustomerType.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\DocumentPath.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ExtendedModels\pCRM_Campaigns_GridGetCampaignsList_Result.cs" />
+    <Compile Include="Entities\ExtendedModels\pCRM_HoodOffers_GridGetHoodOffersList_Result.cs" />
+    <Compile Include="Entities\ExtendedModels\pCRM_Invoices_GridGetInvoicesList_Result.cs" />
+    <Compile Include="Entities\ExtendedModels\pCRM_MonthlyReport_GridGetMonthlyReportsList_Result.cs" />
+    <Compile Include="Entities\ExtendedModels\pCRM_HoodFinalOffers_GridGetHoodFinalOffersList_Result.cs" />
+    <Compile Include="Entities\ExtendedModels\pCRM_Offers_GridGetOffersList_Result.cs" />
+    <Compile Include="Entities\ExtendedModels\pCRM_HoodOrders_GridGetHoodOrdersList_Result.cs" />
+    <Compile Include="Entities\ExtendedModels\pCRM_Orders_GridGetOrdersList_Result.cs" />
+    <Compile Include="Entities\ExtendedModels\pCRM_Products_GridGetDocumentsList_Result.cs" />
+    <Compile Include="Entities\ExtendedModels\pCRM_Users_GridGetUsersList_Result.cs" />
+    <Compile Include="Entities\ExtendedModels\pCRM_WeeklyPlans_GridGetWeeklyPlansList_Result.cs" />
+    <Compile Include="Entities\ExtendedModels\pCRM_WZDocs_GridGetWZDocsList_Result.cs" />
+    <Compile Include="Entities\File.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Group.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\InstallationObject.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Invoice.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Language.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Offer.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\OfferCompany.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\OfferCompanyCustomerType.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\OfferElement.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Order.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\OrderElement.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\pCRM_ActivitiesAnalysis_GridGetActivitiesAnalysisList_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\pCRM_CampaignContacts_GridGetAvailableContactsList_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\pCRM_CampaignContacts_GridGetCampaignContactsList_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\pCRM_CampaignFiles_GridGetCampaignFilesList_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\pCRM_Campaigns_GridGetCampaignsList_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\pCRM_Contacts_GridGetContactsList_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\pCRM_Customers_GridGetCustomersList_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\pCRM_Customers_GridGetUsersList_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\pCRM_DetailedAnalysis_GridGetDetailedAnalysisList_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\pCRM_HoodFinalOfferElements_GridGetHoodFinalOfferElementsList_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\pCRM_HoodFinalOffers_GridGetHoodFinalOffersList_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\pCRM_HoodOfferElements_GridGetAllHoodOfferElementsList_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\pCRM_HoodOfferElements_GridGetHoodOfferElementsList_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\pCRM_HoodOffers_GridGetHoodOffersList_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\pCRM_HoodOrderElements_GridGetHoodOrderElementsList_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\pCRM_HoodOrders_GridGetHoodOrdersList_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\pCRM_HoodPartsPriceList_GridGetHoodPartsPriceListList_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\pCRM_Invoices_GridGetInvoicesList_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\pCRM_MonthlyReport_GridGetMonthlyReportsList_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\pCRM_Objects_GridGetInstallationObjectsList_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\pCRM_OfferElements_GridGetOfferElementsList_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\pCRM_Offers_GridGetOffersList_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\pCRM_OrderElements_GridGetOrderElementsList_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\pCRM_Orders_GridGetOrdersList_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\pCRM_PersonalProducts_GridGetPersonalProductsList_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\pCRM_Products_GridGetDocumentsList_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\pCRM_Products_GridGetProductsList_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\pCRM_Users_GridGetUsersList_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\pCRM_WeeklyPlans_GridGetWeeklyPlansList_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\pCRM_WZDocs_GridGetWZDocsList_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\PersonalProduct.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\PhotoPath.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Product.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Province.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Region.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SC.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\User.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\UserRole.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\UserRoleDict.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\vCRM_FirmyNaleznosci.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\vCRM_TowaryDok.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\vCRM_TowaryPow.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\WZDoc.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\CampaignContactStatus.cs" />
+    <Compile Include="Enums\CampaignStatus.cs" />
+    <Compile Include="Enums\DetailedAnalysisFilterColumn.cs" />
+    <Compile Include="Enums\FileType.cs" />
+    <Compile Include="Enums\HoodFinalOfferElementType.cs" />
+    <Compile Include="Enums\HoodOfferAccessoryType.cs" />
+    <Compile Include="Enums\HoodOfferElementLayoutType.cs" />
+    <Compile Include="Enums\HoodOfferStatus.cs" />
+    <Compile Include="Enums\InstallationObjectStatus.cs" />
+    <Compile Include="Enums\MonthlyReportStatus.cs" />
+    <Compile Include="Enums\OfferDeliveryType.cs" />
+    <Compile Include="Enums\OfferPaymentType.cs" />
+    <Compile Include="Enums\OfferStatus.cs" />
+    <Compile Include="Enums\OrderStatus.cs" />
+    <Compile Include="Enums\ProductPairType.cs" />
+    <Compile Include="Enums\UserRoleType.cs" />
+    <Compile Include="Enums\WeeklyPlanStatus.cs" />
+    <Compile Include="Extensions\DateTimeExtension.cs" />
+    <Compile Include="Extensions\EnumExtension.cs" />
+    <Compile Include="Extensions\NumberExtension.cs" />
+    <Compile Include="Extensions\StringExtension.cs" />
+    <Compile Include="Helpers\ConfigHelper.cs" />
+    <Compile Include="Helpers\DateTimeHelper.cs" />
+    <Compile Include="Helpers\DirectoryHelper.cs" />
+    <Compile Include="Helpers\EntityValidationHelper.cs" />
+    <Compile Include="Helpers\EnumHelper.cs" />
+    <Compile Include="Helpers\FileHelper.cs" />
+    <Compile Include="Helpers\SynergiaHelper.cs" />
+    <Compile Include="Helpers\LogHelper.cs" />
+    <Compile Include="Helpers\MappingHelper.cs" />
+    <Compile Include="Helpers\ParseHelper.cs" />
+    <Compile Include="Helpers\DeliveryTimeDaysHelper.cs" />
+    <Compile Include="Helpers\TemplateHelper.cs" />
+    <Compile Include="Helpers\TransactionHelper.cs" />
+    <Compile Include="Helpers\ZipHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\ResHoodOffer.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResHoodOffer.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\ResHoodOffer.en-GB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResHoodOffer.en-GB.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\ResHoodOffer.en-GB.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResHoodOffer.en-GB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ResHoodOffer.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResHoodOffer.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ResHoodOffer.uk-UA.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Entities\Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Entities\Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Entities\Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Content>
+    <Content Include="Entities\Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

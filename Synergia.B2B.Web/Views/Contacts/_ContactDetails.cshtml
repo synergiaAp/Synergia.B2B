@@ -1,0 +1,150 @@
+﻿@model ContactsViewModel
+@Scripts.Render("~/bundles/contacts/_ContactDetails")
+
+<!-- Modal -->
+<div class="modal fade" id="modalAddContact" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg">
+        @using (Html.BeginForm("AddContact", "Contacts", FormMethod.Post, new { id = "formAddContact" }))
+        {
+
+            <!-- Modal content-->
+            <div class="modal-content">
+
+                @*<div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            <i class="material-icons">clear</i>
+                        </button>
+                        <h4 class="modal-title">&nbsp;</h4>
+                    </div>*@
+                <div class="modal-body">
+
+                    <div class="card">
+                        <div class="card-header card-header-icon" data-background-color="rose">
+                            <i class="material-icons">account_box</i>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">
+                                Dane kontaktu
+                            </h4>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.FirstName, new { @class = "control-label" })
+                                        @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.Surname, new { @class = "control-label" })
+                                        @Html.TextBoxFor(model => model.Surname, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.Position, new { @class = "control-label" })
+                                        @Html.TextBoxFor(model => model.Position, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.MobilePhone, new { @class = "control-label" })
+                                        @Html.TextBoxFor(model => model.MobilePhone, new { @class = "form-control", data_mask = "999 999 999" })
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.LandlinePhone, new { @class = "control-label" })
+                                        @Html.TextBoxFor(model => model.LandlinePhone, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.Email, new { @class = "control-label" })
+                                        @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.Attitude, new { @class = "control-label" })
+                                        @Html.TextBoxFor(model => model.Attitude, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.BirthDate, new { @class = "control-label datepickerLabel" })
+                                        @Html.TextBoxFor(model => model.BirthDate, new { @class = "form-control datepicker" })
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group label-floating">
+                                        <div class="checkbox">
+                                            <label>
+                                                @Html.CheckBoxAwesomeFor(model => model.BirthdayReminder, new { @class = "control-label" })
+                                                @Html.DisplayNameFor(m => m.BirthdayReminder)
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.CustomerType, new { @class = "control-label" })
+                                        @Html.DropDownListFor(model => model.CustomerType, Model.CustomerTypes, new { @class = "selectpicker", data_style = "select-with-transition" })
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.LastContact, new { @class = "control-label datepickerLabel" })
+                                        @Html.TextBoxFor(model => model.LastContact, new { @class = "form-control datepicker" })
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.Interests, new { @class = "control-label" })
+                                        @Html.TextBoxFor(model => model.Interests, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.Comment, new { @class = "control-label controlLabelTextArea" })
+                                        @Html.TextAreaFor(model => model.Comment, new { @class = "form-control", rows = "2" })
+                                    </div>
+                                </div>
+                                @Html.HiddenFor(m => m.Id)
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.OffersCompanyName, new { @class = "required control-label" })
+                                        @Html.TextBoxFor(model => model.OffersCompanyName, new { @class = "form-control autocompleteSearch" })
+                                        @Html.HiddenFor(model => model.OffersCompanyId)
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.Status, new { @class = "control-label" })
+                                        @Html.TextBoxFor(model => model.Status, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Zamknij</button>
+                    <button type="button" onclick="contactDetails.save();" class="btn btn-success">Zapisz kontakt</button>
+                </div>
+            </div>
+        }
+    </div>
+</div>

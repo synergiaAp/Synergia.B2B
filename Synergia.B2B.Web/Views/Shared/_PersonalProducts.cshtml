@@ -1,0 +1,96 @@
+﻿@model PersonalProductsViewModel
+@Scripts.Render("~/bundles/personalProducts/personalProductsList")
+
+<!-- Modal -->
+<div class="modal fade" id="modalAddPersonalProduct" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg">
+        @using (Html.BeginForm("AddPersonalProduct", "PersonalProducts", FormMethod.Post, new { id = "formAddPersonalProduct" }))
+        {
+
+        <!-- Modal content-->
+            <div class="modal-content">
+
+                @*<div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            <i class="material-icons">clear</i>
+                        </button>
+                        <h4 class="modal-title">&nbsp;</h4>
+                    </div>*@
+                <div class="modal-body">
+
+                    <div class="card">
+                        <div class="card-header card-header-icon" data-background-color="rose">
+                            <i class="material-icons">account_box</i>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">
+                                Dane produktu
+                            </h4>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.Code, new { @class = "control-label" })
+                                        @Html.TextBoxFor(model => model.Code, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.Name, new { @class = "control-label" })
+                                        @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.PriceNet, new { @class = "control-label" })
+                                        @Html.TextBoxFor(model => model.PriceNet, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.Dimensions, new { @class = "control-label" })
+                                        @Html.TextBoxFor(model => model.Dimensions, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.Terminal, new { @class = "control-label" })
+                                        @Html.TextBoxFor(model => model.Terminal, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.PowerGas, new { @class = "control-label" })
+                                        @Html.TextBoxFor(model => model.PowerGas, new { @class = "form-control" })
+                                    </div>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.PowerElectricity, new { @class = "control-label" })
+                                        @Html.TextBoxFor(model => model.PowerElectricity, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.Description, new { @class = "control-label controlLabelTextArea" })
+                                        @Html.TextAreaFor(model => model.Description, new { @class = "form-control", rows = "2" })
+                                    </div>
+                                </div>
+                                @Html.HiddenFor(m => m.Id)
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Zamknij</button>
+                    <button type="button" onclick="personalProductsList.save();" class="btn btn-success">Zapisz produkt</button>
+                </div>
+            </div>
+        }
+    </div>
+</div>

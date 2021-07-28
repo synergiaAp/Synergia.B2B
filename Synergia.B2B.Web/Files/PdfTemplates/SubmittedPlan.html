@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <style>
+        body {
+            font-size: 10pt;
+            font-family: "Times New Roman";
+        }
+
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .bordered {
+            border: 1px solid black;
+        }
+
+        .pull-left {
+            float: left;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .font-bold {
+            font-weight: bold;
+        }
+
+        .text-big {
+            font-size: 14pt;
+        }
+
+        .full-width {
+            width: 100%;
+        }
+
+        .text-small {
+            font-size: 10pt;
+        }
+
+        .valign-top {
+            vertical-align: top;
+        }
+
+        .border-collapse {
+            border-collapse: collapse;
+        }
+
+        .no-border {
+            border: none !important;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .avoid-page-break {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-inside: avoid;
+        }
+
+        .nowrap {
+            white-space: nowrap;
+        }
+
+        .newPage {
+            page-break-before: always;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="font-bold text-center text-big" style="padding: 10px">
+        PLAN TYGODNIOWY 
+    </div>
+    <table class="full-width table">
+        <tr>
+            <td style="width: 100px">
+                Pracownik:
+            </td>
+            <td>
+                #WorkerName#
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Bezpośredni przełożony:
+            </td>
+            <td>
+                #Boss#
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Region:
+            </td>
+            <td>
+                #RegionCode#
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Tydzień:
+            </td>
+            <td>
+                #WeekValue#
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Data utworzenia:
+            </td>
+            <td>
+                #CreatedOn#
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Poniedziałek:
+            </td>
+            <td>
+                #Monday#
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Wtorek:
+            </td>
+            <td>
+                #Tuesday#
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Środa:
+            </td>
+            <td>
+                #Wednesday#
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Czwartek:
+            </td>
+            <td>
+                #Thursday#
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Piątek:
+            </td>
+            <td>
+                #Friday#
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Sobota:
+            </td>
+            <td>
+                #Saturday#
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Niedziela:
+            </td>
+            <td>
+                #Sunday#
+            </td>
+        </tr>
+    </table>
+    
+
+
+    <!--BeginPageFooterHtml-->
+    <div style="border-top: 1px solid black;font-size: 10pt;">
+        <table style="width: 100%;">
+            <tr>
+                <td style="width: 50%;">
+                    Plan tygodniowy
+                </td>
+                <td style="width:50%;text-align:right">
+                    Strona <span class="page"></span>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!--EndPageFooterHtml-->
+</body>
+</html>

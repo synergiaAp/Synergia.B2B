@@ -1,0 +1,1996 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-size: 12pt;
+            font-family: "Arial Narrow";
+            /*font-family: "Calibri";*/
+            letter-spacing: 1px;
+        }
+
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .bordered {
+            border: 1px solid black;
+        }
+
+        .bordered-Synergia {
+            border: 1px solid #009AF6;
+        }
+
+        .pull-left {
+            float: left;
+        }
+
+        .pull-right {
+            float: right;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .text-bold {
+            font-weight: bold;
+        }
+
+        .text-big {
+            font-size: 14pt;
+        }
+
+        .full-width {
+            width: 100%;
+        }
+
+        .text-small {
+            font-size: 10pt;
+        }
+
+        .valign-bottom {
+            vertical-align: bottom;
+        }
+
+        .valign-top {
+            vertical-align: top;
+        }
+
+        .border-collapse {
+            border-collapse: collapse;
+        }
+
+        .no-border {
+            border: none !important;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .avoid-page-break {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-inside: avoid;
+        }
+
+        .nowrap {
+            white-space: nowrap;
+        }
+
+        .newPage {
+            page-break-before: always;
+        }
+
+        .SynergiaLine {
+            border-top: 1px solid #3366FF;
+            margin: 10px 0;
+        }
+
+        .SynergiaLineDouble {
+            border-top: 2px solid #3366FF;
+            margin: 10px 0;
+        }
+
+        .SynergiaLineTriple {
+            border-top: 3px solid #3366FF;
+            margin: 10px 0;
+        }
+
+        .table td,
+        .table th {
+            padding: 2px 6px;
+        }
+
+        .table-small td,
+        .table-small th {
+            padding: 1px 4px;
+        }
+
+        .centered {
+            margin: 0 auto;
+        }
+
+        #imgHoodOfferLogo {
+            max-width: 80%;
+        }
+
+        .newPage {
+            page-break-before: always;
+        }
+
+        .table.bordered,
+        .table.bordered-Synergia {
+            border-collapse: collapse;
+        }
+
+            .table.bordered td,
+            .table.bordered th {
+                border: 1px solid black;
+            }
+
+            .table.bordered-Synergia td,
+            .table.bordered-Synergia th {
+                border: 1px solid #3366FF;
+            }
+
+        .width-Synergia {
+            width: 88%;
+            margin: 0 auto;
+        }
+
+        .tableHoodDetails {
+            font-size: 10pt;
+        }
+
+            .tableHoodDetails .bordered-top td {
+                border-top: 1px solid #009AF6;
+            }
+
+            .tableHoodDetails .bordered-bottom td {
+                border-bottom: 1px solid #009AF6;
+            }
+
+        .text-danger {
+            color: red;
+        }
+
+        .hoodLogo {
+            max-width: 350px;
+            height: auto;
+            position: absolute;
+            top: 90px;
+            right: 0px;
+        }
+
+        [data-value=""],
+        [data-value="0"] {
+            display: none;
+        }
+
+        #firstPage {
+            background-image: url(#CRMApplicationUrl#/Images/HoodOffer/hoodOfferBackgroundLogo.png);
+            padding: 0 40px;
+            background-repeat: no-repeat;
+            background-position: center 300px;
+        }
+
+        .imgLogo {
+            width: #LogoImageWidth#cm;
+        }
+
+        .logoText {
+            /*font-size: 7pt;*/
+            font-size: #LogoTextFontSize#pt;
+            white-space: nowrap;
+        }
+
+        .text-Synergia {
+            color: #009AF6 !important;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .table.table-footer td {
+            padding: 0 4px;
+        }
+
+        .underline {
+            text-decoration: underline;
+        }
+
+        #tblAdditionalAccessoryVentilators {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+            #tblAdditionalAccessoryVentilators th {
+                border: 1px solid black;
+            }
+
+            #tblAdditionalAccessoryVentilators td {
+                border-right: 1px solid black;
+            }
+
+        ol {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="firstPage">
+        <div>&nbsp;</div>
+        <div class="text-center" style="margin-top: 1.7cm;">
+            <img style="height: 2cm" src="#CRMApplicationUrl#/Images/logo.png" />
+        </div>
+
+        <div class="text-center" style="margin-top: 2.3cm;font-size:30pt;letter-spacing: 10px">
+            @ResHoodOffer.Ekperci.ToUpper()<br />
+            @ResHoodOffer.Profesjonalistom.ToUpper()
+        </div>
+
+        <div class="text-center text-bold" style="font-size: 30pt;margin-top: 6.5cm;">
+            @ResHoodOffer.DoborNr.ToUpper() #OfferNumber#
+        </div>
+
+        <table style="margin-top: 2cm; font-size: 18pt; height: 250px;" class="full-width">
+            <tr>
+                <td class="valign-bottom">
+                    <table class="table full-width">
+                        <tbody>
+                            <tr>
+                                <td style="width: 170px;" class="valign-top">
+                                    @ResHoodOffer.Obiekt.ToUpper():
+                                </td>
+                                <td>
+                                    #InstallationObject#
+                                </td>
+                            </tr>
+                            <tr data-value="#InstallationObjectCity#">
+                                <td>
+                                    @ResHoodOffer.Miejscowosc.ToUpper():
+                                </td>
+                                <td>
+                                    #City#
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @ResHoodOffer.Data.ToUpper():
+                                </td>
+                                <td>
+                                    #Date#
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <div class="text-center" style="font-size: 14pt;margin-top: 10px;">
+            <a href="http://@(ResHoodOffer.SynergiaUrl)" class="text-Synergia text-bold">@ResHoodOffer.SynergiaUrl</a>
+        </div>
+    </div>
+    <div class="SynergiaLineDouble">&nbsp;</div>
+    <div style="padding: 0 44px;">
+        <table class="table centered table-footer" style="width: 100%; font-size: 9pt;margin-top: -25px;letter-spacing: 1px;" cellpadding="0" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td style="width: 200px;">
+                        @ResHoodOffer.SynergiaSpZoo
+                    </td>
+                    <td style="width: 110px;">
+                        @ResHoodOffer.RegionZachodni
+                    </td>
+                    <td>
+                        @ResHoodOffer.RegionZachodniTelefon
+                    </td>
+                    <td style="width: 110px;">
+                        @ResHoodOffer.RegionWschodni
+                    </td>
+                    <td>
+                        @ResHoodOffer.RegionWschodniTelefon
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @ResHoodOffer.SynergiaAdresLinia1
+                    </td>
+                    <td>
+                        @ResHoodOffer.RegionPoludniowy
+                    </td>
+                    <td>
+                        @ResHoodOffer.RegionPoludniowyTelefon
+                    </td>
+                    <td>
+                        @ResHoodOffer.RegionPolnocny
+                    </td>
+                    <td>
+                        @ResHoodOffer.RegionPolnocnyTelefon
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @ResHoodOffer.SynergiaAdresLinia2
+                    </td>
+                    <td>
+                        @*@ResHoodOffer.RegionWroclaw*@
+                    </td>
+                    <td>
+                        @*@ResHoodOffer.RegionWroclawTelefon*@
+                    </td>
+                    <td colspan="2"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--BeginHoodOfferElement-->
+    <div class="newPage">
+        <div class="pull-right">
+            <img class="imgLogo" src="#CRMApplicationUrl#/Images/logo.png" />
+            <div class="text-bold logoText">
+                @ResHoodOffer.SystemyWentylacjiKuchni.ToUpper()
+            </div>
+        </div>
+        <div class="clearfix">
+        </div>
+        <div class="SynergiaLineTriple" style="margin-top: 5px; margin-bottom: 5px;"></div>
+        <div class="width-Synergia">
+            <table class="full-width" cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 75%" class="valign-top">
+                            <table class="table full-width table-footer">
+                                <tbody>
+                                    <tr style="font-size: 10pt">
+                                        <td>
+                                            @ResHoodOffer.Obiekt.ToUpper():
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-bold" style="font-size: 14pt">
+                                            #InstallationObject#
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-value="#City#" style="font-size: 10pt">
+                                            @ResHoodOffer.Miejscowosc.ToUpper():
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-value="#City#" class="text-bold" style="font-size: 12pt">
+                                            #City#
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-size: 10pt">
+                                            @ResHoodOffer.DataDoboru.ToUpper():
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-bold" style="font-size: 12pt">
+                                            #Date#
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td class="valign-top">
+                            <table class="table full-width table-footer">
+                                <tbody>
+                                    <tr style="font-size: 10pt">
+                                        <td data-value="#ContactPerson#">@ResHoodOffer.Zapytanie.ToUpper():</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-value="#ContactPerson#" class="text-bold valign-bottom nowrap" style="font-size: 11pt">
+                                            #ContactPerson#
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-value="#ContactPerson#" class="text-small nowrap" style="font-size: 9pt">
+                                            #ContactEmail#
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-value="#ContactPerson#" class="text-small nowrap" style="font-size: 9pt">
+                                            #ContactPhone#
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="SynergiaLineTriple" style="margin-top: 5px; margin-bottom: 5px;"></div>
+        <div class="text-center">
+            <h1 style="font-size: 16pt; margin-top: 10px;margin-bottom: 10px;">
+                @ResHoodOffer.KartaDoboruOkapuSynergia.ToUpper() <br />
+                #OfferNumber#
+            </h1>
+        </div>
+        <div>
+            <img class="hoodLogo" src="#CRMApplicationUrl#/Images/HoodOffer/Hoods/#HoodFileName#" />
+            <div class="width-Synergia" style="padding-left: 5px;">
+                <h2 style="margin-bottom: 5px; margin-top: 5px; font-size: 16pt;">@ResHoodOffer.OkapNr #OrderNoText# (#Quantity# @ResHoodOffer.Szt)</h2>
+                <div class="text-bold" style="font-size: 12pt">
+                    @ResHoodOffer.DaneTechniczneDobranegoOkapu.ToUpper()
+                </div>
+            </div>
+            <div class="SynergiaLineDouble" style="margin: 3px 0;"></div>
+            <div class="width-Synergia">
+                <table class="table full-width tableHoodDetails border-collapse" style="font-size: 9pt;">
+                    <tbody>
+                        <tr style="font-size: 11pt;">
+                            <td style="width: 35%; padding-bottom: 10px;">
+                                @ResHoodOffer.TypOkapu
+                            </td>
+                            <td style="padding-bottom: 10px;">
+                                #Type#
+                            </td>
+                        </tr>
+                        <tr data-value="#LocationType#">
+                            <td>
+                                @ResHoodOffer.LokalizacjaOkapu
+                            </td>
+                            <td>
+                                #LocationType#
+                            </td>
+                        </tr>
+                        <tr data-value="#Symbol#">
+                            <td>@ResHoodOffer.OznaczenieOkapu</td>
+                            <td>#Symbol#</td>
+                        </tr>
+                        <tr data-value="#Height#">
+                            <td>@ResHoodOffer.WysokoscOkapu</td>
+                            <td>#Height#+80 mm</td>
+                        </tr>
+                        <tr data-value="#Length#">
+                            <td>@ResHoodOffer.DlugoscOkapu</td>
+                            <td>#Length# mm</td>
+                        </tr>
+                        <tr data-value="#Width#">
+                            <td>@ResHoodOffer.SzerokoscOkapu</td>
+                            <td>#Width# mm</td>
+                        </tr>
+                        <tr data-value="#ModuleCount#">
+                            <td>@ResHoodOffer.IloscModułow</td>
+                            <td>#ModuleCount# @ResHoodOffer.Szt</td>
+                        </tr>
+                        <tr data-value="#ExhaustStreamAcceptedOrAdditionalValue#">
+                            <td>@ResHoodOffer.DobranyWywiew</td>
+                            <td>#ExhaustStreamAcceptedOrAdditionalValue# m<sup>3</sup>/h</td>
+                        </tr>
+                        <tr data-value="#ExhaustCount#">
+                            <td>@ResHoodOffer.IloscKasetFiltrow</td>
+                            <td>#ExhaustCount# @ResHoodOffer.Szt</td>
+                        </tr>
+                        <tr data-value="#VentilatorWidth#">
+                            <td>@ResHoodOffer.SzerokoscElementuNawiewnego</td>
+                            <td>#VentilatorWidth# mm</td>
+                        </tr>
+                        <tr data-value="#VentilatorStream#">
+                            <td>@ResHoodOffer.DobranyNawiew</td>
+                            <td>#VentilatorStream# m<sup>3</sup>/h</td>
+                        </tr>
+                        <tr data-value="#VentilatorCount#">
+                            <td>@ResHoodOffer.IloscKroccowNawiewnych</td>
+                            <td>#VentilatorCount# @ResHoodOffer.Szt</td>
+                        </tr>
+                        <tr data-value="#VentilatorDiameter#">
+                            <td>@ResHoodOffer.SrednicaKroccowNawiewnych</td>
+                            <td>#VentilatorDiameter# mm</td>
+                        </tr>
+                        <tr data-value="#ExhaustCount#">
+                            <td>@ResHoodOffer.IloscKroccowWywiewnych</td>
+                            <td>#ExhaustCount# @ResHoodOffer.Szt</td>
+                        </tr>
+                        <tr data-value="#ExhaustDiameter#">
+                            <td>@ResHoodOffer.SrednicaKroccowWywiewnych</td>
+                            <td>#ExhaustDiameter# mm</td>
+                        </tr>
+                        <tr data-value="#Material#">
+                            <td>@ResHoodOffer.MaterialWykonania</td>
+                            <td>#Material#</td>
+                        </tr>
+                        <tr data-value="#FilterType#">
+                            <td class="valign-top">@ResHoodOffer.TypFiltra</td>
+                            <td>#FilterType#</td>
+                        </tr>
+                        <tr data-value="#FilterAccepted#">
+                            <td>@ResHoodOffer.DobranyFiltr</td>
+                            <td>#FilterAccepted#</td>
+                        </tr>
+                        <tr data-value="#DividerCondenstate#">
+                            <td>@ResHoodOffer.PrzegrodaNaSkropliny</td>
+                            <td>#DividerCondenstate#</td>
+                        </tr>
+                        <tr data-value="#CasetteLength#">
+                            <td>@ResHoodOffer.DlugoscKasetyDobranegoFiltra</td>
+                            <td>#CasetteLength# mm</td>
+                        </tr>
+                        <tr data-value="#FiltersCount#">
+                            <td>@ResHoodOffer.LiczbaDobranychFiltrow</td>
+                            <td>#FiltersCount# @ResHoodOffer.Szt</td>
+                        </tr>
+                        <tr data-value="#EmptyFiltersCount#">
+                            <td>@ResHoodOffer.LiczbaSlepychFiltrow</td>
+                            <td>#EmptyFiltersCount# @ResHoodOffer.Szt</td>
+                        </tr>
+                        <tr data-value="#Weight#">
+                            <td>@ResHoodOffer.Waga</td>
+                            <td>#Weight# kg</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="avoid-page-break">
+            <div class="width-Synergia" style="padding-top: 10px;padding-left: 5px;">
+                <div class="text-bold" style="font-size: 12pt">
+                    @ResHoodOffer.DobranyOkap.ToUpper()
+                </div>
+            </div>
+            <div class="SynergiaLineDouble" style="margin: 3px 0;"></div>
+            <div class="width-Synergia">
+                <table class="table full-width tableHoodDetails border-collapse">
+                    <tbody>
+                        <tr>
+                            <td colspan="2" class="text-bold" style="font-size: 12pt">
+                                #HoodNr#
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="padding-top: 10px; font-size: 10pt;">
+                                #Description#
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="avoid-page-break">
+            <div data-value="#Comments#" class="width-Synergia" style="padding-top: 10px;padding-left: 5px;">
+                <div class="text-bold" style="font-size: 12pt">
+                    @ResHoodOffer.Uwagi.ToUpper()
+                </div>
+            </div>
+            <div data-value="#Comments#" class="SynergiaLineDouble" style="margin: 3px 0;"></div>
+            <div class="width-Synergia">
+                <table class="table full-width tableHoodDetails border-collapse">
+                    <tbody>
+                        <tr data-value="#Comments#">
+                            <td colspan="2">
+                                #Comments#
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="avoid-page-break">
+            <div data-value="#LightingInfo##FiltersInfo##WiresInfo#" class="width-Synergia" style="padding-top: 10px;padding-left: 5px;">
+                <div class="text-bold" style="font-size: 12pt">
+                    @ResHoodOffer.DaneElektryczne.ToUpper()
+                </div>
+            </div>
+            <div data-value="#LightingInfo##FiltersInfo##WiresInfo#" class="SynergiaLineDouble" style="margin: 3px 0;"></div>
+            <div class="width-Synergia">
+                <table class="table full-width tableHoodDetails border-collapse">
+                    <tbody>
+                        <tr data-value="#LightingInfo#">
+                            <td class="valign-top">@ResHoodOffer.Oswietlenie</td>
+                            <td>#LightingInfo#</td>
+                        </tr>
+                        <tr data-value="#FiltersInfo#">
+                            <td class="valign-top">@ResHoodOffer.Filtry</td>
+                            <td>#FiltersInfo#</td>
+                        </tr>
+                        <tr data-value="#WiresInfo#">
+                            <td class="valign-top">
+                                @ResHoodOffer.WentrylatoryWiązki
+                            </td>
+                            <td>
+                                #WiresInfo#
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="avoid-page-break">
+            <div data-value="#Accessories#" class="width-Synergia" style="padding-top: 10px;padding-left: 5px;">
+                <div class="text-bold" style="font-size: 12pt">
+                    @ResHoodOffer.WyposazenieDodatkowe.ToUpper()
+                </div>
+            </div>
+            <div data-value="#Accessories#" class="SynergiaLineDouble" style="margin: 3px 0;"></div>
+            <div class="width-Synergia">
+                <table class="table full-width tableHoodDetails border-collapse">
+                    <tbody>
+                        <tr data-value="#Accessories#">
+                            <td colspan="2">
+                                #Accessories#
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div data-value="#AirCalculationExists#" class="newPage">
+        <div class="pull-right">
+            <img class="imgLogo" src="#CRMApplicationUrl#/Images/logo.png" />
+            <div class="text-bold logoText">
+                @ResHoodOffer.SystemyWentylacjiKuchni.ToUpper()
+            </div>
+        </div>
+        <div class="clearfix">
+        </div>
+        <div class="SynergiaLineTriple" style="margin-top: 5px; margin-bottom: 5px;"></div>
+        <div class="width-Synergia">
+            <table class="full-width" cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 75%" class="valign-top">
+                            <table class="table full-width table-footer">
+                                <tbody>
+                                    <tr style="font-size: 10pt">
+                                        <td>
+                                            @ResHoodOffer.Obiekt.ToUpper():
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-bold" style="font-size: 14pt">
+                                            #InstallationObject#
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-value="#City#" style="font-size: 10pt">
+                                            @ResHoodOffer.Miejscowosc.ToUpper():
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-value="#City#" class="text-bold" style="font-size: 12pt">
+                                            #City#
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-size: 10pt">
+                                            @ResHoodOffer.DataDoboru.ToUpper():
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-bold" style="font-size: 12pt">
+                                            #Date#
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td class="valign-top">
+                            <table class="table full-width table-footer">
+                                <tbody>
+                                    <tr style="font-size: 10pt">
+                                        <td data-value="#ContactPerson#">@ResHoodOffer.Zapytanie.ToUpper():</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-value="#ContactPerson#" class="text-bold valign-bottom nowrap" style="font-size: 11pt">
+                                            #ContactPerson#
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-value="#ContactPerson#" class="text-small nowrap" style="font-size: 9pt">
+                                            #ContactEmail#
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-value="#ContactPerson#" class="text-small nowrap" style="font-size: 9pt">
+                                            #ContactPhone#
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="SynergiaLineTriple" style="margin-top: 5px; margin-bottom: 5px;"></div>
+        <div class="text-center">
+            <h1 style="font-size: 16pt; margin-top: 10px;margin-bottom: 10px;">
+                @ResHoodOffer.ObliczenieStrumieniaPowietrzaWyciaganego.ToUpper() <br />
+                #OfferNumber#
+            </h1>
+        </div>
+        <div>
+            <div class="width-Synergia">
+                <h2 style="font-size: 16pt; margin-bottom: 5px;margin-top: 5px;">@ResHoodOffer.OkapNr.ToUpper() #OrderNoText# (#Quantity# @ResHoodOffer.Szt)</h2>
+                <div class="text-bold" style="font-size: 12pt">
+                    @ResHoodOffer.BilansPowietrzaWyciaganegoPrzezOkap
+                </div>
+            </div>
+            <div class="SynergiaLine" style="margin: 3px 0;"></div>
+            <div class="width-Synergia">
+                <div style="min-height:100px">
+                    <table class="table tableDevices border-collapse" style="width: 70%;">
+                        <thead>
+                            <tr style="font-size: 12pt">
+                                <th class="text-left">
+                                    @ResHoodOffer.NazwaUrzadzenia
+                                </th>
+                                <th>
+                                    Ke
+                                </th>
+                                <th>
+                                    P
+                                </th>
+                                <th>
+                                    S
+                                </th>
+                                <th>
+                                    Mp
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody style="font-size: 10pt">
+                            <!--BeginDeviceItem-->
+                            <tr>
+                                <td>#OrderNo#. #Name#</td>
+                                <td class="text-center">#Ke#</td>
+                                <td class="text-center">#P#</td>
+                                <td class="text-center">#S#</td>
+                                <td class="text-center">#Mp#</td>
+                            </tr>
+                            <!--EndDeviceItem-->
+                        </tbody>
+                        <tfoot style="font-size: 10pt">
+                            <tr>
+                                <td colspan="4"></td>
+                                <td class="text-center">
+                                    #ExhaustStreamCalculated#m<sup>3</sup>/h
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <div style="padding-top: 10px; font-size: 10pt;">
+                    #Factor063Info#
+                </div>
+                <div class="text-bold" style="margin-top: 15px;font-size: 11pt;">
+                    @ResHoodOffer.Legenda.ToUpper()
+                </div>
+                <table class="table full-width" style="font-size: 10pt;">
+                    <tbody>
+                        <tr>
+                            <td style="width: 80px;">Ke [l/s/kW]</td>
+                            <td>- @ResHoodOffer.LegendaKe,</td>
+                        </tr>
+                        <tr>
+                            <td>P [kW]</td>
+                            <td>- @ResHoodOffer.LegendaP,</td>
+                        </tr>
+                        <tr>
+                            <td>S (0,3-1,0)</td>
+                            <td>- @ResHoodOffer.LegendaS</td>
+                        </tr>
+                        <tr>
+                            <td>Mp [m<sup>3</sup>/h]</td>
+                            <td>- @ResHoodOffer.LegendaMp</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="text-bold" style="margin-top: 15px;font-size: 12pt;">
+                    @ResHoodOffer.StrumienPowietrzaWyciaganegoPrzezOkap.ToUpper()
+                </div>
+            </div>
+            <div class="SynergiaLine" style="margin: 3px 0;"></div>
+            <div class="width-Synergia">
+                <div style="margin-top: 0px;padding: 0px;">
+                    <table class="full-width table">
+                        <tbody>
+                            <tr>
+                                <td class="text-bold text-center" style="width: 30%; font-size: 13pt;">
+                                    #ExhaustStreamCalculated#m<sup>3</sup>/h
+                                </td>
+                                <td style="font-size: 11pt" class="valign-bottom">
+                                    @ResHoodOffer.ObliczonyMinimalnyStrumienPowietrzaWywiewanego
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-bold text-center" style="width: 30%; font-size: 15pt;">
+                                    #ExhaustStreamAcceptedOrAdditionalValue#m<sup>3</sup>/h
+                                </td>
+                                <td class="text-bold valign-bottom" style="font-size: 12pt;">
+                                    @ResHoodOffer.PrzyjetyStrumienPowietrzaWywiewanego
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="margin-top: 10px; font-size: 9pt;">
+                    <div class="text-bold">@ResHoodOffer.MetodaObliczenStrumieniPowietrzaWyciaganego:</div>
+                    <div style="padding-left: 20px">
+                        @ResHoodOffer.MetodaObliczenStrumieniPowietrzaWyciaganegoLinia1<br />
+                        - @ResHoodOffer.MetodaObliczenStrumieniPowietrzaWyciaganegoLinia2<br />
+                        - @ResHoodOffer.MetodaObliczenStrumieniPowietrzaWyciaganegoLinia3<br />
+                        &nbsp;&nbsp;@ResHoodOffer.MetodaObliczenStrumieniPowietrzaWyciaganegoLinia4<br />
+                        - @ResHoodOffer.MetodaObliczenStrumieniPowietrzaWyciaganegoLinia5
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--EndHoodOfferElement-->
+    <!--Nawiewniki-->
+    <div data-value="#AdditionalAccessoryVentilatorsEnabled#" class="newPage">
+        <div class="pull-left">
+            <img style="max-height: 55px;" src="#CRMApplicationUrl#/Images/HoodOffer/nawiewnikiLogo.png" />
+        </div>
+        <div class="pull-right">
+            <img class="imgLogo" src="#CRMApplicationUrl#/Images/logo.png" />
+            <div class="text-bold logoText">
+                @ResHoodOffer.SystemyWentylacjiKuchni.ToUpper()
+            </div>
+        </div>
+        <div class="clearfix">
+        </div>
+        <div class="SynergiaLineTriple" style="margin-top: 5px; margin-bottom: 5px;"></div>
+        <div class="width-Synergia">
+            <table class="full-width" cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 75%" class="valign-top">
+                            <table class="table full-width table-footer">
+                                <tbody>
+                                    <tr style="font-size: 10pt">
+                                        <td>
+                                            @ResHoodOffer.Obiekt.ToUpper():
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-bold" style="font-size: 14pt">
+                                            #InstallationObject#
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-value="#City#" style="font-size: 10pt">
+                                            @ResHoodOffer.Miejscowosc.ToUpper():
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-value="#City#" class="text-bold" style="font-size: 12pt">
+                                            #City#
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-size: 10pt">
+                                            @ResHoodOffer.DataDoboru.ToUpper():
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-bold" style="font-size: 12pt">
+                                            #Date#
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td class="valign-top">
+                            <table class="table full-width table-footer">
+                                <tbody>
+                                    <tr style="font-size: 10pt">
+                                        <td data-value="#ContactPerson#">@ResHoodOffer.Zapytanie.ToUpper():</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-value="#ContactPerson#" class="text-bold valign-bottom nowrap" style="font-size: 11pt">
+                                            #ContactPerson#
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-value="#ContactPerson#" class="text-small nowrap" style="font-size: 9pt">
+                                            #ContactEmail#
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-value="#ContactPerson#" class="text-small nowrap" style="font-size: 9pt">
+                                            #ContactPhone#
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="SynergiaLineTriple" style="margin-top: 5px; margin-bottom: 5px;"></div>
+        <div class="text-center">
+            <h1 style="font-size: 16pt; margin-top: 10px;margin-bottom: 10px;">
+                @ResHoodOffer.KartaDoboruNawiewnikow.ToUpper() <br />
+                @ResHoodOffer.ZalacznikNr.ToUpper() #ZalacznikNrNawiewniki# @ResHoodOffer.DoDoboruNr.ToUpper() #OfferNumber#
+            </h1>
+        </div>
+        <div class="SynergiaLineDouble" style="margin: 10px 0;"></div>
+        <div>
+            <div class="width-Synergia" style="font-size: 11pt;">
+                <div class="text-bold" style="padding-bottom: 10px;">
+                    @ResHoodOffer.PrzykladoweZestawienieNawiewnikow
+                </div>
+                <table id="tblAdditionalAccessoryVentilators" class="table full-width">
+                    <thead>
+                        <tr>
+                            <th class="text-left" style="font-weight: normal">
+                                @ResHoodOffer.TypWielkoscNawiewnika
+                            </th>
+                            <th style="font-weight: normal">
+                                @Html.Raw(@ResHoodOffer.PrzeplywPowietrza.ReplaceNewLineToHtml())
+                            </th>
+                            <th style="font-weight: normal">
+                                @Html.Raw(@ResHoodOffer.KrociecPodlaczeniowy.ReplaceNewLineToHtml())
+                            </th>
+                            <th style="font-weight: normal">
+                                @Html.Raw(@ResHoodOffer.Ilosc.ReplaceNewLineToHtml())
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                JRS-300x600
+                            </td>
+                            <td class="text-center">
+                                230
+                            </td>
+                            <td class="text-center">
+                                160
+                            </td>
+                            <td class="text-center">
+                                #AdditionalAccessoryVentilatorsJRS300X600Count#
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                JRS-300x1200
+                            </td>
+                            <td class="text-center">
+                                450
+                            </td>
+                            <td class="text-center">
+                                200
+                            </td>
+                            <td class="text-center">
+                                #AdditionalAccessoryVentilatorsJRS300X1200Count#
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                JRS-600x600
+                            </td>
+                            <td class="text-center">
+                                450
+                            </td>
+                            <td class="text-center">
+                                200
+                            </td>
+                            <td class="text-center">
+                                #AdditionalAccessoryVentilatorsJRS600X600Count#
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                JRS-600x900
+                            </td>
+                            <td class="text-center">
+                                700
+                            </td>
+                            <td class="text-center">
+                                250
+                            </td>
+                            <td class="text-center">
+                                #AdditionalAccessoryVentilatorsJRS600X900Count#
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                JRS-600x1200
+                            </td>
+                            <td class="text-center">
+                                900
+                            </td>
+                            <td class="text-center">
+                                315
+                            </td>
+                            <td class="text-center">
+                                #AdditionalAccessoryVentilatorsJRS600X1200Count#
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                JRS-600x1800
+                            </td>
+                            <td class="text-center">
+                                1400
+                            </td>
+                            <td class="text-center">
+                                400
+                            </td>
+                            <td class="text-center">
+                                #AdditionalAccessoryVentilatorsJRS600X1800Count#
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="padding-top: 10px; font-size: 10pt">
+                    *@ResHoodOffer.StrumienPrzeplywuPowietrzaPrzyGlosnosci
+                </div>
+            </div>
+            <div class="SynergiaLineDouble" style="margin: 10px 0;"></div>
+            <div class="width-Synergia avoid-page-break" style="font-size: 11pt;">
+                <div class="text-bold" style="padding-bottom: 10px;">
+                    @ResHoodOffer.NawiewnikiWyporoweJRSNaglowek
+                </div>
+                <div style="font-size: 10pt;">
+                    @Html.Raw(@ResHoodOffer.NawiewnikiWyporoweJRSOpis.ReplaceNewLineToHtml())
+                </div>
+            </div>
+            <div class="SynergiaLineDouble" style="margin: 10px 0;"></div>
+        </div>
+    </div>
+    <!--BeginSmokiJunior-->
+    <div data-value="#AdditionalAccessorySmokiJuniorEnabled#" class="newPage">
+        <div class="pull-left">
+            <img style="max-height: 55px;" src="#CRMApplicationUrl#/Images/HoodOffer/smokiLogo.png" />
+        </div>
+        <div class="pull-right">
+            <img class="imgLogo" src="#CRMApplicationUrl#/Images/logo.png" />
+            <div class="text-bold logoText">
+                @ResHoodOffer.SystemyWentylacjiKuchni.ToUpper()
+            </div>
+        </div>
+        <div class="clearfix">
+        </div>
+        <div class="SynergiaLineTriple" style="margin-top: 5px; margin-bottom: 5px;"></div>
+        <div class="width-Synergia">
+            <table class="full-width" cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 75%" class="valign-top">
+                            <table class="table full-width table-footer">
+                                <tbody>
+                                    <tr style="font-size: 10pt">
+                                        <td>
+                                            @ResHoodOffer.Obiekt.ToUpper():
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-bold" style="font-size: 14pt">
+                                            #InstallationObject#
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-value="#City#" style="font-size: 10pt">
+                                            @ResHoodOffer.Miejscowosc.ToUpper():
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-value="#City#" class="text-bold" style="font-size: 12pt">
+                                            #City#
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-size: 10pt">
+                                            @ResHoodOffer.DataDoboru.ToUpper():
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-bold" style="font-size: 12pt">
+                                            #Date#
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td class="valign-top">
+                            <table class="table full-width table-footer">
+                                <tbody>
+                                    <tr style="font-size: 10pt">
+                                        <td data-value="#ContactPerson#">@ResHoodOffer.Zapytanie.ToUpper():</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-value="#ContactPerson#" class="text-bold valign-bottom nowrap" style="font-size: 11pt">
+                                            #ContactPerson#
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-value="#ContactPerson#" class="text-small nowrap" style="font-size: 9pt">
+                                            #ContactEmail#
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-value="#ContactPerson#" class="text-small nowrap" style="font-size: 9pt">
+                                            #ContactPhone#
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="SynergiaLineTriple" style="margin-top: 5px; margin-bottom: 5px;"></div>
+        <div class="text-center">
+            <h1 style="font-size: 16pt; margin-top: 5px;margin-bottom: 5px;">
+                @ResHoodOffer.KartaDoboruFiltraSadzySmoki.ToUpper() <br />
+                @ResHoodOffer.ZalacznikNr.ToUpper() #ZalacznikNrSmoki# @ResHoodOffer.DoDoboruNr.ToUpper() #OfferNumber#
+            </h1>
+        </div>
+        <div class="SynergiaLineDouble" style="margin: 5px 0;"></div>
+        <div>
+            <div class="width-Synergia" style="font-size: 11pt;">
+                <div class="text-bold" style="padding-bottom: 0px;">
+                    @ResHoodOffer.WOparciuOWybranyPiecDoPizzyDobranoNastępująceUrządzenie #AdditionalAccessorySmokiType#
+                </div>
+                <div class="text-center">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="#CRMApplicationUrl#/Images/HoodOffer/smokiJunior.png" style="width: 330px;" />
+                                </td>
+                                <td>
+                                    <table class="table table-small text-center bordered nowrap" style="font-size: 7pt;margin-left: 10px;">
+                                        <thead>
+                                            <tr>
+                                                <th>
+
+                                                </th>
+                                                <th>
+                                                    Junior 200/250
+                                                </th>
+                                                <th>
+                                                    Junior 300
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    A [mm]
+                                                </td>
+                                                <td>
+                                                    705
+                                                </td>
+                                                <td>
+                                                    800
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    A1 [mm]
+                                                </td>
+                                                <td>
+                                                    50
+                                                </td>
+                                                <td>
+                                                    50
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    B [mm]
+                                                </td>
+                                                <td>
+                                                    980
+                                                </td>
+                                                <td>
+                                                    1123
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    C [mm]
+                                                </td>
+                                                <td>
+                                                    450
+                                                </td>
+                                                <td>
+                                                    560
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    C1 [mm]
+                                                </td>
+                                                <td>
+                                                    640
+                                                </td>
+                                                <td>
+                                                    750
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    &Phi;D/E [mm]
+                                                </td>
+                                                <td>
+                                                    200/250
+                                                </td>
+                                                <td>
+                                                    300
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    F [mm]
+                                                </td>
+                                                <td>
+                                                    225
+                                                </td>
+                                                <td>
+                                                    280
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    G [mm]
+                                                </td>
+                                                <td>
+                                                    682
+                                                </td>
+                                                <td>
+                                                    773
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    &Phi;K [mm]
+                                                </td>
+                                                <td>
+                                                    40
+                                                </td>
+                                                <td>
+                                                    50
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    @ResHoodOffer.Nap [V]
+                                                </td>
+                                                <td>
+                                                    230, 50Hz
+                                                </td>
+                                                <td>
+                                                    230, 50Hz
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    @ResHoodOffer.Moc [kW]
+                                                </td>
+                                                <td>
+                                                    1.16
+                                                </td>
+                                                <td>
+                                                    1.16
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    @ResHoodOffer.PojWodna [dm<sup>3</sup>]
+                                                </td>
+                                                <td>
+                                                    70
+                                                </td>
+                                                <td>
+                                                    106
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    @ResHoodOffer.WagaPustegoUrzadzenia [kg]
+                                                </td>
+                                                <td>
+                                                    76
+                                                </td>
+                                                <td>
+                                                    105
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    @ResHoodOffer.StrumienWymiewu [m<sup>3</sup>/h]
+                                                </td>
+                                                <td>
+                                                    250/300
+                                                </td>
+                                                <td>
+                                                    500
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    @ResHoodOffer.Glosnosc [dB(A)]
+                                                </td>
+                                                <td>
+                                                    63
+                                                </td>
+                                                <td>
+                                                    69
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    @ResHoodOffer.ZuzycieWody [dm<sup>3</sup>/h]
+                                                </td>
+                                                <td>
+                                                    40
+                                                </td>
+                                                <td>
+                                                    40
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="SynergiaLineDouble" style="margin: 5px 0;margin-top: -8px;"></div>
+            <div class="width-Synergia avoid-page-break" style="font-size: 11pt;">
+                <div class="text-bold" style="padding-bottom: 5px;">
+                    @ResHoodOffer.WytyczneProjektowe
+                </div>
+                <div style="font-size: 9pt;">
+                    <ol style="list-style: decimal">
+                        @Html.Raw(@ResHoodOffer.WytyczneProjektoweSmokiJuniorOpis)
+                    </ol>
+                </div>
+            </div>
+            <div class="SynergiaLineDouble" style="margin: 5px 0;"></div>
+            <div class="width-Synergia avoid-page-break" style="font-size: 11pt;">
+                <div class="text-bold" style="padding-bottom: 5px;">
+                    @ResHoodOffer.FiltrSadzy SMOKI JUNIOR
+                </div>
+                <div style="font-size: 10pt;">
+                    @Html.Raw(@ResHoodOffer.FiltrySadzySmokiJuniorOpis.ReplaceNewLineToHtml())
+                </div>
+            </div>
+        </div>
+        <div class="SynergiaLineDouble" style="margin: 5px 0;"></div>
+    </div>
+    <!--EndSmokiJunior-->
+    <!--BeginSmokiMaxi-->
+    <div data-value="#AdditionalAccessorySmokiMaxiEnabled#" class="newPage">
+        <div class="pull-left">
+            <img style="max-height: 55px;" src="#CRMApplicationUrl#/Images/HoodOffer/smokiLogo.png" />
+        </div>
+        <div class="pull-right">
+            <img class="imgLogo" src="#CRMApplicationUrl#/Images/logo.png" />
+            <div class="text-bold logoText">
+                @ResHoodOffer.SystemyWentylacjiKuchni.ToUpper()
+            </div>
+        </div>
+        <div class="clearfix">
+        </div>
+        <div class="SynergiaLineTriple" style="margin-top: 5px; margin-bottom: 5px;"></div>
+        <div class="width-Synergia">
+            <table class="full-width" cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 75%" class="valign-top">
+                            <table class="table full-width table-footer">
+                                <tbody>
+                                    <tr style="font-size: 10pt">
+                                        <td>
+                                            @ResHoodOffer.Obiekt.ToUpper():
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-bold" style="font-size: 14pt">
+                                            #InstallationObject#
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-value="#City#" style="font-size: 10pt">
+                                            @ResHoodOffer.Miejscowosc.ToUpper():
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-value="#City#" class="text-bold" style="font-size: 12pt">
+                                            #City#
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-size: 10pt">
+                                            @ResHoodOffer.DataDoboru.ToUpper():
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-bold" style="font-size: 12pt">
+                                            #Date#
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td class="valign-top">
+                            <table class="table full-width table-footer">
+                                <tbody>
+                                    <tr style="font-size: 10pt">
+                                        <td data-value="#ContactPerson#">@ResHoodOffer.Zapytanie.ToUpper():</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-value="#ContactPerson#" class="text-bold valign-bottom nowrap" style="font-size: 11pt">
+                                            #ContactPerson#
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-value="#ContactPerson#" class="text-small nowrap" style="font-size: 9pt">
+                                            #ContactEmail#
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-value="#ContactPerson#" class="text-small nowrap" style="font-size: 9pt">
+                                            #ContactPhone#
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="SynergiaLineTriple" style="margin-top: 5px; margin-bottom: 5px;"></div>
+        <div class="text-center">
+            <h1 style="font-size: 16pt; margin-top: 5px;margin-bottom: 5px;">
+                @ResHoodOffer.KartaDoboruFiltraSadzySmoki.ToUpper() <br />
+                @ResHoodOffer.ZalacznikNr.ToUpper() #ZalacznikNrSmoki# @ResHoodOffer.DoDoboruNr.ToUpper() #OfferNumber#
+            </h1>
+        </div>
+        <div class="SynergiaLineDouble" style="margin: 5px 0;"></div>
+        <div>
+            <div class="width-Synergia" style="font-size: 11pt; width: 95%">
+                <div class="text-bold" style="padding-bottom: 0px;">
+                    @ResHoodOffer.WOparciuOOkapOrazGrillWeglowyDobranoNastępująceUrządzenie #AdditionalAccessorySmokiType#
+                </div>
+                <div class="text-center">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="#CRMApplicationUrl#/Images/HoodOffer/smokiMaxi.png" />
+                                </td>
+                                <td>
+                                    <table class="table table-small text-center bordered nowrap" style="font-size: 7pt;margin-left: 0px;">
+                                        <thead>
+                                            <tr>
+                                                <th>
+
+                                                </th>
+                                                <th>
+                                                    Maxi Grill<br />250
+                                                </th>
+                                                <th>
+                                                    Maxi grill<br />350
+                                                </th>
+                                                <th>
+                                                    Maxi grill<br />400
+                                                </th>
+                                                <th>
+                                                    Maxi grill<br />500
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    A [mm]
+                                                </td>
+                                                <td>
+                                                    812
+                                                </td>
+                                                <td>
+                                                    910
+                                                </td>
+                                                <td>
+                                                    1100
+                                                </td>
+                                                <td>
+                                                    1200
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    B [mm]
+                                                </td>
+                                                <td>
+                                                    1050
+                                                </td>
+                                                <td>
+                                                    1050
+                                                </td>
+                                                <td>
+                                                    1300
+                                                </td>
+                                                <td>
+                                                    1400
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    B1 [mm]
+                                                </td>
+                                                <td>
+                                                    1100
+                                                </td>
+                                                <td>
+                                                    1100
+                                                </td>
+                                                <td>
+                                                    1380
+                                                </td>
+                                                <td>
+                                                    1480
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    C [mm]
+                                                </td>
+                                                <td>
+                                                    540
+                                                </td>
+                                                <td>
+                                                    650
+                                                </td>
+                                                <td>
+                                                    800
+                                                </td>
+                                                <td>
+                                                    900
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    C1 [mm]
+                                                </td>
+                                                <td>
+                                                    740
+                                                </td>
+                                                <td>
+                                                    850
+                                                </td>
+                                                <td>
+                                                    1030
+                                                </td>
+                                                <td>
+                                                    1130
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    LxH [mm]
+                                                </td>
+                                                <td>
+                                                    400x300
+                                                </td>
+                                                <td>
+                                                    500x400
+                                                </td>
+                                                <td>
+                                                    600x500
+                                                </td>
+                                                <td>
+                                                    700x600
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    D/E [mm]
+                                                </td>
+                                                <td>
+                                                    160/270
+                                                </td>
+                                                <td>
+                                                    210/325
+                                                </td>
+                                                <td>
+                                                    235/400
+                                                </td>
+                                                <td>
+                                                    280/450
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    &Phi;D [mm]
+                                                </td>
+                                                <td>
+                                                    250
+                                                </td>
+                                                <td>
+                                                    350
+                                                </td>
+                                                <td>
+                                                    400
+                                                </td>
+                                                <td>
+                                                    500
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    F/G [mm]
+                                                </td>
+                                                <td>
+                                                    210/270
+                                                </td>
+                                                <td>
+                                                    260/325
+                                                </td>
+                                                <td>
+                                                    310/400
+                                                </td>
+                                                <td>
+                                                    360/450
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    &Phi;K [mm]
+                                                </td>
+                                                <td>
+                                                    50
+                                                </td>
+                                                <td>
+                                                    50
+                                                </td>
+                                                <td>
+                                                    63
+                                                </td>
+                                                <td>
+                                                    63
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    @ResHoodOffer.Nap [V]
+                                                </td>
+                                                <td>
+                                                    230, 50Hz
+                                                </td>
+                                                <td>
+                                                    230, 50Hz
+                                                </td>
+                                                <td>
+                                                    380, 50Hz
+                                                </td>
+                                                <td>
+                                                    380, 50Hz
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    @ResHoodOffer.Moc [kW]
+                                                </td>
+                                                <td>
+                                                    0.67
+                                                </td>
+                                                <td>
+                                                    0.67
+                                                </td>
+                                                <td>
+                                                    1.20
+                                                </td>
+                                                <td>
+                                                    2.20
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    @ResHoodOffer.PojWodna [dm<sup>3</sup>]
+                                                </td>
+                                                <td>
+                                                    107
+                                                </td>
+                                                <td>
+                                                    135
+                                                </td>
+                                                <td>
+                                                    266
+                                                </td>
+                                                <td>
+                                                    349
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    @ResHoodOffer.WagaPustegoUrzadzenia [kg]
+                                                </td>
+                                                <td>
+                                                    148
+                                                </td>
+                                                <td>
+                                                    176
+                                                </td>
+                                                <td>
+                                                    263
+                                                </td>
+                                                <td>
+                                                    339
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    @ResHoodOffer.StrumienWymiewu [m<sup>3</sup>/h]
+                                                </td>
+                                                <td>
+                                                    2000
+                                                </td>
+                                                <td>
+                                                    3000
+                                                </td>
+                                                <td>
+                                                    6000
+                                                </td>
+                                                <td>
+                                                    7500
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    @ResHoodOffer.Glosnosc [dB(A)]
+                                                </td>
+                                                <td>
+                                                    68
+                                                </td>
+                                                <td>
+                                                    69
+                                                </td>
+                                                <td>
+                                                    69
+                                                </td>
+                                                <td>
+                                                    70
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    @ResHoodOffer.ZuzycieWody [dm<sup>3</sup>/h]
+                                                </td>
+                                                <td>
+                                                    40
+                                                </td>
+                                                <td>
+                                                    40
+                                                </td>
+                                                <td>
+                                                    40
+                                                </td>
+                                                <td>
+                                                    40
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="SynergiaLineDouble" style="margin: 3px 0;margin-top: 0px;"></div>
+            <div class="width-Synergia avoid-page-break" style="font-size: 11pt;">
+                <div class="text-bold" style="padding-bottom: 0px;">
+                    @ResHoodOffer.WytyczneProjektowe
+                </div>
+                <div style="font-size: 8pt;">
+                    <ol style="list-style: decimal">
+                        @Html.Raw(@ResHoodOffer.WytyczneProjektoweSmokiMaxiOpis)
+                    </ol>
+                </div>
+            </div>
+            <div class="SynergiaLineDouble" style="margin: 3px 0;"></div>
+            <div class="width-Synergia avoid-page-break" style="font-size: 11pt;">
+                <div class="text-bold" style="padding-bottom: 0px;">
+                    @ResHoodOffer.FiltrSadzy SMOKI MAXI GRILL
+                </div>
+                <div style="font-size: 8pt;">
+                    @Html.Raw(@ResHoodOffer.FiltrySadzySmokiMaxiOpis.ReplaceNewLineToHtml())
+                </div>
+            </div>
+        </div>
+        <div class="SynergiaLineDouble" style="margin: 3px 0; margin-bottom: 0"></div>
+    </div>
+    <!--EndSmokiMaxi-->
+    <!--ANSUL-->
+    <div data-value="#AdditionalAccessoryAnsulEnabled#" class="newPage">
+        <div class="pull-left">
+            <img style="max-height: 55px;" src="#CRMApplicationUrl#/Images/HoodOffer/ansulLogo.png" />
+        </div>
+        <div class="pull-right">
+            <img class="imgLogo" src="#CRMApplicationUrl#/Images/logo.png" />
+            <div class="text-bold logoText">
+                @ResHoodOffer.SystemyWentylacjiKuchni.ToUpper()
+            </div>
+        </div>
+        <div class="clearfix">
+        </div>
+        <div class="SynergiaLineTriple" style="margin-top: 5px; margin-bottom: 5px;"></div>
+        <div class="width-Synergia">
+            <table class="full-width" cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 75%" class="valign-top">
+                            <table class="table full-width table-footer">
+                                <tbody>
+                                    <tr style="font-size: 10pt">
+                                        <td>
+                                            @ResHoodOffer.Obiekt.ToUpper():
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-bold" style="font-size: 14pt">
+                                            #InstallationObject#
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-value="#City#" style="font-size: 10pt">
+                                            @ResHoodOffer.Miejscowosc.ToUpper():
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-value="#City#" class="text-bold" style="font-size: 12pt">
+                                            #City#
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-size: 10pt">
+                                            @ResHoodOffer.DataDoboru.ToUpper():
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-bold" style="font-size: 12pt">
+                                            #Date#
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td class="valign-top">
+                            <table class="table full-width table-footer">
+                                <tbody>
+                                    <tr style="font-size: 10pt">
+                                        <td data-value="#ContactPerson#">@ResHoodOffer.Zapytanie.ToUpper():</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-value="#ContactPerson#" class="text-bold valign-bottom nowrap" style="font-size: 11pt">
+                                            #ContactPerson#
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-value="#ContactPerson#" class="text-small nowrap" style="font-size: 9pt">
+                                            #ContactEmail#
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-value="#ContactPerson#" class="text-small nowrap" style="font-size: 9pt">
+                                            #ContactPhone#
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="SynergiaLineTriple" style="margin-top: 5px; margin-bottom: 5px;"></div>
+        <div class="text-center">
+            <h1 style="font-size: 16pt; margin-top: 5px;margin-bottom: 5px;">
+                @ResHoodOffer.KartaDoboruSystemuAnsulR102.ToUpper() <br />
+                @ResHoodOffer.ZalacznikNr.ToUpper() #ZalacznikNrAnsul# @ResHoodOffer.DoDoboruNr.ToUpper() #OfferNumber#
+            </h1>
+        </div>
+        <div class="SynergiaLineDouble" style="margin: 3px 0;"></div>
+        <div>
+            <div data-value="#AdditionalAccessoryAnsulItemsEnabled#">
+                <div class="width-Synergia" style="font-size: 11pt;">
+                    <div class="text-bold" style="padding-bottom: 5px;">
+                        @ResHoodOffer.WOparciuOTechnologięGastronomiczną:
+                    </div>
+                    <!--BeginAnsulHoodOfferElement-->
+                    <div>
+                        @ResHoodOffer.Okap #OrderNoText# - #AnsulHoodOfferElementDescription#
+                    </div>
+                    <!--EndAnsulHoodOfferElement-->
+                </div>
+                <div class="SynergiaLineDouble" style="margin: 5px 0;"></div>
+            </div>
+            <div class="width-Synergia avoid-page-break" style="font-size: 11pt;">
+                <div style="padding-bottom: 5px;">
+                    @ResHoodOffer.SystemAnsulR102WariantyNaglowek
+                </div>
+                <div style="font-size: 10pt; padding-bottom: 5px;">
+                    - @Html.Raw(@ResHoodOffer.SystemAnsulR102WariantyDedykowany)
+                </div>
+                <div style="font-size: 10pt;">
+                    - @Html.Raw(@ResHoodOffer.SystemAnsulR102WariantyNakladajacySie)
+                </div>
+                <div class="text-bold" style="padding-top: 5px;">
+                    @ResHoodOffer.SystemAnsulR102WariantyCzynnikGasniczy
+                </div>
+            </div>
+            <div class="SynergiaLineDouble" style="margin: 5px 0;"></div>
+            <div class="width-Synergia avoid-page-break" style="font-size: 11pt;">
+                <div style="padding-bottom: 5px;" class="text-bold">
+                    @ResHoodOffer.SystemAnsulR102WymaganiaNaglowek
+                </div>
+                <div style="font-size: 10pt;padding-bottom: 5px;">
+                    @ResHoodOffer.SystemAnsulR102WymaganiaOpis1
+                </div>
+                <div style="font-size: 10pt;">
+                    @Html.Raw(@ResHoodOffer.SystemAnsulR102WymaganiaOpis2.ReplaceNewLineToHtml())
+                </div>
+            </div>
+            <div class="SynergiaLineDouble" style="margin: 3px 0;"></div>
+            <div class="width-Synergia avoid-page-break" style="font-size: 11pt;">
+                <div class="text-bold" style="padding-bottom: 5px">
+                    @ResHoodOffer.SystemAnsulR102SystemPrzeciwopozarowyNaglowek
+                </div>
+                <div style="font-size: 10pt;">
+                    @Html.Raw(ResHoodOffer.SystemAnsulR102SystemPrzeciwopozarowyOpis.ReplaceNewLineToHtml())
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--BeginPageFooterHtml-->
+    <div style="font-size: 8pt;font-family: 'Arial Narrow';">
+        <!--<div style="font-size: 8pt;font-family: 'Calibri';">-->
+        <table style="width: 100%;">
+            <tr>
+                <td style="text-align: center; color: #3366FF;font-weight:bold;">
+                    @ResHoodOffer.SynergiaStopka
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!--EndPageFooterHtml-->
+</body>
+</html>

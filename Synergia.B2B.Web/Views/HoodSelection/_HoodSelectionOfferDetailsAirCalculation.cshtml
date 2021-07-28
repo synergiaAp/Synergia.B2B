@@ -1,0 +1,173 @@
+﻿@model HoodSelectionOfferDetailsAirCalculationViewModel
+@Scripts.Render("~/bundles/hoodSelection/_HoodSelectionOfferDetailsAirCalculation")
+
+<style>
+    .table .touchSpin {
+        margin-top: 8px;
+    }
+
+    .table .bootstrap-touchspin .input-group-btn-vertical {
+        padding-top: 4px;
+    }
+
+    #tblHoodSelectionOfferDetailsAirCalculationInfo {
+        width: 600px;
+        margin-top: -82px;
+    }
+</style>
+
+<script>
+    hoodSelectionOfferDetailsAirCalculation.deviceList = JSON.parse('@Html.Raw(Model.DeviceListJson)');
+</script>
+
+<table id="tblHoodSelectionOfferDetailsAirCalculationInfo" class="table table-striped table-no-bordered table-hover table-with-inputs pull-right">
+    <thead>
+        <tr class="text-primary" style="font-size: 12pt;">
+            <td class="text-right">
+                Obliczony wymagany strumień powietrza wywiewanego:
+            </td>
+            <td class="text-bold text-center" style="width: 170px;">
+                <span id="spanExhaustStreamCalculated"></span> m<sup>3</sup>/h
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <table style="width: auto;" class="table pull-right">
+                    <tr>
+                        <td style="width: 30px;">
+                            <div class="form-group label-static">
+                                <div class="checkbox checkbox-inline">
+                                    <label>
+                                        @Html.CheckBoxAwesome("SAllDevicesEnabled", new { @class = "control-label", @checked = "true" })
+                                    </label>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            Stały współczynnik jednoczesności
+                        </td>
+                        <td>
+                            <div class="form-group label-static">
+                                <div style="width:55px;margin: 0 auto;" class="touchSpinWrapper">
+                                    @Html.TextBox($"SAllDevicesValue", "", new
+                               {
+                                   @class = "touchSpin",
+                                   data_initVal = "0.7",
+                                   data_min = "0.3",
+                                   data_max = "1",
+                                   data_step="0.01",
+                                   data_decimals = "2",
+                               })
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group label-static" style="padding-left: 15px;">
+                                <div class="checkbox checkbox-inline">
+                                    <label>
+                                        @Html.CheckBoxAwesome("Factor063Enabled", new { @class = "control-label" })
+                                    </label>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            Współczynnik 0,63
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </thead>
+</table>
+
+<div class="scrollableContent">
+    <table id="tblHoodSelectionOfferDetailsAirCalculation" class="table table-striped table-no-bordered table-hover table-with-inputs">
+        <thead>
+            <tr>
+                <th class="text-center">
+                    L.p.
+                </th>
+                <th class="text-center" style="width: 80px;">
+                    Numer
+                </th>
+                <th class="text-center">
+                    Nazwa urządzenia
+                </th>
+                <th class="text-center">
+                    Nazwa alternatywna
+                </th>
+                <th class="text-center" style="width: 100px;">
+                    Wskaźnik wyposażenia<br />
+                    Ke [l/s/kW]
+                </th>
+                <th class="text-center" style="width: 100px;">
+                    Moc zainstalowana
+                    <div id="PowerSum"></div>
+                    P [kW]
+                </th>
+                <th class="text-center" style="width: 100px;">
+                    Współczynnik jednoczesności pracy urządzeń<br />
+                    S (0,3-1,0)
+                </th>
+                <th class="text-center" style="width: 100px;">
+                    Powietrze wyciągane<br />
+                    Mp [m<sup>3</sup>/h]
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @for (int i = 1; i <= 15; i++)
+            {
+                <tr data-orderNo="@i">
+                    <td class="text-center">
+                        @i
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            @Html.TextBox($"Number_{i}", "", new { @class = "form-control calcNumber" })
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            @Html.DropDownList($"Name_{i}", Model.DeviceListSelectListItem, "-", new { @class = "selectpicker calcName", data_style = "select-with-transition" })
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            @Html.TextBox($"AlternativeName{i}", "", new { @class = "form-control calcAlternativeName" })
+                        </div>
+                    </td>
+                    <td class="text-center">
+                        @Html.TextBox($"Ke_{i}", "", new { @class = "form-control calcKe text-center", disabled = "disabled" })
+                    </td>
+                    <td>
+                        @Html.TextBox($"Power_{i}", "", new
+                   {
+                       @class = "form-control calcPower text-center"
+                   })
+                    </td>
+                    <td class="text-right">
+                        <div class="form-group label-static">
+                            <div style="width:55px;margin: 0 auto;" class="touchSpinWrapper">
+                                @Html.TextBox($"S_{i}", "", new
+                           {
+                               @class = "touchSpin calcS",
+                               data_initVal = "0.7",
+                               data_min = "0.3",
+                               data_max = "1",
+                               data_step="0.01",
+                               data_decimals = "2",
+                           })
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center">
+                        @Html.TextBox($"Mp_{i}", "", new { @class = "form-control calcMp text-center", disabled = "disabled" })
+                        @Html.Hidden($"Id_{i}")
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

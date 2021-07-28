@@ -1,0 +1,42 @@
+﻿@model HoodOrderListFilterViewModel
+@Scripts.Render("~/bundles/hoodSelection/hoodOrdersList")
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header card-header-text" data-background-color="blueSynergia">
+                <h4 class="card-title">Lista zamówień okapów</h4>
+            </div>
+            <div class="card-content">
+                <div class="toolbar">
+                    <div class="row">
+                        <div class="col-sm-offset-9 col-sm-3">
+                            <div class="form-group">
+                                @Html.DropDownList("HoodOrderTypeFilter", Model.OrderTypes, "Wszystkie zamówienia", new { @class = "selectpicker", data_style = "select-with-transition" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="material-datatables">
+                    <table id="hoodOrderstable" class="table table-striped table-no-bordered table-hover dataTable" cellspacing="0" style="width:100%; display:none">
+                        <thead>
+                            <tr>
+                                <th>Nr zam.</th>
+                                <th>Data</th>
+                                <th>Klient</th>
+                                <th>Obiekt</th>
+                                <th>Region</th>
+                                <th>Wartość katalogowa</th>
+                                <th>Wartość końcowa</th>
+                                <th>Z oferty nr</th>
+                                <th>Status</th>
+                                <th>Ilość modułów</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

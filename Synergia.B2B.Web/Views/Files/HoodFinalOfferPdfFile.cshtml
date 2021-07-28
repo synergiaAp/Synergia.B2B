@@ -1,0 +1,404 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="#CRMApplicationUrl#/Content/PdfTemplates/HoodFinalOfferPdfFile.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <template>
+        <!--BeginPageHeaderHtml-->
+        <div style="margin: 0 auto; width: 98%">
+            <link rel="stylesheet" type="text/css" href="#CRMApplicationUrl#/Content/PdfTemplates/HoodFinalOfferPdfFile.css">
+            <div>
+                <div class="pull-right">
+                    <img class="imgLogo" src="#CRMApplicationUrl#/Images/logo.png" />
+                    <div class="text-bold logoText">
+                        @ResHoodOffer.SystemyWentylacjiKuchni.ToUpper()
+                    </div>
+                </div>
+                <div class="clearfix">
+                </div>
+                <div class="SynergiaLineTriple" style="margin-top: 5px; margin-bottom: 5px;"></div>
+                <div class="width-Synergia">
+                    <table class="full-width" cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <td style="width: 75%" class="valign-top">
+                                    <table class="table full-width table-footer">
+                                        <tbody>
+                                            <tr style="font-size: 10pt">
+                                                <td>
+                                                    @ResHoodOffer.Obiekt.ToUpper():
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-bold" style="font-size: 14pt">
+                                                    #InstallationObject#
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td data-value="#City#" style="font-size: 10pt">
+                                                    @ResHoodOffer.Miejscowosc.ToUpper():
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td data-value="#InstallationObjectCity#" class="text-bold" style="font-size: 12pt">
+                                                    #InstallationObjectCity#
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="font-size: 10pt">
+                                                    DATA OFERTY:
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-bold" style="font-size: 12pt">
+                                                    #Date#
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td class="valign-top">
+                                    <table class="table full-width table-footer">
+                                        <tbody>
+                                            <tr style="font-size: 10pt">
+                                                <td data-value="#ContactPerson#">@ResHoodOffer.Zapytanie.ToUpper():</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-value="#ContactPerson#" class="text-bold valign-bottom nowrap" style="font-size: 11pt">
+                                                    #ContactPerson#
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td data-value="#ContactPerson#" class="text-small nowrap" style="font-size: 9pt">
+                                                    #ContactEmail#
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td data-value="#ContactPerson#" class="text-small nowrap" style="font-size: 9pt">
+                                                    #ContactPhone#
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td data-value="#OfferCompanyId#" class="text-small nowrap" style="font-size: 9pt">
+                                                    <div class="text-bold" data-value="#OfferCompanyName#">#OfferCompanyName#</div>
+                                                    <div data-value="#OfferCompanyAddress#">#OfferCompanyAddress#</div>
+                                                    <div data-value="#OfferCompanyNIP#">NIP: #OfferCompanyNIP#</div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="SynergiaLineTriple" style="margin-top: 5px; margin-bottom: 5px;"></div>
+            </div>
+        </div>
+        <!--EndPageHeaderHtml-->
+    </template>
+
+    <div>
+        <div>
+            <div class="text-center">
+                <h1 style="font-size: 16pt; padding-top: 5px;margin-bottom: 5px;">
+                    OFERTA CENOWA Synergia JE/#OfferNumber#
+                </h1>
+            </div>
+            <div class="SynergiaLineTriple" style="margin-top: 5px; margin-bottom: 5px;"></div>
+        </div>
+
+        <table class="full-width border-collapse" id="tblOfferElements">
+            <thead>
+                <tr>
+                    <th>
+                        LP
+                    </th>
+                    <th class="text-left">
+                        Opis
+                    </th>
+                    <th class="text-left">
+                        Typ
+                    </th>
+                    <th>
+                        Ilość
+                    </th>
+                    <th data-value="#ShowDiscountInPdfFile#">
+                        Cena<br />katalogowa
+                    </th>
+                    <th data-value="#ShowDiscountInPdfFile#">
+                        Wartość
+                    </th>
+                    <th data-value="#ShowDiscountInPdfFile#">
+                        Rabat
+                    </th>
+                    <th>
+                        Cena<br /><span data-value="#ShowDiscountInPdfFile#">po rabacie</span>
+                    </th>
+                    <th>
+                        Wartość<br /><span data-value="#ShowDiscountInPdfFile#">po rabacie</span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--BeginOfferElementRow-->
+                <tr>
+                    <td class="text-center">
+                        #No#
+                    </td>
+                    <td style="width: 190px;">
+                        <table class="full-width">
+                            <tr>
+                                <td style="width: 75px;" class="text-center">
+                                    <img class="imgProduct" src="#ProductImage#" />
+                                </td>
+                                <td style="padding-left: 5px;">
+                                    #ProductName#
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        #ProductCode#
+                    </td>
+                    <td class="text-center nowrap">
+                        #Quantity#
+                    </td>
+                    <td class="text-center nowrap" data-value="#ShowDiscountInPdfFile#">
+                        #CatalogPriceNet# zł
+                    </td>
+                    <td class="text-center nowrap" data-value="#ShowDiscountInPdfFile#">
+                        #TotalCatalogPriceNet# zł
+                    </td>
+                    <td class="text-center nowrap" data-value="#ShowDiscountInPdfFile#">
+                        #Discount#%
+                    </td>
+                    <td class="text-center nowrap">
+                        #PriceAfterDiscountNet# zł
+                    </td>
+                    <td class="text-center nowrap">
+                        #FinalValueNet# zł
+                    </td>
+                </tr>
+                <!--EndOfferElementRow-->
+            </tbody>
+        </table>
+        <div class="avoid-page-break">
+            <div class="clearfix">
+                <table id="tblOfferSummary" class="border-collapse avoid-page-break">
+                    <tbody>
+                        <tr data-value="#ShowDiscountInPdfFile#">
+                            <td class="text-right">
+                                Łącznie
+                            </td>
+                            <td class="text-right">
+                                #CatalogValueNet# zł
+                            </td>
+                        </tr>
+                        <tr class="text-bold">
+                            <td class="text-right">
+                                Łącznie <span data-value="#ShowDiscountInPdfFile#">po rabacie</span>
+                            </td>
+                            <td class="text-right">
+                                #FinalValueAfterAllDiscountsNet# zł
+                            </td>
+                        </tr>
+                        <tr class="text-bold">
+                            <td class="text-right">
+                                Cena z VAT
+                            </td>
+                            <td>
+                                #FinalValueAfterAllDiscountsGross# zł
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="newPage">
+        <div>
+            <div class="text-center">
+                <h1 style="font-size: 16pt; padding-top: 5px;margin-bottom: 5px;">
+                    WARUNKI OFERTY CENOWEJ
+                </h1>
+            </div>
+            <div class="SynergiaLineTriple" style="margin-top: 5px; margin-bottom: 5px;"></div>
+        </div>
+        <div style="font-size: 10pt;">
+            <ol>
+                <li>
+                    Oferta obejmuje:
+                    <ul>
+                        <li>
+                            dostawę urządzeń loco budowa,
+                        </li>
+                        <li data-value="#HasAnyHood#">
+                            bezpłatny odbiór gwarancyjny obejmujący:
+                            <ul>
+                                <li>
+                                    sprawdzenie poprawności montażu okapów,
+                                </li>
+                                <li>
+                                    pomiar i sprawdzenie zgodności projektowanych wydatków powietrza na okapach,
+                                </li>
+                                <li>
+                                    szkolenie z obsługi i eksploatacji okapów,
+                                </li>
+                            </ul>
+                        </li>
+                        <li data-value="#HasAnyAnsul#">
+                            montaż systemu Ansul wraz ze szkoleniem z obsługi,
+                        </li>
+                        <li data-value="#HasAnySmoki#">
+                            bezpłatny odbiór gwarancyjny obejmujący:
+                            <ul>
+                                <li>
+                                    sprawdzenie poprawności montażu filtra,
+                                </li>
+                                <li>
+                                    szkolenie z obsługi i eksploatacji filtra do sadzy,
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Oferta nie uwzględnia:
+                    <ul>
+                        <li>
+                            rozładunku wewnętrznego,
+                        </li>
+                        <li>
+                            prac konstrukcyjno-budowlanych związanych z zawieszeniem/posadowieniem urządzeń,
+                        </li>
+                        <li>
+                            doprowadzenia instalacji do urządzeń: #InstallationTypes#
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Warunki gwarancji:
+                    <ul>
+                        <li>
+                            warunkiem udzielenia gwarancji jest dokonanie bezpłatnego odbioru gwarancyjnego przez serwis Synergia,
+                        </li>
+                        <li data-value="#HasAnyHood#">
+                            okres gwarancji okapy: #GuaranteeMonthsHoods# od daty dostawy,
+                        </li>
+                        <li data-value="#HasAnyVentilator#">
+                            okres gwarancji nawiewniki: #GuaranteeMonthsVentilators# od daty dostawy,
+                        </li>
+                        <li data-value="#HasAnyCookAir#">
+                            okres gwarancji CookAir wraz z systemem sterowania: #GuaranteeMonthsCookAir# od daty dostawy,
+                        </li>
+                        <li data-value="#HasAnySmoki#">
+                            okres gwarancji Smoki: #GuaranteeMonthsSmoki# od daty dostawy,
+                        </li>
+                        <li data-value="#HasAnyAnsul#">
+                            okres gwarancji Ansul: #GuaranteeMonthsAnsul# od daty dostawy, warunkiem takiego okresu gwarancji na urządzenia Ansul
+                            oraz działanie całego systemu jest dokonywanie przeglądów przez serwis Synergia dwa razy w roku,
+                        </li>
+                        <li data-value="#HasAnyKES#">
+                            okres gwarancji KES: #GuaranteeMonthsKES# od daty dostawy.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Warunki realizacji oferty:
+                    <ul>
+                        <li>
+                            dostawa loco: budowa obiektu,
+                        </li>
+                        <li>
+                            termin dostawy: #DeliveryTime# od daty wpłacenia zadatku.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Warunki płatności:
+                    <ul>
+                        <li data-value="#PrepaymentPercent#">
+                            zadatek w wysokości #PrepaymentPercent#% wartości brutto przedmiotu oferty, płatny w dniu złożenia zamówienia,
+                        </li>
+                        <li data-value="#RestPaymentPercent#">
+                            pozostała należność #RestPaymentPercent#% wartości przedmiotu oferty, płatna #PaymentDeadline# towaru na budowę obiektu,
+                        </li>
+                        <li>
+                            forma płatności – przelew na konto Synergia Sp. z o.o. Bank ING Bank Śląski SA 65 1050 1520 1000 0090 3147 0710
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Termin ważności oferty: 30 dni od daty oferty.
+                </li>
+                <li>
+                    Uwagi:
+                    <ul>
+                        <li>
+                            treść niniejszej oferty jest objęta tajemnicą handlową i nie może być udostępniana osobom trzecim,
+                        </li>
+                        <li>
+                            niniejsza oferta jest obowiązująca pod warunkiem przyjęcia jej w niezmienionej postaci.
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+            <div class="SynergiaLineTriple" style="margin-top: 5px; margin-bottom: 5px;"></div>
+            <div class="nowrap" style="margin-top: 20px;">
+                <div class="pull-right" data-value="#RegionNameRZ#">
+                    Z poważaniem<br />
+                    <b style="font-size: 11pt;">Marek Kłos</b><br />
+                    <i>Dyrektor Generalny /<br />Product Manager</i> <br />
+                    662 332 817<br />
+                    marek.klos@Synergia.pl
+                </div>
+                <div class="pull-right" data-value="#RegionNameRW#">
+                    Z poważaniem<br />
+                    <b style="font-size: 11pt;">Paweł Łopacki</b><br />
+                    <i>Product Manager</i> <br />
+                    661 363 918<br />
+                    pawel.lopacki@Synergia.pl
+                </div>
+                <div class="pull-right" data-value="#RegionNameRP#">
+                    Z poważaniem<br />
+                    <b style="font-size: 11pt;">Piotr Szymarski</b><br />
+                    <i>Regionalny Dyrektor Sprzedaży</i> <br />
+                    795 560 827<br />
+                    piotr.szymarski@Synergia.pl
+                </div>
+                <div class="pull-right" data-value="#RegionNameRG#">
+                    Z poważaniem<br />
+                    <b style="font-size: 11pt;">Robert Martyka</b><br />
+                    <i>Regionalny Dyrektor Sprzedaży</i> <br />
+                    661 501 797<br />
+                    robert.martyka@Synergia.pl
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--BeginPageFooterHtml-->
+    <div style="font-size: 8pt;font-family: 'Arial Narrow';">
+        <table style="width: 100%;">
+            <tr>
+                <td style="text-align: center; color: #3366FF;font-weight:bold;">
+                    @ResHoodOffer.SynergiaStopka
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!--EndPageFooterHtml-->
+</body>
+</html>

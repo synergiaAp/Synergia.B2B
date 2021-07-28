@@ -1,0 +1,149 @@
+﻿@using Synergia.B2B.Web.Models
+@model InstallationObjectsViewModel
+@Scripts.Render("~/bundles/installationObjects/installationObjectsList")
+@{
+    ViewBag.Title = "Obiekty";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <!-- Trigger the modal with a button -->
+
+        <div class="card">
+            @*<div class="card-header card-header-icon" data-background-color="blueSynergia">
+                    <i class="material-icons">assignment</i>
+                </div>*@
+            <div class="card-header card-header-text" data-background-color="blueSynergia">
+                <h4 class="card-title">Obiekty</h4>
+            </div>
+            <div class="card-content">
+                @*<h4 class="card-title">Tabela użytkowników systemu</h4>*@
+                <div class="toolbar">
+                    <!--        Here you can write extra buttons/actions for the toolbar              -->
+                </div>
+                <div class="col-md-10"></div>
+                <div class="col-md-2" style="padding-bottom:10px;">
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalAddInstallationObject">Dodaj obiekt</button>
+                </div>
+                <div class="material-datatables">
+                    <table id="installationobjectstable" class="table table-striped table-no-bordered table-hover dataTable" cellspacing="0" style="width:100%; display:none">
+                        <thead>
+                            <tr>
+                                <th>Typ</th>
+                                <th>Kod</th>
+                                <th>Nazwa</th>
+                                <th>Adres</th>
+                                <th>Kod pocztowy</th>
+                                <th>Miasto</th>
+                                <th>Kraj</th>
+                                <th>Właściciel</th>
+                                <th></th>
+                                @*<th>Notatka</th>*@
+                                <th></th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalAddInstallationObject" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        @using (Html.BeginForm("AddInstallationObject", "InstallationObjects", FormMethod.Post, new { id = "formAddInstallationObject" }))
+        {
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+
+                    <div class="card">
+                        <div class="card-header card-header-icon" data-background-color="rose">
+                            <i class="material-icons">account_balance</i>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">
+                                Dane obiektu
+                            </h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.Code, new { @class = "control-label" })
+                                        @Html.TextBoxFor(model => model.Code, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.Name, new { @class = "control-label" })
+                                        @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.Address, new { @class = "control-label" })
+                                        @Html.TextBoxFor(model => model.Address, new { @class = "form-control" })
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.PostalCode, new { @class = "control-label" })
+                                        @Html.TextBoxFor(model => model.PostalCode, new { @class = "form-control", data_mask = "99-999" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.City, new { @class = "control-label" })
+                                        @Html.TextBoxFor(model => model.City, new { @class = "form-control" })
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.Country, new { @class = "control-label" })
+                                        @Html.TextBoxFor(model => model.Country, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.Type, new { @class = "control-label" })
+                                        @Html.DropDownListFor(model => model.Type, Model.InstallationObjectTypes, new { @class = "selectpicker", data_style = "select-with-transition" })
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.IOOfferCompanyId, new { @class = "required control-label" })
+                                        @Html.TextBoxFor(model => model.IOOfferCompanyName, new { @class = "form-control autocompleteSearch autocompleteSearchFullWidth" })
+                                        @Html.HiddenFor(model => model.IOOfferCompanyId)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group label-floating">
+                                    @Html.LabelFor(model => model.Note, new { @class = "control-label controlLabelTextArea" })
+                                    @Html.TextAreaFor(model => model.Note, new { @class = "form-control", rows = "2" })
+                                </div>
+                            </div>
+                            @Html.HiddenFor(m => m.Id)
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Zamknij</button>
+                    <button type="button" onclick="installationObjectsList.save();" class="btn btn-success">Zapisz obiekt</button>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+

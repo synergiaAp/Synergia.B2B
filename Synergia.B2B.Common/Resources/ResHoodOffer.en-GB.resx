@@ -1,0 +1,731 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AnsulOkapWyposazonyWSystemPrzeciwpozarowy" xml:space="preserve">
+    <value>Ansul - hood equipped with fire suppression system for hoods ANSUL R-102</value>
+  </data>
+  <data name="AnsulSystemPrzeciwpozarowyDoOkapow" xml:space="preserve">
+    <value>Ansul - fire suppression system for hoods</value>
+  </data>
+  <data name="AnsulUkladOpis" xml:space="preserve">
+    <value>{0} (maximum flow number {1}FN)</value>
+  </data>
+  <data name="AnsulUkladOpisNieWymagany" xml:space="preserve">
+    <value>The Ansul system is not required for this hood</value>
+  </data>
+  <data name="BilansPowietrzaWyciaganegoPrzezOkap" xml:space="preserve">
+    <value>The balance of exhaust airflow through the hood</value>
+  </data>
+  <data name="DaneElektryczne" xml:space="preserve">
+    <value>Electrical data</value>
+  </data>
+  <data name="DaneTechniczneDobranegoOkapu" xml:space="preserve">
+    <value>Technical data of the selected hood</value>
+  </data>
+  <data name="Data" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="DataDoboru" xml:space="preserve">
+    <value>Date of selection</value>
+  </data>
+  <data name="DlugoscKasetyDobranegoFiltra" xml:space="preserve">
+    <value>The length of the cassette of the selected filter</value>
+  </data>
+  <data name="DlugoscOkapu" xml:space="preserve">
+    <value>The length of the hood</value>
+  </data>
+  <data name="DoborNr" xml:space="preserve">
+    <value>Selection No.</value>
+  </data>
+  <data name="DobranyFiltr" xml:space="preserve">
+    <value>Selected filter</value>
+  </data>
+  <data name="DobranyNawiew" xml:space="preserve">
+    <value>Selected supply airflow</value>
+  </data>
+  <data name="DobranyOkap" xml:space="preserve">
+    <value>Selected hood</value>
+  </data>
+  <data name="DobranyWywiew" xml:space="preserve">
+    <value>Selected exhaust airflow</value>
+  </data>
+  <data name="DoDoboruNr" xml:space="preserve">
+    <value>To hood selection</value>
+  </data>
+  <data name="Ekperci" xml:space="preserve">
+    <value>Experts</value>
+  </data>
+  <data name="FiltrSadzy" xml:space="preserve">
+    <value>Soot filter</value>
+  </data>
+  <data name="FiltrTurboSwing" xml:space="preserve">
+    <value>TurboSwing filter</value>
+  </data>
+  <data name="FiltrUVCombilux" xml:space="preserve">
+    <value>UV-Combilux UV600 Filter</value>
+  </data>
+  <data name="FiltrUVTurbo" xml:space="preserve">
+    <value>UV-Turbo Filter</value>
+  </data>
+  <data name="Filtry" xml:space="preserve">
+    <value>Filters</value>
+  </data>
+  <data name="FiltrySadzySmokiJuniorOpis" xml:space="preserve">
+    <value>Smoki Junior is a device that elimitantes up to 95% of soot particles created in wood-fired pizza ovens, reducing odors at the same time. The use of the Smoki Junior filtration system prevents the smoke ducts from becoming dirty and significantly reduces the risk of fire by cooling the smoke temperature.
+In installations where it is not possible to move out smoke by gravity, it is possible to equip the Smoki Junior with a fan that increase the natural draft.
+Smoki Junior is a practical solution wherever there are problems with too hot exhaust, odors and when fire safety requirements must be met.</value>
+  </data>
+  <data name="FiltrySadzySmokiMaxiOpis" xml:space="preserve">
+    <value>Smoki Maxi Grill is a device specially designed to filter soot and fats from exhaust air through the hood located above wood or charcoal grills. The Smoki Maxi Grill system eliminates up to 95% of soot and fat particles in the extracted air, while reducing odors and significantly lowering the temperature. The exhaust filter system Smoki Maxi Grill prevents contamination of the smoke ducts and significantly reduces the risk of fire by cooling the smoke temperature. Smoki Maxi Grill is a practical solution wherever there are problems with too hot exhaust, odors and in case when the requirements of fire safety must be met.</value>
+  </data>
+  <data name="Glosnosc" xml:space="preserve">
+    <value>Noise emission</value>
+  </data>
+  <data name="Ilosc" xml:space="preserve">
+    <value>Quantity [units]</value>
+  </data>
+  <data name="IloscKasetFiltrow" xml:space="preserve">
+    <value>Number of filters chamber</value>
+  </data>
+  <data name="IloscKroccowNawiewnych" xml:space="preserve">
+    <value>Number of supply air connections</value>
+  </data>
+  <data name="IloscKroccowWywiewnych" xml:space="preserve">
+    <value>Number of exhaust air connections</value>
+  </data>
+  <data name="IloscModułow" xml:space="preserve">
+    <value>Number of modules</value>
+  </data>
+  <data name="JednostkaSterujaca" xml:space="preserve">
+    <value>The hood control unit</value>
+  </data>
+  <data name="SynergiaAdresLinia1" xml:space="preserve">
+    <value>Sady, ul. Logistyczna 23</value>
+  </data>
+  <data name="SynergiaAdresLinia2" xml:space="preserve">
+    <value>62-080 Tarnowo Podgórne</value>
+  </data>
+  <data name="SynergiaSpZoo" xml:space="preserve">
+    <value>Synergia Sp. z.o.o.</value>
+  </data>
+  <data name="SynergiaStopka" xml:space="preserve">
+    <value>Synergia Sp. z o.o. • Sady, ul. Logistyczna 23 • 62-080 Tarnowo Podgórne</value>
+  </data>
+  <data name="SynergiaUrl" xml:space="preserve">
+    <value>www.synergia.pl</value>
+  </data>
+  <data name="KartaDoboruFiltraSadzySmoki" xml:space="preserve">
+    <value>SMOKI soot filter selection card</value>
+  </data>
+  <data name="KartaDoboruNawiewnikow" xml:space="preserve">
+    <value>Diffuser selection card</value>
+  </data>
+  <data name="KartaDoboruOkapuSynergia" xml:space="preserve">
+    <value>Selection of Synergia hood</value>
+  </data>
+  <data name="KartaDoboruSystemuAnsulR102" xml:space="preserve">
+    <value>Selection of ANSUL system R-102</value>
+  </data>
+  <data name="KrociecPodlaczeniowy" xml:space="preserve">
+    <value>Connection socket
+&amp;Phi;[mm]</value>
+  </data>
+  <data name="LacznaMocElektrycznaFiltrow" xml:space="preserve">
+    <value>Total electric power of filters</value>
+  </data>
+  <data name="LacznaMocElektrycznaOswietlenia" xml:space="preserve">
+    <value>Total electric power of lighting</value>
+  </data>
+  <data name="LacznaMocElektrycznaWentylatorow" xml:space="preserve">
+    <value>Total electric power of ventilators</value>
+  </data>
+  <data name="Legenda" xml:space="preserve">
+    <value>Legend</value>
+  </data>
+  <data name="LegendaKe" xml:space="preserve">
+    <value>kitchen equipment factor</value>
+  </data>
+  <data name="LegendaMp" xml:space="preserve">
+    <value>exhaust airflow</value>
+  </data>
+  <data name="LegendaP" xml:space="preserve">
+    <value>connection power</value>
+  </data>
+  <data name="LegendaS" xml:space="preserve">
+    <value>load factor</value>
+  </data>
+  <data name="LiczbaDobranychFiltrow" xml:space="preserve">
+    <value>Number of filters</value>
+  </data>
+  <data name="LiczbaSlepychFiltrow" xml:space="preserve">
+    <value>Number of blind filters</value>
+  </data>
+  <data name="LokalizacjaOkapu" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="MaterialWykonania" xml:space="preserve">
+    <value>Material</value>
+  </data>
+  <data name="MaterialWykonaniaStalNierdzewna" xml:space="preserve">
+    <value>Stainless steel AISI 304</value>
+  </data>
+  <data name="MaterialWykonaniaSzklo" xml:space="preserve">
+    <value>Glass</value>
+  </data>
+  <data name="MetodaObliczenStrumieniPowietrzaWyciaganego" xml:space="preserve">
+    <value>Calculation method of exhaust airflows</value>
+  </data>
+  <data name="MetodaObliczenStrumieniPowietrzaWyciaganegoLinia1" xml:space="preserve">
+    <value>Synergia calculation are based on:</value>
+  </data>
+  <data name="MetodaObliczenStrumieniPowietrzaWyciaganegoLinia2" xml:space="preserve">
+    <value>VDI 2052 Raumlufttechnische Anlagen fur Kuchen</value>
+  </data>
+  <data name="MetodaObliczenStrumieniPowietrzaWyciaganegoLinia3" xml:space="preserve">
+    <value>Finnish research concerning the behavior of the vapors for a variety of kitchen appliances</value>
+  </data>
+  <data name="MetodaObliczenStrumieniPowietrzaWyciaganegoLinia4" xml:space="preserve">
+    <value>Konvektiovirtaukset, Virtual Space 4D Loppuraportti, Tyoterveyslaitos, 2006</value>
+  </data>
+  <data name="MetodaObliczenStrumieniPowietrzaWyciaganegoLinia5" xml:space="preserve">
+    <value>PN-EN 16282-1:2017 Industrial kitchen equipment</value>
+  </data>
+  <data name="Miejscowosc" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="Moc" xml:space="preserve">
+    <value>Power</value>
+  </data>
+  <data name="Nap" xml:space="preserve">
+    <value>Voltage</value>
+  </data>
+  <data name="NawiewnikiWyporoweJRSNaglowek" xml:space="preserve">
+    <value>JRS displacement flow diffusers</value>
+  </data>
+  <data name="NawiewnikiWyporoweJRSOpis" xml:space="preserve">
+    <value>JRS displacement diffusers are designed for low velocity air distribution. They have been adapted for ventilation of kitchens, where there are large heat gains.
+JRS displacement diffusers supply air to the occupied zone at a low speed. Inside there are deflectors that ensure even distribution of air over the entire surface of the perforated diffuser face.
+Recommended temperature of the air blown through the diffusers should be 3-6°C lower from the air temperature in the room.
+JRS diffusers are designed for ceiling mounting. </value>
+  </data>
+  <data name="NazwaUrzadzenia" xml:space="preserve">
+    <value>Equipment</value>
+  </data>
+  <data name="Obiekt" xml:space="preserve">
+    <value>Object</value>
+  </data>
+  <data name="ObliczenieStrumieniaPowietrzaWyciaganego" xml:space="preserve">
+    <value>Calculation of exhaust airflow</value>
+  </data>
+  <data name="ObliczonyMinimalnyStrumienPowietrzaWywiewanego" xml:space="preserve">
+    <value>Minimum calculated exhaust airflow</value>
+  </data>
+  <data name="Okap" xml:space="preserve">
+    <value>Hood</value>
+  </data>
+  <data name="OkapNr" xml:space="preserve">
+    <value>Hood No.</value>
+  </data>
+  <data name="OpisOkapuJKI" xml:space="preserve">
+    <value>Exhaust hood JKI, condensate type with condensate baffers. The hood is made of stainless steel AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJLI-R-FF" xml:space="preserve">
+    <value>Exhaust hood JLI-R-FF with JCE cyclone filters, with constant pressure drop of airflow and with mesh filter FF. Total filter efficiency up to 95%. Pressure drop of airflow around 80-85 Pa. The hood is made of stainless steel AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJLI-R-JCE" xml:space="preserve">
+    <value>Exhaust hood JLI-R with JCE cyclone filters, with constant pressure drop of airflow around 80-85Pa. Total filter efficiency up to 93%. The hood is made of stainless steel AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJLI-R-Turbo" xml:space="preserve">
+    <value>Exhaust hood JLI-R-Turbo with TurboSwing filter with filtration efficiency up to 98%, also enabling regulation of airlfow in range from 0m3/h to #MaxWydatekPowietrza#m3/h without lowering filtration efficiency. Pressure drop of airflow up to 60 Pa. The hood is made of stainless steel AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJLI-R-UV" xml:space="preserve">
+    <value>Exhaust hood JLI-R-UV with JCE cyclone filters, with constant pressure drop of airflow, with mesh filter FF and with UV Combilux filter. Total filter efficiency up to 99,9%. Pressure drop of airflow around 85-90 Pa. The hood is made of stainless steel AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJLI-R-UV-Turbo" xml:space="preserve">
+    <value>Exhaust hood JLI-R-UV-Turbo with UV-Turbo filter with filtration efficiency up to 98%,  together with odor reduction, also enabling regulation of airlfow in range from 0m3/h to #MaxWydatekPowietrza#m3/h without lowering filtration efficiency. Pressure drop of airflow up to 60 Pa. The hood is made of stainless steel AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJLI-S-FF" xml:space="preserve">
+    <value>Glass exhaust hood JLI-S-FF with JCE cyclone filters, with constant pressure drop of airflow and with mesh filter FF. Total filter efficiency up to 95%. Pressure drop of airflow around 80-85 Pa. The hood is made of stainless steel AISI 304 and laminated glass.</value>
+  </data>
+  <data name="OpisOkapuJLI-S-JCE" xml:space="preserve">
+    <value>Glass exhaust hood JLI-S with JCE cyclone filters, with constant pressure drop of airflow around 80-85Pa. Total filter efficiency up to 93%. The hood is made of stainless steel AISI 304 and laminated glass.</value>
+  </data>
+  <data name="OpisOkapuJLI-S-Turbo" xml:space="preserve">
+    <value>Glass exhaust hood JLI-S-Turbo with TurboSwing filter with filtration efficiency up to 98%, also enabling regulation of airlfow in range from 0m3/h to #MaxWydatekPowietrza#m3/h without lowering filtration efficiency. Pressure drop of airflow up to 60 Pa. The hood is made of stainless steel AISI 304 and laminated glass.</value>
+  </data>
+  <data name="OpisOkapuJLI-S-UV" xml:space="preserve">
+    <value>Glass exhaust hood JLI-S-UV with JCE cyclone filters, with constant pressure drop of airflow, with mesh filter FF and with UV Combilux filter. Total filter efficiency up to 99,9%. Pressure drop of airflow around 85-90 Pa. The hood is made of stainless steel AISI 304 and laminated glass.</value>
+  </data>
+  <data name="OpisOkapuJLI-S-UV-Turbo" xml:space="preserve">
+    <value>Glass exhaust hood JLI-S-UV-Turbo with UV-Turbo filter with filtration efficiency up to 98%,  together with odor reduction, also enabling regulation of airlfow in range from 0m3/h to #MaxWydatekPowietrza#m3/h without lowering filtration efficiency. Pressure drop of airflow up to 60 Pa. The hood is made of stainless steel AISI 304 and laminated glass.</value>
+  </data>
+  <data name="OpisOkapuJSI-R-FF" xml:space="preserve">
+    <value>Supply air hood JSI-R-FF with supply air units, with pressure chamber creating direction air leading exhaust air to the inside of the hood. Filter cassette with JCE cyclone filters, with constant pressure drop of airflow and with mesh filter FF. Total filter efficiency up to 95%. Pressure drop of airflow around 80-85 Pa. The hood is made of stainless steel AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJSI-R-JCE" xml:space="preserve">
+    <value>Supply air hood JSI-R with supply air units, with pressure chamber creating direction air leading exhaust air to the inside of the hood. Filter cassette with JCE cyclone filters, with constant pressure drop of airflow around 80-85Pa. Total filter efficiency up to 93%. The hood is made of stainless steel AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJSI-R-Turbo" xml:space="preserve">
+    <value>Supply air hood JSI-R-Turbo with supply air units, with pressure chamber creating direction air leading exhaust air to the inside of the hood, with TurboSwing filter with filtration efficiency up to 98%, also enabling regulation of airlfow in range from 0m3/h to #MaxWydatekPowietrza#m3/h without lowering filtration efficiency. Pressure drop of airflow up to 60 Pa. The hood is made of stainless steel AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJSI-R-UV" xml:space="preserve">
+    <value>Supply air hood JSI-R-UV with supply air units, with pressure chamber creating direction air leading exhaust air to the inside of the hood. Filter cassette with JCE cyclone filters, with constant pressure drop of airflow, with mesh filter FF and with UV Combilux filter. Total filter efficiency up to 99,9%. Pressure drop of airflow around 85-90 Pa. The hood is made of stainless steel AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJSI-R-UV-Turbo" xml:space="preserve">
+    <value>Supply air hood JSI-R-UV-Turbo with supply air units, with pressure chamber creating direction air leading exhaust air to the inside of the hood, with UV-Turbo filter with filtration efficiency up to 98%,  together with odor reduction, also enabling regulation of airlfow in range from 0m3/h to #MaxWydatekPowietrza#m3/h without lowering filtration efficiency. Pressure drop of airflow up to 60 Pa. The hood is made of stainless steel AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJSI-S-FF" xml:space="preserve">
+    <value>Glass supply air hood JSI-S-FF with supply air units, with pressure chamber creating direction air leading exhaust air to the inside of the hood. Filter cassette with JCE cyclone filters, with constant pressure drop of airflow and with mesh filter FF. Total filter efficiency up to 95%. Pressure drop of airflow around 80-85 Pa. The hood is made of stainless steel AISI 304 and laminated glass.</value>
+  </data>
+  <data name="OpisOkapuJSI-S-JCE" xml:space="preserve">
+    <value>Glass supply air hood JSI-S with supply air units, with pressure chamber creating direction air leading exhaust air to the inside of the hood. Filter cassette with JCE cyclone filters, with constant pressure drop of airflow around 80-85Pa. Total filter efficiency up to 93%. The hood is made of stainless steel AISI 304 and laminated glass.</value>
+  </data>
+  <data name="OpisOkapuJSI-S-Turbo" xml:space="preserve">
+    <value>Glass supply air hood JSI-S-Turbo with supply air units, with pressure chamber creating direction air leading exhaust air to the inside of the hood, with TurboSwing filter with filtration efficiency up to 98%, also enabling regulation of airlfow in range from 0m3/h to #MaxWydatekPowietrza#m3/h without lowering filtration efficiency. Pressure drop of airflow up to 60 Pa. The hood is made of stainless steel AISI 304 and laminated glass.</value>
+  </data>
+  <data name="OpisOkapuJSI-S-UV" xml:space="preserve">
+    <value>Glass supply air hood JSI-S-UV with supply air units, with pressure chamber creating direction air leading exhaust air to the inside of the hood. Filter cassette with JCE cyclone filters, with constant pressure drop of airflow, with mesh filter FF and with UV Combilux filter. Total filter efficiency up to 99,9%. Pressure drop of airflow around 85-90 Pa. The hood is made of stainless steel AISI 304 and laminated glass.</value>
+  </data>
+  <data name="OpisOkapuJSI-S-UV-Turbo" xml:space="preserve">
+    <value>Glass supply air hood JSI-S-UV-Turbo with supply air units, with pressure chamber creating direction air leading exhaust air to the inside of the hood, with UV-Turbo filter with filtration efficiency up to 98%,  together with odor reduction, also enabling regulation of airlfow in range from 0m3/h to #MaxWydatekPowietrza#m3/h without lowering filtration efficiency. Pressure drop of airflow up to 60 Pa. The hood is made of stainless steel AISI 304 and laminated glass.</value>
+  </data>
+  <data name="OpisOkapuJSKI" xml:space="preserve">
+    <value>Supply air hood JSKI, condensate type with supply air units and condensate baffers. The hood is made of stainless steel AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJSVI-R-FF" xml:space="preserve">
+    <value>Supply air hood JSVI-R-FF with supply air units, with pressure chamber creating direction air leading exhaust air to the inside of the hood. Filter cassette with JCE cyclone filters, with constant pressure drop of airflow and with mesh filter FF. Total filter efficiency up to 95%. Pressure drop of airflow around 80-85 Pa. The hood is made of stainless steel AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJSVI-R-JCE" xml:space="preserve">
+    <value>Supply air hood JSVI-R with supply air units, with pressure chamber creating direction air leading exhaust air to the inside of the hood. Filter cassette with JCE cyclone filters, with constant pressure drop of airflow around 80-85Pa. Total filter efficiency up to 93%. The hood is made of stainless steel AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJSVI-R-Turbo" xml:space="preserve">
+    <value>Supply air hood JSVI-R-Turbo with supply air units, with pressure chamber creating direction air leading exhaust air to the inside of the hood, with TurboSwing filter with filtration efficiency up to 98%, also enabling regulation of airlfow in range from 0m3/h to #MaxWydatekPowietrza#m3/h without lowering filtration efficiency. Pressure drop of airflow up to 60 Pa. The hood is made of stainless steel AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJSVI-R-UV" xml:space="preserve">
+    <value>Supply air hood JSVI-R-UV with supply air units, with pressure chamber creating direction air leading exhaust air to the inside of the hood. Filter cassette with JCE cyclone filters, with constant pressure drop of airflow, with mesh filter FF and with UV Combilux filter. Total filter efficiency up to 99,9%. Pressure drop of airflow around 85-90 Pa. The hood is made of stainless steel AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJSVI-R-UV-Turbo" xml:space="preserve">
+    <value>Supply air hood JSVI-R-UV-Turbo with supply air units, with pressure chamber creating direction air leading exhaust air to the inside of the hood, with UV-Turbo filter with filtration efficiency up to 98%,  together with odor reduction, also enabling regulation of airlfow in range from 0m3/h to #MaxWydatekPowietrza#m3/h without lowering filtration efficiency. Pressure drop of airflow up to 60 Pa. The hood is made of stainless steel AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJVI-R-FF" xml:space="preserve">
+    <value>Exhaust hood with direction air JVI-R-FF with pressure chamber creating direction air leading exhaust air to the inside of the hood. Filter cassette with JCE cyclone filters, with constant pressure drop of airflow and with mesh filter FF. Total filter efficiency up to 95%. Pressure drop of airflow around 80-85 Pa. The hood is made of stainless steel AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJVI-R-JCE" xml:space="preserve">
+    <value>Exhaust hood with direction air JVI-R with pressure chamber creating direction air leading exhaust air to the inside of the hood. Filter cassette with JCE cyclone filters, with constant pressure drop of airflow around 80-85Pa. Total filter efficiency up to 93%. The hood is made of stainless steel AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJVI-R-Turbo" xml:space="preserve">
+    <value>Exhaust hood with direction air JVI-R-Turbo with pressure chamber creating direction air leading exhaust air to the inside of the hood, with TurboSwing filter with filtration efficiency up to 98%, also enabling regulation of airlfow in range from 0m3/h to #MaxWydatekPowietrza#m3/h without lowering filtration efficiency. Pressure drop of airflow up to 60 Pa. The hood is made of stainless steel AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJVI-R-UV" xml:space="preserve">
+    <value>Exhaust hood with direction air JVI-R-UV with pressure chamber creating direction air leading exhaust air to the inside of the hood. Filter cassette with JCE cyclone filters, with constant pressure drop of airflow, with mesh filter FF and with UV Combilux filter. Total filter efficiency up to 99,9%. Pressure drop of airflow around 85-90 Pa. The hood is made of stainless steel AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJVI-R-UV-Turbo" xml:space="preserve">
+    <value>Exhaust hood with direction air JVI-R-Turbo with pressure chamber creating direction air leading exhaust air to the inside of the hood, with UV-Turbo filter with filtration efficiency up to 98%,  together with odor reduction, also enabling regulation of airlfow in range from 0m3/h to #MaxWydatekPowietrza#m3/h without lowering filtration efficiency. Pressure drop of airflow up to 60 Pa. The hood is made of stainless steel AISI 304.</value>
+  </data>
+  <data name="Oswietlenie" xml:space="preserve">
+    <value>Lighting</value>
+  </data>
+  <data name="OswietlenieLedowePunktowe" xml:space="preserve">
+    <value>LED spot lighting</value>
+  </data>
+  <data name="OznaczenieOkapu" xml:space="preserve">
+    <value>Type of hood</value>
+  </data>
+  <data name="Plyta" xml:space="preserve">
+    <value>Plate</value>
+  </data>
+  <data name="PojWodna" xml:space="preserve">
+    <value>Water content</value>
+  </data>
+  <data name="Profesjonalistom" xml:space="preserve">
+    <value>for Professionals</value>
+  </data>
+  <data name="PrzegrodaNaSkropliny" xml:space="preserve">
+    <value>Condensate baffers</value>
+  </data>
+  <data name="PrzeplywPowietrza" xml:space="preserve">
+    <value>Air flow
+[m&lt;sup&gt;3&lt;/sup&gt;/h]</value>
+  </data>
+  <data name="PrzyjetyStrumienPowietrzaWywiewanego" xml:space="preserve">
+    <value>Selected exhaust airflow</value>
+  </data>
+  <data name="PrzykladoweZestawienieNawiewnikow" xml:space="preserve">
+    <value>Exemplary combination of diffusers ensuring balanced supply and exhaust air flow in the kitchen.</value>
+  </data>
+  <data name="Przyscienny" xml:space="preserve">
+    <value>Wall-mounted</value>
+  </data>
+  <data name="RegionPolnocny" xml:space="preserve">
+    <value>Gdansk Region</value>
+  </data>
+  <data name="RegionPolnocnyTelefon" xml:space="preserve">
+    <value>661-501-797</value>
+  </data>
+  <data name="RegionPoludniowy" xml:space="preserve">
+    <value>Cracow Region</value>
+  </data>
+  <data name="RegionPoludniowyTelefon" xml:space="preserve">
+    <value>795-560-827</value>
+  </data>
+  <data name="RegionWroclaw" xml:space="preserve">
+    <value>Wroclaw Region</value>
+  </data>
+  <data name="RegionWroclawTelefon" xml:space="preserve">
+    <value>785-559-958</value>
+  </data>
+  <data name="RegionWschodni" xml:space="preserve">
+    <value>Warsaw Region</value>
+  </data>
+  <data name="RegionWschodniTelefon" xml:space="preserve">
+    <value>661-363-918</value>
+  </data>
+  <data name="RegionZachodni" xml:space="preserve">
+    <value>Poznan Region</value>
+  </data>
+  <data name="RegionZachodniTelefon" xml:space="preserve">
+    <value>662-332-817</value>
+  </data>
+  <data name="SrednicaKroccowNawiewnych" xml:space="preserve">
+    <value>Diameter of supply air connections</value>
+  </data>
+  <data name="SrednicaKroccowWywiewnych" xml:space="preserve">
+    <value>Diameter of exhaust air connections</value>
+  </data>
+  <data name="StrumienPowietrzaWyciaganegoPrzezOkap" xml:space="preserve">
+    <value>Exhaust airflow</value>
+  </data>
+  <data name="StrumienPrzeplywuPowietrzaPrzyGlosnosci" xml:space="preserve">
+    <value>air flow rate at 35 dB(A)</value>
+  </data>
+  <data name="StrumienWymiewu" xml:space="preserve">
+    <value>Air flow</value>
+  </data>
+  <data name="SystemAnsulR102SystemPrzeciwopozarowyNaglowek" xml:space="preserve">
+    <value>The fire suppression system Ansul R-102</value>
+  </data>
+  <data name="SystemAnsulR102SystemPrzeciwopozarowyOpis" xml:space="preserve">
+    <value>The protection of catering equipment in professional kitchens with fire suppression systems allows to avoid serious consequences associated with fire outbreak. The ANSUL system protects human health and life, valuable equipments and rooms. The system reduces the hazard connected with inability to conduct business caused by the consequences of fire. Fire protection systems are taken into account by insurance companies which leads to lowering insurance costs.</value>
+  </data>
+  <data name="SystemAnsulR102WariantyCzynnikGasniczy" xml:space="preserve">
+    <value>ANSULEX is the medium used to extinguish fire which contains 11,4 liters in one tank</value>
+  </data>
+  <data name="SystemAnsulR102WariantyDedykowany" xml:space="preserve">
+    <value>&lt;b&gt;Dedicated&lt;/b&gt; - each nozzle below ceiling of the hood protects only one equipment it's dedicated for - any change in type or placement of equipment selected system requires revision.</value>
+  </data>
+  <data name="SystemAnsulR102WariantyNaglowek" xml:space="preserve">
+    <value>The Ansul R-102 system is available in two nozzle placement options</value>
+  </data>
+  <data name="SystemAnsulR102WariantyNakladajacySie" xml:space="preserve">
+    <value>&lt;b&gt;Overlapping&lt;/b&gt; - the nozzle ranges overlap and the entire area requiring protection is secured - devices can be freely moved or swapped over the entire length of the protected area.</value>
+  </data>
+  <data name="SystemAnsulR102WymaganiaNaglowek" xml:space="preserve">
+    <value>Requirements to be met by the contracting authority to ensure a guarantee of effective functioning.</value>
+  </data>
+  <data name="SystemAnsulR102WymaganiaOpis1" xml:space="preserve">
+    <value>When activated, the ANSUL R-102 system must cut off the power supply to devices under the hood (gas and electric). The control cabinet of the ANSUL R-102 system has NC contacts.</value>
+  </data>
+  <data name="SystemAnsulR102WymaganiaOpis2" xml:space="preserve">
+    <value>That is why a 3x1mm2 (max 3) wire/s should be brought near the box from gas valves and / or relays cutting off the power supply &lt;b&gt;(valves and relays and wiring to the box out of Synergia responsibility).&lt;/b&gt;
+If it is necessary to connect to the alarm system in the building, connect another 3x1mm2 cable &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;(cable connection out of Synergia responsibility).&lt;/b&gt;
+When the ANSUL R-102 system is activated, the exhaust ventilation must remain switched on, while the supply ventilation should be stopped.
+Meeting the above requirements is a prerequisite for providing a guarantee of effective functioning of the ANSUL R-102 system.</value>
+  </data>
+  <data name="SystemyWentylacjiKuchni" xml:space="preserve">
+    <value>Kitchen ventilation systems</value>
+  </data>
+  <data name="SzerokoscElementuNawiewnego" xml:space="preserve">
+    <value>Width of supply air fasade</value>
+  </data>
+  <data name="SzerokoscOkapu" xml:space="preserve">
+    <value>Width of hood</value>
+  </data>
+  <data name="Szt" xml:space="preserve">
+    <value>pcs</value>
+  </data>
+  <data name="TypFiltra" xml:space="preserve">
+    <value>Filter type</value>
+  </data>
+  <data name="TypFiltraJCE" xml:space="preserve">
+    <value>JCE - cyclone filter - one step filtration</value>
+  </data>
+  <data name="TypFiltraJFF" xml:space="preserve">
+    <value>JFF - cyclone filter with mesh filter - two steps filtration</value>
+  </data>
+  <data name="TypFiltraTurboSwing" xml:space="preserve">
+    <value>TurboSwing - TurboSwing filter with fast rotating extraction plate - one step filtration</value>
+  </data>
+  <data name="TypFiltraUV" xml:space="preserve">
+    <value>UV-Combilux - cyclone filter with mesh filter and UV filter - three steps filtration</value>
+  </data>
+  <data name="TypFiltraUVTurbo" xml:space="preserve">
+    <value>UV-Turbo - TurboSwing filter with fast roatating extraction plate and UV filter - two steps filtration</value>
+  </data>
+  <data name="TypOkapu" xml:space="preserve">
+    <value>Type of hood</value>
+  </data>
+  <data name="TypOkapuJKI" xml:space="preserve">
+    <value>Condensate Hood</value>
+  </data>
+  <data name="TypOkapuJLI-R" xml:space="preserve">
+    <value>Exhaust hood</value>
+  </data>
+  <data name="TypOkapuJSI-R" xml:space="preserve">
+    <value>Supply air hood with direction air</value>
+  </data>
+  <data name="TypOkapuJSKI" xml:space="preserve">
+    <value>Supply air condensate Hood</value>
+  </data>
+  <data name="TypOkapuJVI-R" xml:space="preserve">
+    <value>Exhaust hood with direction air</value>
+  </data>
+  <data name="TypWielkoscNawiewnika" xml:space="preserve">
+    <value>Type / size of the diffuser</value>
+  </data>
+  <data name="UkladDedykowany" xml:space="preserve">
+    <value>Dedicated system</value>
+  </data>
+  <data name="UkladNakladajacySie" xml:space="preserve">
+    <value>Overlapping system</value>
+  </data>
+  <data name="UrzadzenieBemar" xml:space="preserve">
+    <value>Bain-marie</value>
+  </data>
+  <data name="UrzadzenieFrytkownica" xml:space="preserve">
+    <value>Fryer</value>
+  </data>
+  <data name="UrzadzenieKociolWarzelny" xml:space="preserve">
+    <value>Boiling pan</value>
+  </data>
+  <data name="UrzadzenieOpiekaczGastronomiczny" xml:space="preserve">
+    <value>Catering toaster</value>
+  </data>
+  <data name="UrzadzeniePatelnia" xml:space="preserve">
+    <value>Bratt pan</value>
+  </data>
+  <data name="UrzadzeniePatelniaWok" xml:space="preserve">
+    <value>Wok pan</value>
+  </data>
+  <data name="UrzadzeniePiecDoPizzy" xml:space="preserve">
+    <value>Pizza oven</value>
+  </data>
+  <data name="UrzadzeniePiecKombi" xml:space="preserve">
+    <value>Combi oven</value>
+  </data>
+  <data name="UrzadzeniePiecKonwekcyjnoParowy" xml:space="preserve">
+    <value>Convection-steam oven</value>
+  </data>
+  <data name="UrzadzeniePlytaGrillowa" xml:space="preserve">
+    <value>Grill</value>
+  </data>
+  <data name="UrzadzeniePlytaIndukcyjna" xml:space="preserve">
+    <value>Induction cooker</value>
+  </data>
+  <data name="UrzadzenieSalamander" xml:space="preserve">
+    <value>Salamander</value>
+  </data>
+  <data name="UrzadzenieSzybkowar" xml:space="preserve">
+    <value>Pressure cooker</value>
+  </data>
+  <data name="UrzadzenieTaboretGrzewczy" xml:space="preserve">
+    <value>Heating stool</value>
+  </data>
+  <data name="UrzadzenieTrzonKuchenny" xml:space="preserve">
+    <value>Range</value>
+  </data>
+  <data name="UrzadzenieWarnik" xml:space="preserve">
+    <value>Boiler</value>
+  </data>
+  <data name="UrzadzenieZmywarka" xml:space="preserve">
+    <value>Dishwasher</value>
+  </data>
+  <data name="Uwagi" xml:space="preserve">
+    <value>Comments</value>
+  </data>
+  <data name="Waga" xml:space="preserve">
+    <value>Weight</value>
+  </data>
+  <data name="WagaPustegoUrzadzenia" xml:space="preserve">
+    <value>Weight of empty machine</value>
+  </data>
+  <data name="WentrylatoryWiązki" xml:space="preserve">
+    <value>Direction air fan</value>
+  </data>
+  <data name="WOparciuOOkapOrazGrillWeglowyDobranoNastępująceUrządzenie" xml:space="preserve">
+    <value>The following device was selected based on the selected hood and type of grill</value>
+  </data>
+  <data name="WOparciuOTechnologięGastronomiczną" xml:space="preserve">
+    <value>Based on the kitchen technology, selected hoods and the option of placing the nozzles, the following system size was selected</value>
+  </data>
+  <data name="WOparciuOWybranyPiecDoPizzyDobranoNastępująceUrządzenie" xml:space="preserve">
+    <value>The following device was selected based on the selected pizza oven</value>
+  </data>
+  <data name="WrazZPanelemDotykowym" xml:space="preserve">
+    <value>with the touchpad FC</value>
+  </data>
+  <data name="Wspolczynnik063Info" xml:space="preserve">
+    <value>The calculated minimum exhaust airflow with included reduction factor of 0.63 for a wall-mounted hood.</value>
+  </data>
+  <data name="WyposazenieDodatkowe" xml:space="preserve">
+    <value>Additional equipment</value>
+  </data>
+  <data name="WysokoscOkapu" xml:space="preserve">
+    <value>Height of hood</value>
+  </data>
+  <data name="Wyspowy" xml:space="preserve">
+    <value>Island-mounted</value>
+  </data>
+  <data name="WytyczneProjektowe" xml:space="preserve">
+    <value>Design guidelines</value>
+  </data>
+  <data name="WytyczneProjektoweSmokiJuniorOpis" xml:space="preserve">
+    <value>&lt;li&gt; SMOKI Junior duct connections should be treated like smoke ducts and stainless double-wall chimney systems should be used. &lt;/li&gt;
+&lt;li&gt; Due to the high humidity of the smoke leaving SMOKI and the very presence of smoke, the ducts must be tight and should be laid with a slope towards the device. If it is not possible to arrange the ducts with a slope towards SMOKI, install a fitting with the possibility of drainage in the lowest place of installation. The smoke duct shall be led above the roof in accordance with applicable chimney regulations. &lt;/li&gt;
+&lt;li&gt; DO NOT CONNECT SMOKI JUNIOR TO THE VENTILATION SYSTEM &lt;/li&gt;
+&lt;li&gt; Cold tap water should be connected to the SMOKI Junior device and permanently connected. The device automatically draws the right amount of water. A water filter is installed in the device. &lt;/li&gt;
+&lt;li&gt; A sanitary sewage system should be connected to the SMOKI Junior device. The drain should pass through the grease separator. &lt;/li&gt;
+&lt;li&gt; The SMOKI Junior device must be supplied with power supply and voltage compatible with the product card. &lt;/li&gt;
+&lt;li&gt; SMOKI Junior should be located as close as possible to the pizza oven, above the hearth. This ensures a short channel section exposed to soot deposition and high temperature. The device can be placed on the ground or attached to a wall or ceiling with a support frame. &lt;/li&gt;</value>
+  </data>
+  <data name="WytyczneProjektoweSmokiMaxiOpis" xml:space="preserve">
+    <value>&lt;li&gt; SMOKI Maxi Grill duct connections between the grill and the device should be treated as smoke ducts and stainless double-wall chimney systems should be used. &lt;/li&gt;
+&lt;li&gt; It is recommended to make ducts for SMOKI Maxi Grill also in the chimney system, stainless ventilation fittings may be used. &lt;/li&gt;
+&lt;li&gt; Due to the high humidity of the smoke leaving SMOKI, the channels must be tight and should be laid with a slope towards the device. If it is not possible to arrange the ducts with a slope towards SMOKI, install a fitting with the possibility of drainage in the lowest place of installation. The exhaust channel should be led above the roof in accordance with applicable regulations. &lt;/li&gt;
+&lt;li&gt; SMOKI MAXI GRILL SHOULD NOT BE COMBINED WITH OTHER VENTILATION SYSTEMS &lt;/li&gt;
+&lt;li&gt; Cold tap water should be connected to the SMOKI Maxi Grill device and permanently connected. The device automatically draws the right amount of water. A water filter is installed in the device. &lt;/li&gt;
+&lt;li&gt; A sanitary sewage system should be connected to the SMOKI Maxi Grill device. The drain should pass through the grease separator. &lt;/li&gt;
+&lt;li&gt; The SMOKI Maxi Grill device must be supplied with power supply and voltage compatible with the product card. &lt;/li&gt;
+&lt;li&gt; The SMOKI Maxi Grill device should be located as close to the grill as possible, this ensures a short section of the channel exposed to orchard deposition and high temperature. The device can be placed on the ground or attached to a wall or ceiling. &lt;/li&gt; </value>
+  </data>
+  <data name="Zalacznik" xml:space="preserve">
+    <value>Annex</value>
+  </data>
+  <data name="ZalacznikNr" xml:space="preserve">
+    <value>Annex No.</value>
+  </data>
+  <data name="Zapytanie" xml:space="preserve">
+    <value>Query</value>
+  </data>
+  <data name="Zbiornikowy" xml:space="preserve">
+    <value>Tank/s</value>
+  </data>
+  <data name="ZuzycieWody" xml:space="preserve">
+    <value>Water consumption</value>
+  </data>
+</root>

@@ -1,0 +1,200 @@
+﻿
+@model CustomersViewModel
+@Scripts.Render("~/bundles/customers/customerDetails")
+@{
+    ViewBag.Title = "Nabywca";
+
+}
+
+<script>
+
+</script>
+
+<div class="row">
+    <div class="col-lg-8">
+        <!-- Trigger the modal with a button -->
+
+        <div class="card">
+            @*<div class="card-header card-header-icon" data-background-color="blueSynergia">
+                    <i class="material-icons">assignment</i>
+                </div>*@
+            <div class="card-header card-header-text" data-background-color="blueSynergia">
+                <h4 class="card-title">Dane podstawowe</h4>
+            </div>
+            <div class="card-content">
+                <div class="row">
+                    <div class="col-md-11">
+                        <div class="form-group label-floating">
+                            @Html.LabelFor(model => model.Name, new { @class = "control-label" })
+                            @Html.TextBoxFor(model => model.Name, new { @class = "form-control", disabled = "true" })
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-11">
+                        <div class="form-group label-floating">
+                            @Html.LabelFor(model => model.Address, new { @class = "control-label" })
+                            @Html.TextBoxFor(model => model.Address, new { @class = "form-control", disabled = "true" })
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="form-group label-floating">
+                            @Html.LabelFor(model => model.NIP, new { @class = "control-label" })
+                            @Html.TextBoxFor(model => model.NIP, new { @class = "form-control", disabled = "true" })
+                        </div>
+                    </div>
+                    @*<div class="col-md-4">
+            <div class="form-group label-floating">
+                @Html.LabelFor(model => model.Regon, new { @class = "control-label" })
+                @Html.TextBoxFor(model => model.Regon, new { @class = "form-control", disabled = "true" })
+            </div>
+        </div>*@
+                    <div class="col-md-6">
+                        <div class="form-group label-floating">
+                            @Html.LabelFor(model => model.Email, new { @class = "control-label" })
+                            @Html.TextBoxFor(model => model.Email, new { @class = "form-control", disabled = "true" })
+                        </div>
+                        @Html.HiddenFor(model => model.Id)
+                    </div>
+                </div>
+                @*<div class="row">
+                    <div class="col-md-11">
+                        <div class="form-group label-floating">
+                            @Html.LabelFor(model => model.Email, new { @class = "control-label" })
+                            @Html.TextBoxFor(model => model.Email, new { @class = "form-control", disabled = "true" })
+                        </div>
+                        @Html.HiddenFor(model => model.Id)
+                    </div>
+                </div>*@
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="col-lg-4">
+        <!-- Trigger the modal with a button -->
+
+        <div class="card">
+            @*<div class="card-header card-header-icon" data-background-color="blueSynergia">
+                    <i class="material-icons">assignment</i>
+                </div>*@
+            <div class="card-header card-header-text" data-background-color="blueSynergia">
+                <h4 class="card-title">Warunki handlowe</h4>
+            </div>
+            <div class="card-content">
+                <div class="row">
+                    <div class="col-md-11">
+                        <div class="form-group label-floating">
+                            @Html.LabelFor(model => model.OrderCurrency, new { @class = "control-label" })
+                            @Html.TextBoxFor(model => model.OrderCurrency, new { @class = "form-control", disabled = "true" })
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-11">
+                        <div class="form-group label-floating">
+                            @Html.LabelFor(model => model.PaymentFormName, new { @class = "control-label" })
+                            @Html.TextBoxFor(model => model.PaymentFormName, new { @class = "form-control", disabled = "true" })
+                        </div>
+                    </div>
+                </div>
+                @*<div class="row">
+                    <div class="col-md-11">
+                        <div class="form-group label-floating">
+                            @Html.LabelFor(model => model.LimitValue, new { @class = "control-label" })
+                            @Html.TextBoxFor(model => model.LimitValue, new { @class = "form-control", disabled = "true" })
+                        </div>
+                    </div>
+                </div>*@
+
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="form-group label-floating">
+                            @Html.LabelFor(model => model.ReceivablesPLN, new { @class = "control-label" })
+                            @Html.TextBoxFor(model => model.ReceivablesPLN, new { @class = "form-control", disabled = "true" })
+                            @*@Html.DisplayTextFor(model => model.Name), new { @class = "control-label" })*@
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-group label-floating">
+                            @Html.LabelFor(model => model.ReceivablesEUR, new { @class = "control-label" })
+                            @Html.TextBoxFor(model => model.ReceivablesEUR, new { @class = "form-control", disabled = "true" })
+                            @*@Html.DisplayTextFor(model => model.Name), new { @class = "control-label" })*@
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-8">
+        <!-- Trigger the modal with a button -->
+
+        <div class="card">
+            <div class="card-header card-header-text" data-background-color="blueSynergia">
+                <h4 class="card-title">Realizacja zamówień</h4>
+            </div>
+            <div class="card-content">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="form-ggroup label-floating">
+                            @*@Html.TextBoxFor(m => m.TransportFree, new { style = "color: red; border: 0px; width: 80px;" })*@
+                            @*@Html.TextBoxFor(model => model.TransportFree, new { @class = "form-control", disabled = "true", width="10" })*@
+                            @*@Html.LabelFor(model => model.TransportFree, new { @class = "control-label" })
+                                @Html.TextBoxFor(model => model.TransportFree, new { @class = "form-control", disabled = "true" })*@
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-11">
+                        <P> 1. Realizacja zamówień złożonych od poniedziałku do piątku do godziny 16:00 nastąpi w kolejnym tygodniu.</P>
+                        <P> 2. Minimum logistyczne wynosi  @Html.TextBoxFor(m => m.TransportMin, new { style = "font-weight: bold; text-align: center; border: 0px; width: 60px;" }) @Html.TextBoxFor(m => m.Currency1, new { style = "font-weight: bold; text-align: center; border: 0px; width: 30px;" }) netto</P>
+                        <P> 3. W przypadku zamówień na kwotę powyżej  @Html.TextBoxFor(m => m.TransportFree, new { style = "font-weight: bold; text-align: center; border: 0px; width: 60px;" }) @Html.TextBoxFor(m => m.Currency2, new { style = "font-weight: bold; text-align: center; border: 0px; width: 30px;" }) netto koszty transportu na terytorium Rzeczypospolitej Polskiej pokrywa Dostawca.  </P>
+                        <P> 4. W przypadku zamówień na kwotę od @Html.TextBoxFor(m => m.TransportMin2, new { style = "font-weight: bold; text-align: center; border: 0px; width: 60px;" }) @Html.TextBoxFor(m => m.Currency3, new { style = "font-weight: bold; text-align: center; border: 0px; width: 30px;" }) netto do @Html.TextBoxFor(m => m.TransportFree2, new { style = "font-weight: bold; text-align: center; border: 0px; width: 60px;" }) @Html.TextBoxFor(m => m.Currency4, new { style = "font-weight: bold; text-align: center; border: 0px; width: 30px;" }) netto, koszt dostawy zamówienia do Kupującego na terytorium Rzeczypospolitej Polskiej wynosi @Html.TextBoxFor(m => m.TransportCost, new { style = "font-weight: bold; text-align: center; border: 0px; width: 50px;" }) @Html.TextBoxFor(m => m.Currency5, new { style = "font-weight: bold; text-align: center; border: 0px; width: 30px;" }) netto</P>
+                        <P> 5. W przypadku opóźnień w płatnościach Dostawca zastrzega sobie możliwość wstrzymania wykonania dostaw towaru do Kupującego.</P>
+                        <P><b> Korzystanie z systemu zamówień B2B jest równoznaczne z akceptacją warunków handlowych Dostawcy (Building Shutter Systems Sp. z o.o.) oraz powyższych warunków realizacji zamówień.</b></P>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <!-- Trigger the modal with a button -->
+
+        <div class="card">
+            @*<div class="card-header card-header-icon" data-background-color="blueSynergia">
+                    <i class="material-icons">assignment</i>
+                </div>*@
+            <div class="card-header card-header-text" data-background-color="blueSynergia">
+                <h4 class="card-title">Użytkownicy B2B (aktywni)</h4>
+            </div>
+            <div class="card-content">
+                <div class="material-datatables col-sm-12">
+                    <table id="userstable" class="table table-striped table-no-bordered table-hover dataTable" cellspacing="0" style="width:100%;">
+                        <thead>
+                            <tr>
+                                <th>Imię</th>
+                                <th>Nazwisko</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

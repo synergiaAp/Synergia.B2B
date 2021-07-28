@@ -1,0 +1,692 @@
+﻿@model HoodSelectionOfferHoodDetailsModalViewModel
+
+@Scripts.Render("~/bundles/hoodSelection/_HoodSelectionOfferHoodDetailsModal")
+
+<style>
+    #commentsLabel {
+        color: #ff9800;
+    }
+</style>
+
+<div class="modal fade" id="modalHoodSelectionOfferHoodDetails" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+
+                <div class="card">
+                    <div class="card-header card-header-icon" data-background-color="rose">
+                        <i class="material-icons">border_color</i>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">
+                            <h4>Szczegóły okapu</h4>
+                            <ul class="nav nav-pills nav-pills-warning" style="left: 240px;">
+                                <li class="active" style="width:180px">
+                                    <a href="#pillOfferDetails" data-toggle="tab">Dobór i cena</a>
+                                </li>
+                                <li style="width:180px">
+                                    <a href="#pillAirCalculation" data-toggle="tab">Ilość powietrza</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content" style="margin-top: 0;">
+                            <div class="tab-pane active" id="pillOfferDetails">
+                                <div class="row rowHoodOfferNumber" style="top: 10px;">
+                                    <div class="col-md-6">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.HoodStatusTextModal, new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.HoodStatusTextModal, new { @class = "form-control form-control-disabled", disabled = "disabled" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.HoodOfferNumberModal, new { @class = "required control-label" })
+                                            @Html.TextBoxFor(model => model.HoodOfferNumberModal, new { @class = "form-control form-control-disabled", disabled = "disabled" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <form id="formHoodSelectionOfferHoodDetails">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="row">
+                                                <div class="col-sm-5">
+                                                    <div class="form-group label-static">
+                                                        @Html.LabelFor(model => model.HoodNr, new { @class = "control-label" })
+                                                        @Html.TextBoxFor(x => x.HoodNr, new { @class = "form-control", disabled = "disabled" })
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-1">
+                                                    <div class="form-group label-static">
+                                                        @Html.LabelFor(model => model.PriceAdditionalValue, new { @class = "control-label text-ellipsis",
+                                                            title = Html.DisplayNameFor(x => x.PriceAdditionalValue), data_toggle="tooltip" })
+                                                        @Html.TextBoxFor(x => x.PriceAdditionalValue, new { @class = "form-control" })
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-1">
+                                                    <div class="form-group label-static">
+                                                        @Html.LabelFor(model => model.Price, new { @class = "control-label" })
+                                                        @Html.TextBoxFor(x => x.Price, new { @class = "form-control", disabled = "disabled" })
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-1">
+                                                    <div class="form-group label-static">
+                                                        @Html.LabelFor(model => model.FinalPriceSingleElement, new { @class = "control-label text-ellipsis",
+                                                            title = Html.DisplayNameFor(x => x.FinalPriceSingleElement), data_toggle="tooltip" })
+                                                        @Html.TextBoxFor(x => x.FinalPriceSingleElement, new { @class = "form-control", disabled = "disabled" })
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-1">
+                                                    <div class="form-group label-static">
+                                                        @Html.LabelFor(model => model.WeightAdditionalValue, new { @class = "control-label text-ellipsis",
+                                                            title = Html.DisplayNameFor(x => x.WeightAdditionalValue), data_toggle="tooltip" })
+                                                        @Html.TextBoxFor(x => x.WeightAdditionalValue, new { @class = "form-control" })
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-1">
+                                                    <div class="form-group label-static">
+                                                        @Html.LabelFor(model => model.Weight, new { @class = "control-label" })
+                                                        @Html.TextBoxFor(x => x.Weight, new { @class = "form-control", disabled = "disabled" })
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-1">
+                                                    <div class="form-group label-static">
+                                                        @Html.LabelFor(model => model.FinalWeightSingleElement, new { @class = "control-label text-ellipsis", 
+                                                            title = Html.DisplayNameFor(x => x.FinalWeightSingleElement), data_toggle="tooltip" })
+                                                        @Html.TextBoxFor(x => x.FinalWeightSingleElement, new { @class = "form-control", disabled = "disabled" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="scrollableContent">
+                                                <div class="row">
+                                                    <div class="col-sm-8">
+                                                        <div class="row">
+                                                            <div class="col-sm-3">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.Type, new { @class = "control-label" })
+                                                                    @Html.DropDownListFor(x => x.Type, Model.TypeList, new { @class = "selectpicker", data_style = "select-with-transition" })
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-3">
+                                                                <div class="form-group label-static" id="formGroupHoodOfferElementLocation">
+                                                                    @Html.LabelFor(model => model.LocationType, new { @class = "control-label" })
+                                                                    @Html.DropDownListFor(x => x.LocationType, Model.LocationTypeList, new { @class = "selectpicker", data_style = "select-with-transition" })
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-3">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.OrderNoText, new { @class = "control-label" })
+                                                                    @Html.TextBoxFor(x => x.OrderNoText, new { @class = "form-control" })
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-3">
+                                                                <img style="position: absolute;" src="~/Images/HoodOffer/hoodOfferElementLayoutType.png" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-3">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.FilterType, new { @class = "control-label" })
+                                                                    @Html.DropDownListFor(x => x.FilterType, new List<SelectListItem>(), new { @class = "selectpicker", data_style = "select-with-transition" })
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-3">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.ModuleCount, new { @class = "control-label" })
+                                                                    <div style="width:45px;" class="touchSpinWrapper">
+                                                                        @Html.TextBoxFor(model => model.ModuleCount, new
+                                                                        {
+                                                                            @class = "touchSpin",
+                                                                            data_initVal = "1",
+                                                                            data_min = "1",
+                                                                            data_max = "100"
+                                                                        })
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-3">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.LayoutType, new { @class = "control-label" })
+                                                                    @Html.DropDownListFor(x => x.LayoutType, /*Model.LayoutTypeList*/ new List<SelectListItem>(), "", new { @class = "selectpicker", data_style = "select-with-transition" })
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-3">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.Length, new { @class = "control-label" })
+                                                                    @Html.TextBoxFor(x => x.Length, new { @class = "form-control" })
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-3">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.LengthAdditionalValue, new { @class = "control-label" })
+                                                                    @Html.TextBoxFor(x => x.LengthAdditionalValue, new { @class = "form-control" })
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-3">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.Width, new { @class = "control-label" })
+                                                                    @Html.TextBoxFor(x => x.Width, new { @class = "form-control" })
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-3">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.WidthAdditionalValue, new { @class = "control-label" })
+                                                                    @Html.TextBoxFor(x => x.WidthAdditionalValue, new { @class = "form-control" })
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-3">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.Height, new { @class = "control-label" })
+                                                                    @Html.DropDownListFor(x => x.Height, Model.HeightList, new { @class = "selectpicker", data_style = "select-with-transition" })
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-3">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.HeightAdditionalValue, new { @class = "control-label" })
+                                                                    @Html.TextBoxFor(x => x.HeightAdditionalValue, new { @class = "form-control" })
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <table id="tblHoodSelectionInfo" class="table">
+                                                            <thead class="text-primary">
+                                                                <tr>
+                                                                    <th class="text-center">
+                                                                        Filtr
+                                                                    </th>
+                                                                    <th style="width: 70px;">
+                                                                        Przepływ
+                                                                    </th>
+                                                                    <th class="text-center">
+                                                                        Średnica
+                                                                    </th>
+                                                                    <th class="text-center">
+                                                                        Długość
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="text-center">1</td>
+                                                                    <td>
+                                                                        144-250
+                                                                    </td>
+                                                                    <td class="text-center">200</td>
+                                                                    <td class="text-center">240</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">2</td>
+                                                                    <td>250-500</td>
+                                                                    <td class="text-center">200</td>
+                                                                    <td class="text-center">240</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">3</td>
+                                                                    <td>500-755</td>
+                                                                    <td class="text-center">315</td>
+                                                                    <td class="text-center">358</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">4</td>
+                                                                    <td>755-970</td>
+                                                                    <td class="text-center">315</td>
+                                                                    <td class="text-center">470</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">5</td>
+                                                                    <td>970-1250</td>
+                                                                    <td class="text-center">315</td>
+                                                                    <td class="text-center">588</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">6</td>
+                                                                    <td>1250-1440</td>
+                                                                    <td class="text-center">400</td>
+                                                                    <td class="text-center">705</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">7</td>
+                                                                    <td>1440-1670</td>
+                                                                    <td class="text-center">400</td>
+                                                                    <td class="text-center">822</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">8</td>
+                                                                    <td>1670-2000</td>
+                                                                    <td class="text-center">400</td>
+                                                                    <td class="text-center">
+                                                                        940
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">9</td>
+                                                                    <td>2000-2140</td>
+                                                                    <td class="text-center">2x315</td>
+                                                                    <td class="text-center">1057</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">10</td>
+                                                                    <td>2140-2380</td>
+                                                                    <td class="text-center">2x315</td>
+                                                                    <td class="text-center">1174</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+
+
+
+                                                <div id="panelVentilator" class="panel panel-info" style="margin-top:20px">
+                                                    <div class="panel-heading">Nawiew</div>
+                                                    <div class="panel-body">
+                                                        <div class="row">
+                                                            <div class="col-sm-3">
+                                                                <div class="form-group label-static">
+                                                                    <label class="control-label">
+                                                                        @Html.DisplayNameFor(x => x.VentilatorDiameter)
+                                                                    </label>
+                                                                    @*@Html.LabelFor(model => model.VentilatorDiameter, new { @class = "control-label" })*@
+                                                                    @Html.DropDownListFor(x => x.VentilatorDiameter, new List<SelectListItem>(), new { @class = "selectpicker", data_style = "select-with-transition" })
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-3">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.VentilatorDiameterAdditionalValue, new { @class = "control-label" })
+                                                                    @Html.TextBoxFor(x => x.VentilatorDiameterAdditionalValue, new { @class = "form-control" })
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-3">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.VentilatorCountAdditionalValue, new { @class = "control-label" })
+                                                                    @Html.TextBoxFor(model => model.VentilatorCountAdditionalValue, new { @class = "form-control" })
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-3">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.VentilatorCount, new { @class = "control-label" })
+                                                                    <table>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <div style="width:45px;" class="touchSpinWrapper">
+                                                                                    @Html.TextBoxFor(model => model.VentilatorCount, new
+                                                                                    {
+                                                                                        @class = "touchSpin",
+                                                                                        data_initVal = "",
+                                                                                        data_min = "0",
+                                                                                        data_max = "100"
+                                                                                    })
+                                                                                </div>
+                                                                            </td>
+                                                                            <td style="padding-left: 10px;">
+                                                                                <span id="VentilatorDiameterInfo"></span>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-3">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.WiresCount, new { @class = "control-label" })
+                                                                    <div style="width:45px;" class="touchSpinWrapper">
+                                                                        @Html.TextBoxFor(model => model.WiresCount, new
+                                                                        {
+                                                                            @class = "touchSpin",
+                                                                            data_initVal = "",
+                                                                            data_min = "0",
+                                                                            data_max = "1000"
+                                                                        })
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-3">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.VentilatorStream, new { @class = "control-label" })
+                                                                    @Html.TextBoxFor(x => x.VentilatorStream, new { @class = "form-control" })
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-3">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.MaxVentilatorStream, new { @class = "control-label" })
+                                                                    @Html.TextBoxFor(x => x.MaxVentilatorStream, new { @class = "form-control", disabled = "disabled" })
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="panel panel-success" style="margin-top:20px">
+                                                    <div class="panel-heading">Wywiew</div>
+                                                    <div class="panel-body">
+                                                        <div class="row">
+                                                            <div class="col-sm-3">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.ExhaustStreamCalculated, new { @class = "control-label" })
+                                                                    @Html.TextBoxFor(x => x.ExhaustStreamCalculated, new { @class = "form-control", disabled = "diabled" })
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-3">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.ExhaustStreamAccepted, new { @class = "control-label" })
+                                                                    @Html.TextBoxFor(x => x.ExhaustStreamAccepted, new { @class = "form-control" })
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-3">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.ExhaustStreamAdditionalValue, new { @class = "control-label" })
+                                                                    @Html.TextBoxFor(x => x.ExhaustStreamAdditionalValue, new { @class = "form-control" })
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-3">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.ExhaustCount, new { @class = "control-label" })
+                                                                    <table>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <div style="width:45px;" class="touchSpinWrapper">
+                                                                                    @Html.TextBoxFor(model => model.ExhaustCount, new
+                                                                                    {
+                                                                                        @class = "touchSpin",
+                                                                                        data_initVal = "1",
+                                                                                        data_min = "1",
+                                                                                        data_max = "100"
+                                                                                    })
+                                                                                </div>
+                                                                            </td>
+                                                                            <td style="padding-left: 10px;">
+                                                                                <span id="ExhaustCountInfo" class="text-small"></span>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-3 col-sm-offset-6">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.AdditionalFilterExhaustCount, new { @class = "control-label" })
+                                                                    <table>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <div style="width:45px;" class="touchSpinWrapper">
+                                                                                    @Html.TextBoxFor(model => model.AdditionalFilterExhaustCount, new
+                                                                                    {
+                                                                                        @class = "touchSpin",
+                                                                                        data_initVal = "1",
+                                                                                        data_min = "1",
+                                                                                        data_max = "100"
+                                                                                    })
+                                                                                </div>
+                                                                            </td>
+                                                                            <td style="padding-left: 10px;">
+                                                                                <span id="AdditionalFilterExhaustCountInfo" class="text-small"></span>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-3">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.FilterAccepted, new { @class = "control-label" })
+                                                                    @Html.TextBoxFor(x => x.FilterAccepted, new { @class = "form-control", disabled = "disabled" })
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-3 col-sm-offset-6">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.AdditionalFilterFilterAccepted, new { @class = "control-label" })
+                                                                    @Html.DropDownListFor(x => x.AdditionalFilterFilterAccepted, new List<SelectListItem>(), new { @class = "selectpicker", data_style = "select-with-transition" })
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-3">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.ExhaustDiameter, new { @class = "control-label" })
+                                                                    @Html.DropDownListFor(x => x.ExhaustDiameter, new List<SelectListItem>(), new { @class = "selectpicker", data_style = "select-with-transition" })
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-3">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.ExhaustDiameterAdditionalValue, new { @class = "control-label" })
+                                                                    @Html.TextBoxFor(x => x.ExhaustDiameterAdditionalValue, new { @class = "form-control" })
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-3">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.ExhaustCountAdditionalValue, new { @class = "control-label" })
+                                                                    @Html.TextBoxFor(model => model.ExhaustCountAdditionalValue, new { @class = "form-control" })
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-3">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.AdditionalFilterExhaustStreamAccepted, new { @class = "control-label" })
+                                                                    @Html.TextBoxFor(x => x.AdditionalFilterExhaustStreamAccepted, new { @class = "form-control" })
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="panel panel-danger" style="margin-top:20px">
+                                                    <div class="panel-heading">Oświetlenie</div>
+                                                    <div class="panel-body">
+                                                        <div class="row lighting1 hidden">
+                                                            <div class="col-sm-2">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.LightingLED6030WCount, new { @class = "control-label" })
+                                                                    <div style="width:45px;" class="touchSpinWrapper">
+                                                                        @Html.TextBoxFor(model => model.LightingLED6030WCount, new
+                                                                        {
+                                                                            @class = "touchSpin",
+                                                                            data_initVal = "0",
+                                                                            data_min = "0",
+                                                                            data_max = "100"
+                                                                        })
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-2">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.LightingLED9045WCount, new { @class = "control-label" })
+                                                                    <div style="width:45px;" class="touchSpinWrapper">
+                                                                        @Html.TextBoxFor(model => model.LightingLED9045WCount, new
+                                                                        {
+                                                                            @class = "touchSpin",
+                                                                            data_initVal = "0",
+                                                                            data_min = "0",
+                                                                            data_max = "100"
+                                                                        })
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-2">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.LightingLED12060WCount, new { @class = "control-label" })
+                                                                    <div style="width:45px;" class="touchSpinWrapper">
+                                                                        @Html.TextBoxFor(model => model.LightingLED12060WCount, new
+                                                                        {
+                                                                            @class = "touchSpin",
+                                                                            data_initVal = "0",
+                                                                            data_min = "0",
+                                                                            data_max = "100"
+                                                                        })
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-2">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.LightingLED15075WCount, new { @class = "control-label" })
+                                                                    <div style="width:45px;" class="touchSpinWrapper">
+                                                                        @Html.TextBoxFor(model => model.LightingLED15075WCount, new
+                                                                        {
+                                                                            @class = "touchSpin",
+                                                                            data_initVal = "0",
+                                                                            data_min = "0",
+                                                                            data_max = "100"
+                                                                        })
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-3">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.LightingLED9Count, new { @class = "control-label" })
+                                                                    <div style="width:45px;" class="touchSpinWrapper">
+                                                                        @Html.TextBoxFor(model => model.LightingLED9Count, new
+                                                                        {
+                                                                            @class = "touchSpin",
+                                                                            data_initVal = "0",
+                                                                            data_min = "0",
+                                                                            data_max = "100"
+                                                                        })
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row lighting2 hidden">
+                                                            <div class="col-sm-2">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.LightingLED6018WCount, new { @class = "control-label" })
+                                                                    <div style="width:45px;" class="touchSpinWrapper">
+                                                                        @Html.TextBoxFor(model => model.LightingLED6018WCount, new
+                                                                        {
+                                                                            @class = "touchSpin",
+                                                                            data_initVal = "0",
+                                                                            data_min = "0",
+                                                                            data_max = "100"
+                                                                        })
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-2">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.LightingLED12036WCount, new { @class = "control-label" })
+                                                                    <div style="width:45px;" class="touchSpinWrapper">
+                                                                        @Html.TextBoxFor(model => model.LightingLED12036WCount, new
+                                                                        {
+                                                                            @class = "touchSpin",
+                                                                            data_initVal = "0",
+                                                                            data_min = "0",
+                                                                            data_max = "100"
+                                                                        })
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-2">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.LightingLED15050WCount, new { @class = "control-label" })
+                                                                    <div style="width:45px;" class="touchSpinWrapper">
+                                                                        @Html.TextBoxFor(model => model.LightingLED15050WCount, new
+                                                                        {
+                                                                            @class = "touchSpin",
+                                                                            data_initVal = "0",
+                                                                            data_min = "0",
+                                                                            data_max = "100"
+                                                                        })
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="panel panel-warning" style="margin-top:20px">
+                                                    <div class="panel-heading">Wyposażenie dodatkowe</div>
+                                                    <div class="panel-body">
+                                                        <div class="row">
+                                                            <div class="col-sm-1">
+                                                                <div class="checkbox">
+                                                                    <label class="nowrap">
+                                                                        @Html.CheckBoxAwesomeFor(x => x.AdditionalAccessoryAnsulEnabled, new { @class = "control-label" })
+                                                                        @Html.DisplayNameFor(x => x.AdditionalAccessoryAnsulEnabled)
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-3">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.AdditionalAccessoryAnsulType, new { @class = "control-label" })
+                                                                    @Html.DropDownListFor(x => x.AdditionalAccessoryAnsulType, Model.AdditionalAccessoryAnsulTypeList, new { @class = "selectpicker", data_style = "select-with-transition" })
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-2">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        @Html.CheckBoxAwesomeFor(x => x.ControlPanelUnitEnabled, new { @class = "control-label" })
+                                                                        @Html.DisplayNameFor(x => x.ControlPanelUnitEnabled)
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-2">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.ControlPanelCount, new { @class = "control-label" })
+                                                                    <div style="width:45px;" class="touchSpinWrapper">
+                                                                        @Html.TextBoxFor(model => model.ControlPanelCount, new
+                                                                        {
+                                                                            @class = "touchSpin",
+                                                                            data_initVal = "",
+                                                                            data_min = "0",
+                                                                            data_max = "100"
+                                                                        })
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-2">
+                                                                <div class="form-group label-static">
+                                                                    @Html.LabelFor(model => model.ControlUnitCount, new { @class = "control-label" })
+                                                                    <div style="width:45px;" class="touchSpinWrapper">
+                                                                        @Html.TextBoxFor(model => model.ControlUnitCount, new
+                                                                        {
+                                                                            @class = "touchSpin",
+                                                                            data_initVal = "",
+                                                                            data_min = "0",
+                                                                            data_max = "100"
+                                                                        })
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <div class="form-group label-static">
+                                                            @Html.LabelFor(model => model.Comments, new { @class = "control-label text-warning", id = "commentsLabel" })
+                                                            @Html.TextAreaFor(x => x.Comments, new { @class = "form-control", rows = "2" })
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @Html.HiddenFor(x => x.HoodOfferElementId)
+                                </form>
+                            </div>
+                            <div id="pillAirCalculation" class="tab-pane">
+                                @Html.Partial("_HoodSelectionOfferDetailsAirCalculation", new HoodSelectionOfferDetailsAirCalculationViewModel())
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" style="width:150px; margin-right: 50px" data-dismiss="modal">Zamknij</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+

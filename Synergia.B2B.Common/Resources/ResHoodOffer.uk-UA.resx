@@ -1,0 +1,733 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AnsulOkapWyposazonyWSystemPrzeciwpozarowy" xml:space="preserve">
+    <value>Ansul - витяжка, обладнана системою протипожежного захисту для витяжок ANSUL R-102</value>
+  </data>
+  <data name="AnsulSystemPrzeciwpozarowyDoOkapow" xml:space="preserve">
+    <value>Ansul - система протипожежного захисту для витяжок</value>
+  </data>
+  <data name="AnsulUkladOpis" xml:space="preserve">
+    <value>{0} (максимальна кількість витяжного повітря {1}FN)</value>
+  </data>
+  <data name="AnsulUkladOpisNieWymagany" xml:space="preserve">
+    <value>Система Ansul не потрібна для цієї витяжки</value>
+  </data>
+  <data name="BilansPowietrzaWyciaganegoPrzezOkap" xml:space="preserve">
+    <value>Баланс повітря, що витягується витяжкою</value>
+  </data>
+  <data name="DaneElektryczne" xml:space="preserve">
+    <value>Електричні характеристики</value>
+  </data>
+  <data name="DaneTechniczneDobranegoOkapu" xml:space="preserve">
+    <value>Технічні характеристики добраної витяжки</value>
+  </data>
+  <data name="Data" xml:space="preserve">
+    <value>Дата</value>
+  </data>
+  <data name="DataDoboru" xml:space="preserve">
+    <value>Дата добору</value>
+  </data>
+  <data name="DlugoscKasetyDobranegoFiltra" xml:space="preserve">
+    <value>Довжина картриджа добраного фільтра</value>
+  </data>
+  <data name="DlugoscOkapu" xml:space="preserve">
+    <value>Довжина витяжки</value>
+  </data>
+  <data name="DoborNr" xml:space="preserve">
+    <value>Добір №</value>
+  </data>
+  <data name="DobranyFiltr" xml:space="preserve">
+    <value>Добраний фільтр</value>
+  </data>
+  <data name="DobranyNawiew" xml:space="preserve">
+    <value>Добраний вентилятор</value>
+  </data>
+  <data name="DobranyOkap" xml:space="preserve">
+    <value>Добрана витяжка</value>
+  </data>
+  <data name="DobranyWywiew" xml:space="preserve">
+    <value>Добраний вихлоп</value>
+  </data>
+  <data name="DoDoboruNr" xml:space="preserve">
+    <value>Щоб вибрати витяжку</value>
+  </data>
+  <data name="Ekperci" xml:space="preserve">
+    <value>Експерти</value>
+  </data>
+  <data name="FiltrSadzy" xml:space="preserve">
+    <value>Сажовий фільтр</value>
+  </data>
+  <data name="FiltrTurboSwing" xml:space="preserve">
+    <value>Фільтр TurboSwing</value>
+  </data>
+  <data name="FiltrUVCombilux" xml:space="preserve">
+    <value>Фільтр UV-Combilux UV600</value>
+  </data>
+  <data name="FiltrUVTurbo" xml:space="preserve">
+    <value>Фільтр UV-Turbo</value>
+  </data>
+  <data name="Filtry" xml:space="preserve">
+    <value>Фільтри</value>
+  </data>
+  <data name="FiltrySadzySmokiJuniorOpis" xml:space="preserve">
+    <value>Smoki Junior - це пристрій, який усуває до 95% частинок сажі, що утворюються в печах для піци, опалюваних дровами, одночасно зменшуючи запахи. Застосування системи фільтрації Smoki Junior запобігає забрудненню каналів димоходів, а також значно знижує ризик виникнення пожежі шляхом охолодження температури диму.
+У разі установки, де немає можливості відводу диму під дією сили тяжіння, існує можливість оснащення Smoki Junior вентилятором що покращує природну тягу.
+Smoki Junior - це практичне рішення для місць, де є проблеми з занадто гарячим витяжним повітрям, запахом і у випадках, коли необхідно виконати вимоги пожежної безпеки.</value>
+  </data>
+  <data name="FiltrySadzySmokiMaxiOpis" xml:space="preserve">
+    <value>Smoki Maxi Grill - це пристрій, спеціально розроблений для фільтрації сажі та жирів із витяжного повітря через витяжку, розташований над дров’яними або вугільним Ґрилем  Система Smoki Maxi Grill усуває до 95% частинок сажі та жиру з повітря, що витягується, зменшуючи при цьому запахи та значно знижуючи температуру повітря, що витягується. Застосування системи фільтрації Smoki Maxi Grill запобігає забрудненню каналів димоходів, а також значно знижує ризик виникнення пожежі шляхом охолодження температури диму.
+Smoki Maxi Grill - це практичне рішення для місць, де є проблеми з занадто гарячим витяжним повітрям, запахом і у випадках, коли необхідно виконати вимоги пожежної безпеки.</value>
+  </data>
+  <data name="Glosnosc" xml:space="preserve">
+    <value>Гучність</value>
+  </data>
+  <data name="Ilosc" xml:space="preserve">
+    <value>Кількість
+[шт]</value>
+  </data>
+  <data name="IloscKasetFiltrow" xml:space="preserve">
+    <value>Кількість картриджів фільтрів</value>
+  </data>
+  <data name="IloscKroccowNawiewnych" xml:space="preserve">
+    <value>Кількість припливних патрубків</value>
+  </data>
+  <data name="IloscKroccowWywiewnych" xml:space="preserve">
+    <value>Кількість витяжних патрубків</value>
+  </data>
+  <data name="IloscModułow" xml:space="preserve">
+    <value>Кількість модулів</value>
+  </data>
+  <data name="JednostkaSterujaca" xml:space="preserve">
+    <value>Блок управління/контролю роботи витяжки</value>
+  </data>
+  <data name="SynergiaAdresLinia1" xml:space="preserve">
+    <value>Sady, ul. Logistyczna 23</value>
+  </data>
+  <data name="SynergiaAdresLinia2" xml:space="preserve">
+    <value>62-080 Tarnowo Podgórne</value>
+  </data>
+  <data name="SynergiaSpZoo" xml:space="preserve">
+    <value>Synergia Sp. z.o.o.</value>
+  </data>
+  <data name="SynergiaStopka" xml:space="preserve">
+    <value>Synergia Sp. z o.o. • Sady, ul. Logistyczna 23 • 62-080 Tarnowo Podgórne</value>
+  </data>
+  <data name="SynergiaUrl" xml:space="preserve">
+    <value>www.synergia.pl</value>
+  </data>
+  <data name="KartaDoboruFiltraSadzySmoki" xml:space="preserve">
+    <value>Карта добору фільтра сажі SMOKI</value>
+  </data>
+  <data name="KartaDoboruNawiewnikow" xml:space="preserve">
+    <value>Карта добору дифузорів</value>
+  </data>
+  <data name="KartaDoboruOkapuSynergia" xml:space="preserve">
+    <value>Карта добору витяжки synergia</value>
+  </data>
+  <data name="KartaDoboruSystemuAnsulR102" xml:space="preserve">
+    <value>Карта добору системи ANSUL R-102</value>
+  </data>
+  <data name="KrociecPodlaczeniowy" xml:space="preserve">
+    <value>З'єднувальний патрубок
+&amp;Phi;[мм]</value>
+  </data>
+  <data name="LacznaMocElektrycznaFiltrow" xml:space="preserve">
+    <value>Загальна електрична потужність фільтрів</value>
+  </data>
+  <data name="LacznaMocElektrycznaOswietlenia" xml:space="preserve">
+    <value>Загальна електрична потужність освітлення</value>
+  </data>
+  <data name="LacznaMocElektrycznaWentylatorow" xml:space="preserve">
+    <value>Загальна електрична потужність вентиляторів</value>
+  </data>
+  <data name="Legenda" xml:space="preserve">
+    <value>Легенда</value>
+  </data>
+  <data name="LegendaKe" xml:space="preserve">
+    <value>показник обладнання - описує кількість забруднень, що виділяються пристроями</value>
+  </data>
+  <data name="LegendaMp" xml:space="preserve">
+    <value>потік витяжного повітря</value>
+  </data>
+  <data name="LegendaP" xml:space="preserve">
+    <value>встановлена потужність</value>
+  </data>
+  <data name="LegendaS" xml:space="preserve">
+    <value>коефіцієнт одночасної роботи приладів</value>
+  </data>
+  <data name="LiczbaDobranychFiltrow" xml:space="preserve">
+    <value>Кількість добраних фільтрів</value>
+  </data>
+  <data name="LiczbaSlepychFiltrow" xml:space="preserve">
+    <value>Кількість сліпих фільтрів</value>
+  </data>
+  <data name="LokalizacjaOkapu" xml:space="preserve">
+    <value>Розташування витяжки</value>
+  </data>
+  <data name="MaterialWykonania" xml:space="preserve">
+    <value>Матеріал виготовлення</value>
+  </data>
+  <data name="MaterialWykonaniaStalNierdzewna" xml:space="preserve">
+    <value>Нержавіюча сталь AISI 304</value>
+  </data>
+  <data name="MaterialWykonaniaSzklo" xml:space="preserve">
+    <value>Скло</value>
+  </data>
+  <data name="MetodaObliczenStrumieniPowietrzaWyciaganego" xml:space="preserve">
+    <value>Метод розрахунку витяжних повітряних потоків</value>
+  </data>
+  <data name="MetodaObliczenStrumieniPowietrzaWyciaganegoLinia1" xml:space="preserve">
+    <value>Розрахунки SYNERGIA проводилися на основі:</value>
+  </data>
+  <data name="MetodaObliczenStrumieniPowietrzaWyciaganegoLinia2" xml:space="preserve">
+    <value>VDI 2052 Raumlufttechnische Anlagen fur Kuchen</value>
+  </data>
+  <data name="MetodaObliczenStrumieniPowietrzaWyciaganegoLinia3" xml:space="preserve">
+    <value>Фінських досліджень поведінки парів для різних кухонних приладів</value>
+  </data>
+  <data name="MetodaObliczenStrumieniPowietrzaWyciaganegoLinia4" xml:space="preserve">
+    <value>Konvektiovirtaukset, Virtual Space 4D Loppuraportti, Tyoterveyslaitos, 2006</value>
+  </data>
+  <data name="MetodaObliczenStrumieniPowietrzaWyciaganegoLinia5" xml:space="preserve">
+    <value>PN-EN 16282-1:2017 Обладнання промислових кухонь</value>
+  </data>
+  <data name="Miejscowosc" xml:space="preserve">
+    <value>Місце</value>
+  </data>
+  <data name="Moc" xml:space="preserve">
+    <value>Потужність</value>
+  </data>
+  <data name="Nap" xml:space="preserve">
+    <value>Напруга</value>
+  </data>
+  <data name="NawiewnikiWyporoweJRSNaglowek" xml:space="preserve">
+    <value>Напірні дифузори JRS</value>
+  </data>
+  <data name="NawiewnikiWyporoweJRSOpis" xml:space="preserve">
+    <value>Напірні дифузори JRS призначені для напірного розповсюдження повітря. Вони були пристосовані для вентиляції кухонних приміщень, де є великі теплові надходження. 
+Напірні дифузори JRS постачають повітря в зону перебування людей з малою швидкістю. Усередині знаходяться дефлектори, які забезпечують рівномірний розподіл повітря по всій поверхні перфорованої лицьовій панелі дифузорів. 
+Рекомендована температура припливного повітря через дифузори повинна бути нижче на 3-6°C 
+від температури повітря в приміщенні.
+Дифузори JRS призначені для стельового монтажу.</value>
+  </data>
+  <data name="NazwaUrzadzenia" xml:space="preserve">
+    <value>Назва пристрою</value>
+  </data>
+  <data name="Obiekt" xml:space="preserve">
+    <value>Об'єкт</value>
+  </data>
+  <data name="ObliczenieStrumieniaPowietrzaWyciaganego" xml:space="preserve">
+    <value>Розрахунок витяжного повітряного потоку</value>
+  </data>
+  <data name="ObliczonyMinimalnyStrumienPowietrzaWywiewanego" xml:space="preserve">
+    <value>Розрахований мінімальний потік витяжного повітря</value>
+  </data>
+  <data name="Okap" xml:space="preserve">
+    <value>Витяжка</value>
+  </data>
+  <data name="OkapNr" xml:space="preserve">
+    <value>Витяжка №</value>
+  </data>
+  <data name="OpisOkapuJKI" xml:space="preserve">
+    <value>Витяжка JKI конденсаційного витяжного типу з конденсатними панелями. Витяжка виготовлена з нержавіючої сталі AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJLI-R-FF" xml:space="preserve">
+    <value>Витяжка JLI-R-FF витяжна з циклоновими циліндричними фільтрами типу JCE з постійним опором повітряного потоку та з сітчастим фільтром FF. Загальна ефективність фільтра до 95%. Опір повітряного потоку на рівні 80-85 Па. Витяжка виготовлена з нержавіючої сталі AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJLI-R-JCE" xml:space="preserve">
+    <value>Витяжка JLI-R витяжна з циклоновими циліндричними фільтрами типу JCE з постійним опором повітряного потоку на рівні 50-65 Па. Ефективність фільтра до 93%. Витяжка виготовлена з нержавіючої сталі AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJLI-R-Turbo" xml:space="preserve">
+    <value>Витяжка JLI-R-Turbo витяжна з фільтром TurboSwing з ефективністю до 98%, що також дозволяє регулювати витрату повітря в межах від 0м3/год до # МаксВитратаПовітря#м3/год без втрати ефективності фільтрації. Опір повітряного потоку до 60 Па. Витяжка виготовлена з нержавіючої сталі AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJLI-R-UV" xml:space="preserve">
+    <value>Витяжка JLI-R-UV витяжна з циклоновими циліндричними фільтрами типу JCE з постійним опором повітряного потоку, з сітчастим фільтром FF та ультрафіолетовим фільтром UV Combilux. Загальна ефективність фільтра до 99.9%. Опір повітряного потоку на рівні 85-90 Па. Витяжка виготовлена з нержавіючої сталі AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJLI-R-UV-Turbo" xml:space="preserve">
+    <value>Витяжка JLI-R-Turbo витяжна з фільтром UV-Turbo з ефективністю видалення жиру до 98% і зменшуючий запах, що також дозволяє регулювати витрату повітря в межах від 0м3/год до 
+#MaxWydatekPowietrza#м3/год без втрати ефективності фільтрації. Опір повітряного потоку до 60 Па. Витяжка виготовлена з нержавіючої сталі AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJLI-S-FF" xml:space="preserve">
+    <value>Витяжка JLI-S-FF витяжна з циклоновими циліндричними фільтрами типу JCE з постійним опором повітряного потоку та з сітчастим фільтром FF. Загальна ефективність фільтра до 95%. Опір повітряного потоку на рівні 80-85 Па. Витяжка виготовлена з нержавіючої сталі AISI 304 та ламінованого скла.</value>
+  </data>
+  <data name="OpisOkapuJLI-S-JCE" xml:space="preserve">
+    <value>Скляна витяжка JLI-S витяжна з циклоновими циліндричними фільтрами типу JCE з постійним опором повітряного потоку на рівні 50-65 Па. Ефективність фільтра до 93%. Витяжка виготовлена з нержавіючої сталі AISI 304 та ламінованого скла.</value>
+  </data>
+  <data name="OpisOkapuJLI-S-Turbo" xml:space="preserve">
+    <value>Скляна витяжка JLI-S-Turbo витяжна з фільтром TurboSwing з ефективністю до 98%, що також дозволяє регулювати витрату повітря в межах від 0м3/год до #MaxWydatekPowietrza#м3/год без втрати ефективності фільтрації. Опір повітряного потоку до 60 Па. Витяжка виготовлена з нержавіючої сталі AISI 304 та ламінованого скла.</value>
+  </data>
+  <data name="OpisOkapuJLI-S-UV" xml:space="preserve">
+    <value>Скляна витяжка JLI-S-UV витяжна з циклоновими циліндричними фільтрами типу JCE з постійним опором повітряного потоку, з сітчастим фільтром FF та ультрафіолетовим фільтром UV Combilux. Загальна ефективність фільтра до 99.9%. Опір повітряного потоку на рівні 85-90 Па. Витяжка виготовлена з нержавіючої сталі AISI 304 та ламінованого скла.</value>
+  </data>
+  <data name="OpisOkapuJLI-S-UV-Turbo" xml:space="preserve">
+    <value>Скляна витяжка JLI-S-UV-Turbo витяжна з фільтром UV-Turbo з ефективністю видалення жиру до 98% і зменшуюча запах, що також дозволяє регулювати витрату повітря в межах від 0м3/год до #MaxWydatekPowietrza#м3/год без втрати ефективності фільтрації. Опір повітряного потоку до 60 Па. Витяжка виготовлена з нержавіючої сталі AISI 304 та ламінованого скла.</value>
+  </data>
+  <data name="OpisOkapuJSI-R-FF" xml:space="preserve">
+    <value>Витяжка JSI-R-FF і припливно-витяжна з дифузорами свіжого повітря, з камерами тиску, що утворюють повітряні потоки, які підтримують направлення витяжного повітря в середину витяжки. Фільтраційний картридж з циклоновими циліндричними фільтрами типу JCE з постійним опором повітряного потоку та з сітчастим фільтром FF. Загальна ефективність фільтра до 95%. Опір повітряного потоку на рівні 80-85 Па. Витяжка виготовлена з нержавіючої сталі AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJSI-R-JCE" xml:space="preserve">
+    <value>Витяжка JSI-R і припливно-витяжна з дифузорами свіжого повітря, з камерами тиску, що утворюють повітряні потоки, які підтримують направлення витяжного повітря в середину витяжки. Фільтраційний картридж з циклоновими циліндричними фільтрами типу JCE з ефективністю до 93% та постійним опором повітряного потоку на рівні 50-65 Па. Витяжка виготовлена з нержавіючої сталі AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJSI-R-Turbo" xml:space="preserve">
+    <value>Витяжка JSI-R-Turbo припливно-витяжний з дифузорами свіжого повітря, з камерами тиску, що утворюють повітряні потоки, які підтримують направлення витяжного повітря всередину витяжки, з фільтром TurboSwing з ефективністю до 98%, що дозволяє регулювати витрату повітря в межах від 0м3/год до #MaxWydatekPowietrza#м3/год без втрати ефективності фільтрації. Опір повітряного потоку до 60 Па. Витяжка виготовлена з нержавіючої сталі AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJSI-R-UV" xml:space="preserve">
+    <value>Витяжка JSI-R-UV припливно-витяжна з дифузорами свіжого повітря, з камерами тиску, що утворюють повітряні потоки, які підтримують направлення витяжного повітря в середину витяжки. Фільтраційний картридж з циклоновими циліндричними фільтрами типу JCE з постійним опором повітряного потоку, з сітчастим фільтром FF та ультрафіолетовим фільтром UV Combilux. Загальна ефективність фільтра до 99.9%. Опір повітряного потоку на рівні 85-90 Па. Витяжка виготовлена з нержавіючої сталі AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJSI-R-UV-Turbo" xml:space="preserve">
+    <value>Витяжка JSI-R-UV-Turbo припливно-витяжна з дифузорами свіжого повітря, з камерами тиску, що утворюють повітряні потоки, які підтримують направлення витяжного повітря в середину витяжки, з фільтром UV-Turbo з ефективністю видалення жиру до 98% і зменшуючим запах, що дозволяє регулювати витрату повітря в межах від 0м3/год до #MaxWydatekPowietrza#м3/год без втрати ефективності фільтрації. Опір повітряного потоку до 60 Па. Витяжка виготовлена з нержавіючої сталі AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJSI-S-FF" xml:space="preserve">
+    <value>Витяжка JSI-S-FF припливно-витяжна з дифузорами свіжого повітря, з камерами тиску, що утворюють повітряні потоки, які підтримують направлення витяжного повітря всередину витяжки. Фільтраційний картридж з циклоновими циліндричними фільтрами типу JCE з постійним опором повітряного потоку та з сітчастим фільтром FF. Загальна ефективність фільтра до 95%. Опір повітряного потоку на рівні 80-85 Па. Витяжка виготовлена з нержавіючої сталі AISI 304 та ламінованого скла.</value>
+  </data>
+  <data name="OpisOkapuJSI-S-JCE" xml:space="preserve">
+    <value>Скляна витяжка JSI-S і припливно-витяжна з дифузорами свіжого повітря, з камерами тиску, що утворюють повітряні потоки, які підтримують направлення витяжного повітря всередину витяжки. Фільтраційний картридж з циклоновими циліндричними фільтрами типу JCE з ефективністю до 93% та постійним опором повітряного потоку на рівні 50-65 Па. Витяжка виготовлена з нержавіючої сталі AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJSI-S-Turbo" xml:space="preserve">
+    <value>Витяжка JSI-S-Turbo припливно-витяжна з дифузорами свіжого повітря, з камерами тиску, що утворюють повітряні потоки, які підтримують направлення витяжного повітря всередину витяжки, з фільтром TurboSwing з ефективністю до 98%, що дозволяє регулювати витрату повітря в межах від 0м3/год до #MaxWydatekPowietrza#м3/год без втрати ефективності фільтрації. Опір повітряного потоку до 60 Па. Витяжка виготовлена з нержавіючої сталі AISI 304 та ламінованого скла.</value>
+  </data>
+  <data name="OpisOkapuJSI-S-UV" xml:space="preserve">
+    <value>Витяжка JSI-S-UV припливно-витяжна з дифузорами свіжого повітря, з камерами тиску, що утворюють повітряні потоки, які підтримують направлення витяжного повітря всередину витяжки. Фільтраційний картридж з циклоновими циліндричними фільтрами типу JCE з постійним опором повітряного потоку, з сітчастим фільтром FF та ультрафіолетовим фільтром UV Combilux. Загальна ефективність фільтра до 99.9%. Опір повітряного потоку на рівні 85-90 Па. Витяжка виготовлена з нержавіючої сталі AISI 304 та ламінованого скла.</value>
+  </data>
+  <data name="OpisOkapuJSI-S-UV-Turbo" xml:space="preserve">
+    <value>Скляна витяжка JSI-S-UV-Turbo припливно-витяжна з дифузорами свіжого повітря, з камерами тиску, що утворюють повітряні потоки, які підтримують направлення витяжного повітря всередину витяжки, з фільтром UV-Turbo з ефективністю видалення жиру до 98% і зменшуючим запах, що дозволяє регулювати витрату повітря в межах від 0м3/год до #MaxWydatekPowietrza#м3/год без втрати ефективності фільтрації. Опір повітряного потоку до 60 Па. Витяжка виготовлена з нержавіючої сталі AISI 304 та ламінованого скла.</value>
+  </data>
+  <data name="OpisOkapuJSKI" xml:space="preserve">
+    <value>Витяжка JSKI припливно-витяжна конденсаційного типу з дифузорами свіжого повітря та конденсатними панелями. Витяжка виготовлена з нержавіючої сталі AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJSVI-R-FF" xml:space="preserve">
+    <value>Витяжка JSVI-R-FF припливно-витяжна з дифузорами свіжого повітря, з камерами тиску, що утворюють повітряні потоки, які підтримують направлення витяжного повітря всередину витяжки. Фільтраційний картридж з циклоновими циліндричними фільтрами типу JCE з постійним опором повітряного потоку та з сітчастим фільтром FF. Загальна ефективність фільтра до 95%. Опір повітряного потоку на рівні 80-85 Па. Витяжка виготовлена з нержавіючої сталі AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJSVI-R-JCE" xml:space="preserve">
+    <value>Витяжка JSVI-R припливно-витяжна з дифузорами свіжого повітря, з камерами тиску, що утворюють повітряні потоки, які підтримують направлення витяжного повітря в середину витяжки. Фільтраційний картридж з циклоновими циліндричними фільтрами типу JCE з ефективністю до 93% та постійним опором повітряного потоку на рівні 50-65 Па. Витяжка виготовлена з нержавіючої сталі AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJSVI-R-Turbo" xml:space="preserve">
+    <value>Витяжка JSVI-R-Turbo припливно-витяжна з дифузорами свіжого повітря, з камерами тиску, що утворюють повітряні потоки, які підтримують направлення витяжного повітря всередину витяжки, з фільтром TurboSwing з ефективністю до 98%, що дозволяє регулювати витрату повітря в межах від 0м3/год до 
+#MaxWydatekPowietrza#м3/год без втрати ефективності фільтрації. Опір повітряного потоку до 60 Па. Витяжка виготовлена з нержавіючої сталі AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJSVI-R-UV" xml:space="preserve">
+    <value>Витяжка JSVI-R-UV припливно-витяжна з дифузорами свіжого повітря, з камерами тиску, що утворюють повітряні потоки, які підтримують направлення витяжного повітря в середину витяжки. Фільтраційний картридж з циклоновими циліндричними фільтрами типу JCE з постійним опором повітряного потоку, з сітчастим фільтром FF та ультрафіолетовим фільтром UV Combilux. Загальна ефективність фільтра до 99.9%. Опір повітряного потоку на рівні 85-90 Па. Витяжка виготовлена з нержавіючої сталі AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJSVI-R-UV-Turbo" xml:space="preserve">
+    <value>Витяжка JSVI-R-UV-Turbo припливно-витяжна з дифузорами свіжого повітря, з камерами тиску, що утворюють повітряні потоки, які підтримують направлення витяжного повітря в середину витяжки, з фільтром UV-Turbo з ефективністю видалення жиру до 98% і зменшуючим запах, що дозволяє регулювати витрату повітря в межах від 0м3/год до #MaxWydatekPowietrza#м3/год без втрати ефективності фільтрації. Опір повітряного потоку до 60 Па. Витяжка виготовлена з нержавіючої сталі AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJVI-R-FF" xml:space="preserve">
+    <value>Витяжка JVI-R-FF витяжна з камерами тиску, що утворюють повітряні потоки, які підтримують направлення витяжного повітря всередину витяжки. Фільтраційний картридж з циклоновими циліндричними фільтрами типу JCE з постійним опором повітряного потоку та з сітчастим фільтром FF. Загальна ефективність фільтра до 95%. Опір повітряного потоку на рівні 80-85 Па. Витяжка виготовлена з нержавіючої сталі AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJVI-R-JCE" xml:space="preserve">
+    <value>Витяжка JVI-R витяжна з камерами тиску, що утворюють повітряні потоки, які підтримують направлення витяжного повітря всередину витяжки та циклоновими циліндричними фільтрами типу JCE, з ефективністю 93% та постійним опором повітряного потоку на рівні 50-65 Па. Витяжка виготовлена з нержавіючої сталі AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJVI-R-Turbo" xml:space="preserve">
+    <value>Витяжка JVI-R-Turbo витяжна, з камерами тиску, що утворюють повітряні потоки, які підтримують направлення витяжного повітря всередину витяжки, з фільтром TurboSwing з ефективністю до 98%, що також дозволяє регулювати витрату повітря в межах від 0м3/год до 
+# МаксВитратаПовітря#м3/год без втрати ефективності фільтрації. Опір повітряного потоку до 60 Па. Витяжка виготовлена з нержавіючої сталі AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJVI-R-UV" xml:space="preserve">
+    <value>Витяжка JVI-R-UV витяжна, з камерами тиску, що утворюють повітряні потоки, які підтримують направлення витяжного повітря всередину витяжки Фільтраційний картридж з циклоновими циліндричними фільтрами типу JCE з постійним опором повітряного потоку, з сітчастим фільтром FF та ультрафіолетовим фільтром UV Combilux. Загальна ефективність фільтра до 99.9%. Опір повітряного потоку на рівні 85-90 Па. Витяжка виготовлена з нержавіючої сталі AISI 304.</value>
+  </data>
+  <data name="OpisOkapuJVI-R-UV-Turbo" xml:space="preserve">
+    <value>Витяжка JVI-R-UV-Turbo з камерами тиску, що утворюють повітряні потоки, які підтримують направлення витяжного повітря всередину витяжки, з фільтром UV-Turbo з ефективністю видалення жиру до 98% і зменшуючим запах, що також дозволяє регулювати витрату повітря в межах від 0м3/год до 
+#MaxWydatekPowietrza#м3/год без втрати ефективності фільтрації. Опір повітряного потоку до 60 Па. Витяжка виготовлена з нержавіючої сталі AISI 304.</value>
+  </data>
+  <data name="Oswietlenie" xml:space="preserve">
+    <value>Освітлення</value>
+  </data>
+  <data name="OswietlenieLedowePunktowe" xml:space="preserve">
+    <value>Точкове світлодіодне освітлення</value>
+  </data>
+  <data name="OznaczenieOkapu" xml:space="preserve">
+    <value>Позначення витяжки</value>
+  </data>
+  <data name="Plyta" xml:space="preserve">
+    <value>Плита</value>
+  </data>
+  <data name="PojWodna" xml:space="preserve">
+    <value>Обсяг води</value>
+  </data>
+  <data name="Profesjonalistom" xml:space="preserve">
+    <value>Професіоналам</value>
+  </data>
+  <data name="PrzegrodaNaSkropliny" xml:space="preserve">
+    <value>Перегородка для конденсату</value>
+  </data>
+  <data name="PrzeplywPowietrza" xml:space="preserve">
+    <value>Потік повітря
+[m&lt;sup&gt;3&lt;/sup&gt;/h]</value>
+  </data>
+  <data name="PrzyjetyStrumienPowietrzaWywiewanego" xml:space="preserve">
+    <value>Прийнятий потік витяжного повітря</value>
+  </data>
+  <data name="PrzykladoweZestawienieNawiewnikow" xml:space="preserve">
+    <value>Приклад поєднання дифузорів, що забезпечують збалансованість припливного і витяжного потоку на кухні.</value>
+  </data>
+  <data name="Przyscienny" xml:space="preserve">
+    <value>Пристінний</value>
+  </data>
+  <data name="RegionPolnocny" xml:space="preserve">
+    <value>Північний Регіон</value>
+  </data>
+  <data name="RegionPolnocnyTelefon" xml:space="preserve">
+    <value>661-501-797</value>
+  </data>
+  <data name="RegionPoludniowy" xml:space="preserve">
+    <value>Південний Регіон</value>
+  </data>
+  <data name="RegionPoludniowyTelefon" xml:space="preserve">
+    <value>795-560-827</value>
+  </data>
+  <data name="RegionWschodni" xml:space="preserve">
+    <value>Східний Регіон</value>
+  </data>
+  <data name="RegionWschodniTelefon" xml:space="preserve">
+    <value>661-363-918</value>
+  </data>
+  <data name="RegionZachodni" xml:space="preserve">
+    <value>Західний Регіон</value>
+  </data>
+  <data name="RegionZachodniTelefon" xml:space="preserve">
+    <value>662-332-817</value>
+  </data>
+  <data name="SrednicaKroccowNawiewnych" xml:space="preserve">
+    <value>Діаметр припливних патрубків</value>
+  </data>
+  <data name="SrednicaKroccowWywiewnych" xml:space="preserve">
+    <value>Діаметр витяжних патрубків</value>
+  </data>
+  <data name="StrumienPowietrzaWyciaganegoPrzezOkap" xml:space="preserve">
+    <value>Потік повітря, що витягується витяжкою</value>
+  </data>
+  <data name="StrumienPrzeplywuPowietrzaPrzyGlosnosci" xml:space="preserve">
+    <value>припливний потік повітря при рівні гучності 35 дБ(А)</value>
+  </data>
+  <data name="StrumienWymiewu" xml:space="preserve">
+    <value>Витяжний потік</value>
+  </data>
+  <data name="SystemAnsulR102SystemPrzeciwopozarowyNaglowek" xml:space="preserve">
+    <value>Протипожежна система Ansul R-102</value>
+  </data>
+  <data name="SystemAnsulR102SystemPrzeciwopozarowyOpis" xml:space="preserve">
+    <value>Захист обладнання громадського харчування на професійних кухнях протипожежними системами захисту, дозволяє уникнути серйозних наслідків, пов’язаних із пожежею. Система ANSUL - це захист здоров'я та життя людини, цінного обладнання та приміщень. Система дозволяє знизити ризики, пов'язані з відсутністю можливості ведення бізнесу, викликаного наслідками пожежі. Пожежний захист кухонних приладів враховується страховими компаніями, що призводить до зниження вартості страхування.
+Система ANSUL використовується в витяжках Synergia з жировими фільтрами, тобто в витяжках типу JSI, JVI і JLI.</value>
+  </data>
+  <data name="SystemAnsulR102WariantyCzynnikGasniczy" xml:space="preserve">
+    <value>Використовується агент для гасіння - ANSULEX, в одному резервуарі знаходиться 11,4 л</value>
+  </data>
+  <data name="SystemAnsulR102WariantyDedykowany" xml:space="preserve">
+    <value>&lt;b&gt;Призначення&lt;/b&gt; - кожне сопло під стелею витяжки захищає лише той пристрій, для якого вона призначена - у разі заміни пристроїв або перестановки пристроїв, систему слід адаптувати / переробити.</value>
+  </data>
+  <data name="SystemAnsulR102WariantyNaglowek" xml:space="preserve">
+    <value>Система Ansul R-102 доступна у двох варіантах розміщення сопел</value>
+  </data>
+  <data name="SystemAnsulR102WariantyNakladajacySie" xml:space="preserve">
+    <value>&lt;b&gt;Перекриття&lt;/b&gt; - діапазони сопла перекривається, і вся зона, яка потребує захисту, захищена - прилади можна вільно переміщувати або міняти по всій довжині захищеної зони.</value>
+  </data>
+  <data name="SystemAnsulR102WymaganiaNaglowek" xml:space="preserve">
+    <value>Вимоги, необхідні для задоволення сторони замовника, щоб забезпечити гарантію ефективної роботи.</value>
+  </data>
+  <data name="SystemAnsulR102WymaganiaOpis1" xml:space="preserve">
+    <value>Система ANSUL R-102 в разі активації необхідно відключити живлення пристроїв під витяжкою (газових і електричних). У шафі управління системою ANSUL R-102 знаходиться автоматичний запобіжник.</value>
+  </data>
+  <data name="SystemAnsulR102WymaganiaOpis2" xml:space="preserve">
+    <value>Тому слід привести в область шафки кабель/y 3x1мм2 (max 3) від газових клапанів і / або автоматичних запобіжників, що вимикають напругу живлення (клапани і автоматичні запобіжники та проведення кабелів до шафки поза діапазоном Synergia).&lt;/b&gt;
+При необхідності підключення до системи сигналізації в будівлі, необхідно провести ще один кабель 3x1мм2 &lt;b&gt;(проведення кабелю за межі діапазону Synergia).&lt;/b&gt;
+При активації системи ANSUL R-102 витяжна вентиляція повинна залишатися включеною, а припливна вентиляція повинна бути зупинена.
+Виконання вищенаведених вимог є необхідною умовою для надання гарантії ефективної роботи системи ANSUL R-102.</value>
+  </data>
+  <data name="SystemyWentylacjiKuchni" xml:space="preserve">
+    <value>Системи вентиляції кухні</value>
+  </data>
+  <data name="SzerokoscElementuNawiewnego" xml:space="preserve">
+    <value>Ширина припливного елемента</value>
+  </data>
+  <data name="SzerokoscOkapu" xml:space="preserve">
+    <value>Ширина витяжки</value>
+  </data>
+  <data name="Szt" xml:space="preserve">
+    <value>шт.</value>
+  </data>
+  <data name="TypFiltra" xml:space="preserve">
+    <value>Тип фільтра</value>
+  </data>
+  <data name="TypFiltraJCE" xml:space="preserve">
+    <value>JCE - циклонно-циліндричний фільтр - одноступінчата фільтрація</value>
+  </data>
+  <data name="TypFiltraJFF" xml:space="preserve">
+    <value>JFF - циклонно-циліндричний фільтр разом із сітчастим фільтром - двоступенева фільтрація</value>
+  </data>
+  <data name="TypFiltraTurboSwing" xml:space="preserve">
+    <value>TurboSwing - фільтр TurboSwing з швидкообертовою фільтрувальною пластиною - одноступінчата фільтрація</value>
+  </data>
+  <data name="TypFiltraUV" xml:space="preserve">
+    <value>UV-Combilux- циклонно-циліндричний фільтр разом із сітчастим фільтром і фільтром UV - триступінчаста фільтрація</value>
+  </data>
+  <data name="TypFiltraUVTurbo" xml:space="preserve">
+    <value>UV-Turbo - фільтр TurboSwing з швидкообертовою фільтрувальною пластиною і фільтром UV - двоступінчаста фільтрація</value>
+  </data>
+  <data name="TypOkapu" xml:space="preserve">
+    <value>Тип витяжки</value>
+  </data>
+  <data name="TypOkapuJKI" xml:space="preserve">
+    <value>Витяжка конденсаційна витяжна</value>
+  </data>
+  <data name="TypOkapuJLI-R" xml:space="preserve">
+    <value>Витяжка витяжна</value>
+  </data>
+  <data name="TypOkapuJSI-R" xml:space="preserve">
+    <value>Витяжка припливно-витяжна з витяжним блоком</value>
+  </data>
+  <data name="TypOkapuJSKI" xml:space="preserve">
+    <value>Витяжка конденсаційна припливно-витяжна </value>
+  </data>
+  <data name="TypOkapuJVI-R" xml:space="preserve">
+    <value>Витяжка витяжна з витяжним блоком</value>
+  </data>
+  <data name="TypWielkoscNawiewnika" xml:space="preserve">
+    <value>Тип/Розмір дифузора</value>
+  </data>
+  <data name="UkladDedykowany" xml:space="preserve">
+    <value>Система призначення</value>
+  </data>
+  <data name="UkladNakladajacySie" xml:space="preserve">
+    <value>Система перекриття</value>
+  </data>
+  <data name="UrzadzenieBemar" xml:space="preserve">
+    <value>Марміт</value>
+  </data>
+  <data name="UrzadzenieFrytkownica" xml:space="preserve">
+    <value>Фритюрниця</value>
+  </data>
+  <data name="UrzadzenieKociolWarzelny" xml:space="preserve">
+    <value>Варильний казан</value>
+  </data>
+  <data name="UrzadzenieOpiekaczGastronomiczny" xml:space="preserve">
+    <value>Кухонний Гриль Тостер</value>
+  </data>
+  <data name="UrzadzeniePatelnia" xml:space="preserve">
+    <value>Сковорода</value>
+  </data>
+  <data name="UrzadzeniePatelniaWok" xml:space="preserve">
+    <value>Сковорода Вок</value>
+  </data>
+  <data name="UrzadzeniePiecDoPizzy" xml:space="preserve">
+    <value>Піч для піци</value>
+  </data>
+  <data name="UrzadzeniePiecKombi" xml:space="preserve">
+    <value>Піч комбінована</value>
+  </data>
+  <data name="UrzadzeniePiecKonwekcyjnoParowy" xml:space="preserve">
+    <value>Піч пароконвекційна</value>
+  </data>
+  <data name="UrzadzeniePlytaGrillowa" xml:space="preserve">
+    <value>Гриль плита</value>
+  </data>
+  <data name="UrzadzeniePlytaIndukcyjna" xml:space="preserve">
+    <value>Індукційна плита</value>
+  </data>
+  <data name="UrzadzenieSalamander" xml:space="preserve">
+    <value>Salamander</value>
+  </data>
+  <data name="UrzadzenieSzybkowar" xml:space="preserve">
+    <value>Скороварка</value>
+  </data>
+  <data name="UrzadzenieTaboretGrzewczy" xml:space="preserve">
+    <value>Нагрівальний табурет</value>
+  </data>
+  <data name="UrzadzenieTrzonKuchenny" xml:space="preserve">
+    <value>Кухонна плита</value>
+  </data>
+  <data name="UrzadzenieWarnik" xml:space="preserve">
+    <value>Електрокип'ятильник</value>
+  </data>
+  <data name="UrzadzenieZmywarka" xml:space="preserve">
+    <value>Посудомийна машина</value>
+  </data>
+  <data name="Uwagi" xml:space="preserve">
+    <value>Примітки</value>
+  </data>
+  <data name="Waga" xml:space="preserve">
+    <value>Вага</value>
+  </data>
+  <data name="WagaPustegoUrzadzenia" xml:space="preserve">
+    <value>Вага порожнього пристрою</value>
+  </data>
+  <data name="WentrylatoryWiązki" xml:space="preserve">
+    <value>Вентилятори блоку</value>
+  </data>
+  <data name="WOparciuOOkapOrazGrillWeglowyDobranoNastępująceUrządzenie" xml:space="preserve">
+    <value>На основі витяжки та вугільного грилю, добрані наступні пристрої</value>
+  </data>
+  <data name="WOparciuOTechnologięGastronomiczną" xml:space="preserve">
+    <value>На основі технології громадського харчування, добрані витяжки і варіанти розташування сопел обрано наступний розмір системи</value>
+  </data>
+  <data name="WOparciuOWybranyPiecDoPizzyDobranoNastępująceUrządzenie" xml:space="preserve">
+    <value>На основі обраної печі для піци добрані наступні пристрої</value>
+  </data>
+  <data name="WrazZPanelemDotykowym" xml:space="preserve">
+    <value>разом з сенсорною панеллю FC</value>
+  </data>
+  <data name="Wspolczynnik063Info" xml:space="preserve">
+    <value>У розрахованому мінімальному потоці витяжного повітря враховується коефіцієнт зменшення 0,63 для витяжки, розташованої на стіні.</value>
+  </data>
+  <data name="WyposazenieDodatkowe" xml:space="preserve">
+    <value>Додаткове обладнання</value>
+  </data>
+  <data name="WysokoscOkapu" xml:space="preserve">
+    <value>Висота витяжки</value>
+  </data>
+  <data name="Wyspowy" xml:space="preserve">
+    <value>Острівний</value>
+  </data>
+  <data name="WytyczneProjektowe" xml:space="preserve">
+    <value>Вказівки щодо проекту</value>
+  </data>
+  <data name="WytyczneProjektoweSmokiJuniorOpis" xml:space="preserve">
+    <value>&lt;li&gt;Підключення каналів з SMOKI Junior слід розглядати, як димові канали і застосовувати нержавіючі двостінні димохідні системи.&lt;/li&gt;						
+&lt;li&gt; Через високу вологість диму, що залишає SMOKI і саму присутність диму, канали повинні бути герметичними і слід укладати їх з ухилом в сторону пристрою. У разі відсутності можливості прокладки каналів з ухилом в бік SMOKI, в найнижчому місці встановити фітинг з можливістю зневоднення. Димовий канал вивести над дахом відповідно до чинного законодавства про димоходи.&lt;/li&gt;	
+&lt;li&gt; ЗАБОРОНЯЄТЬСЯ ПІДКЛЮЧАТИ SMOKI JUNIOR ДО СИСТЕМИ ВЕНТИЛЯЦІЇ &lt;/li&gt;				
+&lt;li&gt; Для пристрою SMOKI Junior необхідно підвести холодну водопровідну воду і підключити на постійній основі. Пристрій автоматично бере потрібну кількість води. У пристрої встановлений фільтр для води. &lt;/li&gt;
+&lt;li&gt; До пристрою SMOKI Junior слід підключити санітарну каналізацію. Відплив повинен пройти через сепаратор жирів. &lt;/li&gt;
+&lt;li&gt; До пристрою SMOKI Junior має бути підведене джерело електроживлення з напругою, сумісною з паспортом виробу. &lt;/li&gt;
+&lt;li&gt; Пристрій SMOKI Junior слід розташовувати якомога ближче до пічки для піци, над топкою. Це забезпечує короткий відрізок каналу, що піддається впливу сажі та високої температури. Пристрій може бути як поставлений на підлозі, так і прикріплений до стіни або перекриття за допомогою опорної рами.&lt;/Іі&gt;</value>
+  </data>
+  <data name="WytyczneProjektoweSmokiMaxiOpis" xml:space="preserve">
+    <value>&lt;li&gt;Підключення каналів з SMOKI Maxi Grill між грилем , а пристроєм, слід розглядати як димові канали і застосовувати нержавіючі двостінні димохідні системи.&lt;/li&gt;						
+&lt;li&gt; Рекомендується виконання каналів за SMOKI Maxi Grill, також в системі димоходу, допускається застосування вентиляційних фітингів з нержавіючої сталі.&lt;/li&gt;						
+&lt;li&gt; Через високу вологість диму, що залишає SMOKI, канали повинні бути герметичними і слід укладати їх з ухилом в сторону пристрою. У разі відсутності можливості прокладки каналів з ухилом в бік SMOKI, в найнижчому місці встановити фітинг з можливістю зневоднення. Димовий вихід вивести над дахом відповідно до чинного законодавства.&lt;/li&gt;	
+&lt;li&gt;ЗАБОРОНЯЄТЬСЯ З’ЄДНУВАТИ ВИТЯЖКУ ВІД SMOKI MAXI GRILL З ІНШИМИ СИСТЕМАМИ ВЕНТИЛЯЦІЇ&lt;/li&gt;				
+&lt;li&gt; Для пристрою SMOKI Maxi Grill необхідно підвести холодну водопровідну воду і підключити на постійній основі. Пристрій автоматично бере потрібну кількість води. У пристрої встановлений фільтр для води. &lt;/li&gt;
+&lt;li&gt; До пристрою SMOKI Maxi Grill слід підключити санітарну каналізацію. Відплив повинен пройти через сепаратор жирів. &lt;/li&gt;
+&lt;li&gt; До пристрою SMOKI Maxi Grill слід підвести джерело електроживлення з напругою, сумісною з паспортом виробу.&lt;/li&gt;
+&lt;li&gt; Пристрій SMOKI Maxi Grill слід розташовувати якомога ближче до грилю, це забезпечує короткий відрізок каналу, що піддається впливу сажі та високої температури. Пристрій може бути як поставлений на підлозі, так і прикріплений до стіни або стелі. &lt;/Іі&gt;</value>
+  </data>
+  <data name="Zalacznik" xml:space="preserve">
+    <value>Додаток</value>
+  </data>
+  <data name="ZalacznikNr" xml:space="preserve">
+    <value>Додаток № </value>
+  </data>
+  <data name="Zapytanie" xml:space="preserve">
+    <value>Запит</value>
+  </data>
+  <data name="Zbiornikowy" xml:space="preserve">
+    <value>Резервуарний</value>
+  </data>
+  <data name="ZuzycieWody" xml:space="preserve">
+    <value>Витрата води</value>
+  </data>
+</root>

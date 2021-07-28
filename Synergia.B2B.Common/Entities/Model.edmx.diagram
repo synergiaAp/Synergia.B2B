@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="22d469deb5e74d3dbff6721a36c9b043" Name="Diagram1" ZoomLevel="75">
+        <EntityTypeShape EntityType="ERP_SYNERGIAModel.User" Width="1.5" PointX="3" PointY="39.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERP_SYNERGIAModel.Group" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ERP_SYNERGIAModel.PhotoPath" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="ERP_SYNERGIAModel.InstallationObject" Width="2.5" PointX="7" PointY="25" />
+        <EntityTypeShape EntityType="ERP_SYNERGIAModel.DocumentPath" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="ERP_SYNERGIAModel.Customer" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ERP_SYNERGIAModel.Invoice" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="ERP_SYNERGIAModel.WZDoc" Width="1.5" PointX="2.75" PointY="6.75" />
+        <EntityTypeShape EntityType="ERP_SYNERGIAModel.File" Width="1.5" PointX="0.75" PointY="44.25" />
+        <EntityTypeShape EntityType="ERP_SYNERGIAModel.OfferCompany" Width="1.5" PointX="4.75" PointY="25.125" />
+        <EntityTypeShape EntityType="ERP_SYNERGIAModel.Contact" Width="1.5" PointX="5.25" PointY="42.875" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_Contacts_CRM_OfferCompanies" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_Contacts_CRM_Users" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_Users_CRM_Files" />
+        <EntityTypeShape EntityType="ERP_SYNERGIAModel.OfferElement" Width="1.5" PointX="13.5" PointY="56" />
+        <EntityTypeShape EntityType="ERP_SYNERGIAModel.OrderElement" Width="1.5" PointX="8.25" PointY="43.375" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_OrderElements_CRM_Users" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_OrderElements_CRM_Users1" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_OrderElements_CRM_Users2" />
+        <EntityTypeShape EntityType="ERP_SYNERGIAModel.PersonalProduct" Width="1.5" PointX="5.25" PointY="69.625" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_OfferElements_CRM_PersonalProducts" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_PersonalProducts_CRM_Users" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_PersonalProducts_CRM_Users1" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_PersonalProducts_CRM_Users2" />
+        <EntityTypeShape EntityType="ERP_SYNERGIAModel.Province" Width="1.5" PointX="14.25" PointY="53" />
+        <EntityTypeShape EntityType="ERP_SYNERGIAModel.Region" Width="1.5" PointX="12" PointY="50.875" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_Provinces_CRM_Regions" />
+        <EntityTypeShape EntityType="ERP_SYNERGIAModel.SC" Width="1.5" PointX="6.75" PointY="4.75" />
+        <EntityTypeShape EntityType="ERP_SYNERGIAModel.CampaignContact" Width="1.5" PointX="10.5" PointY="61.875" />
+        <EntityTypeShape EntityType="ERP_SYNERGIAModel.CampaignFile" Width="1.5" PointX="7.5" PointY="65.125" />
+        <EntityTypeShape EntityType="ERP_SYNERGIAModel.Campaign" Width="1.5" PointX="5.25" PointY="88.875" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_CampaignContacts_CRM_Campaigns" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_CampaignContacts_CRM_Contacts" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_CampaignContacts_CRM_Users" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_CampaignContacts_CRM_Users1" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_CampaignFiles_CRM_Campaigns" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_CampaignFiles_CRM_Files" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_CampaignFiles_CRM_Users" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_CampaignFiles_CRM_Users1" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_Campaigns_CRM_Users" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_Campaigns_CRM_Users1" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_Campaigns_CRM_Users2" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_Campaigns_CRM_Campaigns" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_S_OBIEKTY_CRM_OfferCompanies" />
+        <EntityTypeShape EntityType="ERP_SYNERGIAModel.Offer" Width="1.5" PointX="11.25" PointY="42.125" />
+        <EntityTypeShape EntityType="ERP_SYNERGIAModel.Order" Width="1.5" PointX="16.5" PointY="42.125" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_Offers_CRM_Files" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_Offers_CRM_Files1" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_Orders_CRM_Files" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_Orders_CRM_Files1" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_Offers_CRM_OfferCompanies" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_Orders_CRM_OfferCompanies" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_OfferElements_CRM_Offers" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_Offers_CRM_Offers" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_Offers_CRM_Users" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_Orders_CRM_Offers" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_OrderElements_CRM_Orders" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_Orders_CRM_Users" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_Orders_CRM_Users1" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_Orders_CRM_Users2" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_Offers_S_OBIEKTY" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_Orders_S_OBIEKTY" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_Offers_S_OBIEKTY" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_Orders_S_OBIEKTY" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_Offers_S_OBIEKTY" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_Orders_S_OBIEKTY" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_Offers_S_OBIEKTY" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_Orders_S_OBIEKTY" />
+        <EntityTypeShape EntityType="ERP_SYNERGIAModel.CustomerType" Width="1.5" PointX="7.75" PointY="34.25" />
+        <EntityTypeShape EntityType="ERP_SYNERGIAModel.OfferCompanyCustomerType" Width="2.25" PointX="10" PointY="36.375" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_OfferCompanyCustomerType_CRM_CustomerType" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_OfferCompanyCustomerType_CRM_OfferCompanies" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_OfferCompanyCustomerType_CRM_Users" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_OfferCompanyCustomerType_CRM_Users1" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_OfferCompanyCustomerType_CRM_Users2" />
+        <EntityTypeShape EntityType="ERP_SYNERGIAModel.Language" Width="1.5" PointX="5.375" PointY="7.75" />
+        <EntityTypeShape EntityType="ERP_SYNERGIAModel.Configuration" Width="1.5" PointX="3" PointY="35.625" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_Configuration_CRM_Files" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_OfferCompanies_CRM_Users" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_OfferCompanies_CRM_Users1" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_OfferCompanies_CRM_Users2" />
+        <EntityTypeShape EntityType="ERP_SYNERGIAModel.UserRole" Width="1.5" PointX="5.25" PointY="57.875" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_UserRoles_CRM_Users" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_UserRoles_CRM_Users1" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_UserRoles_CRM_Users2" />
+        <EntityTypeShape EntityType="ERP_SYNERGIAModel.UserRoleDict" Width="1.5" PointX="7.375" PointY="7.875" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_UserRoles_CRM_UserRolesDict" />
+        <EntityTypeShape EntityType="ERP_SYNERGIAModel.vCRM_FirmyNaleznosci" Width="1.5" PointX="9.375" PointY="0.75" />
+        <EntityTypeShape EntityType="ERP_SYNERGIAModel.vCRM_TowaryDok" Width="1.5" PointX="9.375" PointY="3.75" />
+        <EntityTypeShape EntityType="ERP_SYNERGIAModel.vCRM_TowaryPow" Width="1.5" PointX="11.375" PointY="3.75" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_CRM_Users_CRM_Files1" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_S_OBIEKTY_CRM_Users" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_S_OBIEKTY_CRM_Users1" />
+        <AssociationConnector Association="ERP_SYNERGIAModel.FK_S_OBIEKTY_CRM_Users2" />
+        <EntityTypeShape EntityType="ERP_SYNERGIAModel.Product" Width="1.5" PointX="0.5" PointY="0.75" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

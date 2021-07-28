@@ -1,0 +1,162 @@
+﻿@model UsersViewModel
+@Scripts.Render("~/bundles/users/_UserDetails")
+
+<!-- Modal -->
+<div class="modal fade" id="modalAddUser" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        @using (Html.BeginForm("AddUser", "Users", FormMethod.Post, new { id = "formAddUser" }))
+        {
+
+            <!-- Modal content-->
+            <div class="modal-content">
+
+                @*<div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            <i class="material-icons">clear</i>
+                        </button>
+                        <h4 class="modal-title">&nbsp;</h4>
+                    </div>*@
+                <div class="modal-body">
+
+                    <div class="card">
+                        <div class="card-header card-header-icon" data-background-color="rose">
+                            <i class="material-icons">perm_identity</i>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">
+                                Dane użytkownika
+                            </h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.FirstName, new { @class = "required control-label" })
+                                        @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control" })
+                                        @*@Html.ValidationMessageFor(model => model.FirstName)*@
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.Surname, new { @class = "required control-label" })
+                                        @Html.TextBoxFor(model => model.Surname, new { @class = "form-control" })
+                                        @*@Html.ValidationMessageFor(model => model.Surname)*@
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.Login, new { @class = "required control-label" })
+                                        @Html.TextBoxFor(model => model.Login, new { @class = "form-control" })
+                                        @*@Html.ValidationMessageFor(model => model.Login)*@
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.Phone, new { @class = "control-label" })
+                                        @Html.TextBoxFor(model => model.Phone, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.Password, new { @class = "required control-label" })
+                                        @Html.PasswordFor(model => model.Password, new { @class = "form-control" })
+                                        @*@Html.ValidationMessageFor(model => model.Password)*@
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.ConfirmPassword, new { @class = "required control-label" })
+                                        @Html.PasswordFor(model => model.ConfirmPassword, new { @class = "form-control" })
+                                        @*@Html.ValidationMessageFor(model => model.ConfirmPassword)*@
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.Role, new { @class = "control-label" })
+                                        @Html.DropDownListFor(model => model.Role, Model.UserRoles, new { @class = "multiSelect form-control", multiple = "multiple" })
+                                    </div>
+                                </div>
+                                @*<div class="col-md-6">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.Role, new { @class = "required control-label" })
+                                            @Html.DropDownListFor(model => model.Role, Model.UserRoles, new { @class = "selectpicker", data_style = "select-with-transition" })
+                                        </div>
+                                    </div>*@
+                                <div class="col-md-6">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.CustomerName, new { @class = "required control-label" })
+                                        @Html.TextBoxFor(model => model.CustomerName, new { @class = "form-control autocompleteSearch" })
+                                        @Html.HiddenFor(model => model.CustomerId)
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.Boss, new { @class = "control-label" })
+                                        @Html.TextBoxFor(model => model.Boss, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.Position, new { @class = "control-label" })
+                                        @Html.TextBoxFor(model => model.Position, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.BirthdayDate, new { @class = "control-label datepickerLabel" })
+                                        @Html.TextBoxFor(model => model.BirthdayDate, new { @class = "form-control datepicker" })
+                                        @*@Html.ValidationMessageFor(model => model.FirstName)*@
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.RegionId, new { @class = "required control-label" })
+                                        @Html.DropDownListFor(model => model.RegionId, Model.RegionCodeNames, "Wybierz", new { @class = "selectpicker", data_style = "select-with-transition" })
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group label-floating">
+                                        <div class="checkbox">
+                                            <label>
+                                                @Html.CheckBoxAwesomeFor(model => model.IsActive, new { @class = "control-label" })
+                                                @Html.DisplayNameFor(m => m.IsActive)
+                                            </label>
+                                        </div>
+                                    </div>
+                                    @Html.HiddenFor(m => m.Id)
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group label-floating">
+                                        @Html.LabelFor(model => model.WelcomeText, new { @class = "control-label controlLabelTextArea" })
+                                        @Html.TextAreaFor(model => model.WelcomeText, new { @class = "form-control", rows = "2" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p style="font-size:11px;margin-top:20px;">Wymagania hasła: minimum 8 znaków, co najmniej jedna duża litera, jedna mała i jedna cyfra.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Zamknij</button>
+                    <button type="button" onclick="userDetails.save();" class="btn btn-success">Zapisz użytkownika</button>
+                </div>
+            </div>
+        }
+    </div>
+</div>

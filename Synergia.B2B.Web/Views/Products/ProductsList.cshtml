@@ -1,0 +1,91 @@
+﻿@Scripts.Render("~/bundles/products/productsList")
+@{
+    ViewBag.Title = "Produkty";
+}
+@model  ProductsViewModel
+<style>
+    /*.main-panel > .content {
+        padding: 0px 15px;
+    }*/
+</style>
+<script>
+    @if (Model.GroupId.HasValue)
+    {
+        @:productsList.selectedGroupId = "@Model.GroupId";
+    }
+</script>
+@*<div class="row">
+        <div class="col-sm-12">
+            <div class="btn-group">
+                <a id="btnBack" class="invisible" href="javascript:productsList.back();">
+                    <i style="font-size:40pt" class="material-icons">keyboard_return</i>
+                </a>
+            </div>
+        </div>
+    </div>*@
+<div class="card cardNoAnimation">
+    <div class="card-header card-header-text" data-background-color="blueSynergia">
+        <h4 class="card-title">Lista produktów</h4>
+    </div>
+    @*<div class="card-header card-header-icon" data-background-color="blueSynergia">
+            <i class="material-icons">group_work</i>
+        </div>*@
+    <div class="card-content">
+        @*<h4 class="card-title">Lista produktów</h4>*@
+
+        <div class="row" id="productList">
+        </div>
+    </div>
+</div>
+
+@*<div class="row">
+        <div class="col-sm-12">
+            <div class="btn-group">
+                <a id="btnBack" class="invisible" href="javascript:productsList.back();">
+                    <i style="font-size:40pt" class="material-icons">keyboard_return</i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="productList">
+    </div>*@
+<template id="templateProductItem">
+    <div class="col-md-3 col-sm-4">
+        <div class="card card-product">
+            <div class="card-image small-animation" data-header-animation="true">
+                <a href="#">
+                    <img class="img" src="#">
+                </a>
+            </div>
+            <div class="card-content">
+                <h4 class="card-title">
+                    <strong><a href="#">ICF94E22</a></strong>
+                    <div style="position:absolute; right:25px; top:2px">
+                        <i title="Dodaj do oferty" data-toggle="tooltip" class="addOfferElement material-icons btn btn-simple btn-info btn-icon edit" style="font-size:20pt; padding:0; z-index:2">local_grocery_store</i>
+                    </div>
+                </h4>
+                <div class="card-description" style="height:42px; overflow:hidden">
+                    Frytownica elektryczna 1-komorowa lini I-CHEFG, poj. 22 litry, zaawansowane sterowanie elektron...
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template id="templateGroupItem">
+    <div class="col-md-3 col-sm-4">
+        <div class="card card-product">
+            <div class="card-image small-animation" data-header-animation="true">
+                <a href="#">
+                    <img class="img" src="#">
+                </a>
+            </div>
+            <div class="card-content">
+                <h4 class="card-title">
+                    <strong><a href="#">ICF94E22</a></strong>
+                </h4>
+            </div>
+        </div>
+    </div>
+</template>
+

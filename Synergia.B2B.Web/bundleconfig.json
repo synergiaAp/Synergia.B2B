@@ -1,0 +1,158 @@
+[
+  {
+    "outputFileName": "Content/awesome-bootstrap-checkbox.min.css",
+    "inputFiles": [
+      "Content/awesome-bootstrap-checkbox.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/font-awesome.min.css",
+    "inputFiles": [
+      "Content/font-awesome.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/sb-admin-2.min.css",
+    "inputFiles": [
+      "Content/sb-admin-2.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/Site.min.css",
+    "inputFiles": [
+      "Content/Site.css"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/bootstrap/css/bootstrap.min.css",
+    "inputFiles": [
+      "Scripts/bootstrap/css/bootstrap.css"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/bootstrap/js/bootstrap.min.js",
+    "inputFiles": [
+      "Scripts/bootstrap/js/bootstrap.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/bootstrap-social/bootstrap-social.min.css",
+    "inputFiles": [
+      "Scripts/bootstrap-social/bootstrap-social.css"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/data/flot-data.min.js",
+    "inputFiles": [
+      "Scripts/data/flot-data.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/data/morris-data.min.js",
+    "inputFiles": [
+      "Scripts/data/morris-data.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/datatables/css/dataTables.bootstrap.min.css",
+    "inputFiles": [
+      "Scripts/datatables/css/dataTables.bootstrap.css"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/datatables/css/jquery.dataTables.min.css",
+    "inputFiles": [
+      "Scripts/datatables/css/jquery.dataTables.css"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/datatables/js/dataTables.bootstrap.min.js",
+    "inputFiles": [
+      "Scripts/datatables/js/dataTables.bootstrap.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/datatables/js/jquery.dataTables.min.js",
+    "inputFiles": [
+      "Scripts/datatables/js/jquery.dataTables.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/datatables-plugins/dataTables.bootstrap.min.css",
+    "inputFiles": [
+      "Scripts/datatables-plugins/dataTables.bootstrap.css"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/datatables-plugins/dataTables.bootstrap.min.js",
+    "inputFiles": [
+      "Scripts/datatables-plugins/dataTables.bootstrap.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/datatables-responsive/dataTables.responsive.min.css",
+    "inputFiles": [
+      "Scripts/datatables-responsive/dataTables.responsive.css"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/datatables-responsive/dataTables.responsive.min.js",
+    "inputFiles": [
+      "Scripts/datatables-responsive/dataTables.responsive.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/jquery/jquery.min.js",
+    "inputFiles": [
+      "Scripts/jquery/jquery.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/metisMenu/metisMenu.min.css",
+    "inputFiles": [
+      "Scripts/metisMenu/metisMenu.css"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/metisMenu/metisMenu.min.js",
+    "inputFiles": [
+      "Scripts/metisMenu/metisMenu.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/morrisjs/morris.min.css",
+    "inputFiles": [
+      "Scripts/morrisjs/morris.css"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/morrisjs/morris.min.js",
+    "inputFiles": [
+      "Scripts/morrisjs/morris.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/raphael/raphael.min.js",
+    "inputFiles": [
+      "Scripts/raphael/raphael.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/jquery.validate.min.js",
+    "inputFiles": [
+      "Scripts/jquery.validate.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/jquery.validate.unobtrusive.min.js",
+    "inputFiles": [
+      "Scripts/jquery.validate.unobtrusive.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/sb-admin-2.min.js",
+    "inputFiles": [
+      "Scripts/sb-admin-2.js"
+    ]
+  }
+]

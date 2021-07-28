@@ -1,0 +1,464 @@
+﻿@Scripts.Render("~/bundles/hoodSelection/_hoodFinalOfferDetails")
+@model HoodFinalOfferDetailsViewModel
+
+<div class="modal fade" id="modalHFOOfferDetails" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <form method="post" id="formSaveHFOOfferDetails">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="card">
+                        <div class="card-header card-header-icon" data-background-color="rose">
+                            <i class="material-icons">border_color</i>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <h4> Oferta </h4>
+                                <ul class="nav nav-pills nav-pills-warning">
+                                    <li class="active" style="width:180px">
+                                        <a href="#pillHFOOffer" data-toggle="tab">Dane podstawowe</a>
+                                    </li>
+                                    <li style="width:180px">
+                                        <a href="#pillHFOOfferElements" data-toggle="tab">Produkty</a>
+                                    </li>
+                                </ul>
+                                <div class="row" id="rowHFOOfferNumber">
+                                    <div class="col-md-12">
+                                        <div class="form-group label-floating">
+                                            @Html.LabelFor(model => model.HFOOfferNumber, new { @class = "required control-label" })
+                                            @Html.TextBoxFor(model => model.HFOOfferNumber, new { @class = "form-control form-control-disabled", disabled = "disabled" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <table id="hfoOfferElementsTableSummary" class="table">
+                                    <thead class="text-primary">
+                                        <tr>
+                                            <th style="width: 220px">Opis wartości</th>
+                                            <th>Netto PLN</th>
+                                            <th>VAT PLN</th>
+                                            <th>Brutto PLN</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Łączna wartość katalogowa</td>
+                                            <td><span id="HFOCatalogValueNet"></span></td>
+                                            <td><span id="HFOCatalogValueVat"></span></td>
+                                            <td><span id="HFOCatalogValueGross"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Wartość po rabacie</td>
+                                            <td><span id="HFOFinalValueAfterAllDiscountsNet"></span></td>
+                                            <td><span id="HFOFinalValueAfterAllDiscountsVat"></span></td>
+                                            <td><span id="HFOFinalValueAfterAllDiscountsGross"></span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="pillHFOOffer">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="text-center">
+                                                        <img id="hfoOfferLogo" class="hidden" style="width: 80%" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-10">
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                    <div class="form-group label-floating">
+                                                        @Html.LabelFor(model => model.HFOOfferDate, new { @class = "control-label datepickerLabel" })
+                                                        @Html.TextBoxFor(model => model.HFOOfferDate, new { @class = "form-control datepicker" })
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="form-group label-floating">
+                                                        @Html.LabelFor(model => model.HFOCity, new { @class = "control-label" })
+                                                        @Html.TextBoxFor(model => model.HFOCity, new { @class = "form-control" })
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="form-group label-floating">
+                                                        @Html.LabelFor(model => model.HFORegionId, new { @class = "control-label" })
+                                                        @Html.DropDownListFor(model => model.HFORegionId, Model.Regions, new { @class = "selectpicker", data_style = "select-with-transition" })
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 col-md-offset-2">
+                                                    <div class="form-group label-static">
+                                                        @Html.LabelFor(model => model.HFOFixedValueAfterAllDiscounts, new { @class = "control-label" })
+                                                        @Html.TextBoxFor(model => model.HFOFixedValueAfterAllDiscounts, new { @class = "form-control text-right text-danger" })
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="form-group label-floating">
+                                                        @Html.LabelFor(model => model.HFOStatusText, new { @class = "control-label" })
+                                                        @Html.TextBoxFor(model => model.HFOStatusText, new { @class = "form-control form-control-disabled", disabled = "disabled" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <div class="form-group label-floating">
+                                                        @Html.LabelFor(model => model.HFOContactPerson, new { @class = "control-label" })
+                                                        @Html.TextBoxFor(model => model.HFOContactPerson, new { @class = "form-control" })
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group label-floating">
+                                                        @Html.LabelFor(model => model.HFOContactEmail, new { @class = "control-label" })
+                                                        @Html.TextBoxFor(model => model.HFOContactEmail, new { @class = "form-control" })
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="form-group label-floating">
+                                                        @Html.LabelFor(model => model.HFOContactPhone, new { @class = "control-label" })
+                                                        @Html.TextBoxFor(model => model.HFOContactPhone, new { @class = "form-control" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-info" id="hfoOfferCompanyDetails">
+                                                <div class="panel-heading">Dane klienta</div>
+                                                <div class="panel-body">
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <div class="form-group label-floating">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        @Html.CheckBoxAwesome("ChBAddNewHFOOfferCompany", new { @class = "control-label" })
+                                                                        @Html.Label("Dodaj nowego klienta")
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3" id="ColHFOOfferCompaniesDropDown">
+                                                            <div class="form-group label-floating">
+                                                                @Html.LabelFor(model => model.HFOOfferCompanyName, new { @class = "required control-label" })
+                                                                <input id="HFOOfferSearchCompany" class="form-control autocompleteSearch">
+                                                                <button type="button" class="btn btn-white btn-round btn-just-icon btn-round-small" id="btnClearHFOOfferSearchCompany">
+                                                                    <i class="material-icons">clear</i>
+                                                                    <div class="ripple-container"></div>
+                                                                </button>
+                                                                @Html.HiddenFor(model => model.HFOOfferCompanyId)
+                                                                @Html.Hidden("HFOOfferCompanyTempName")
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3 hidden" id="ColHFOOfferCompanyName">
+                                                            <div class="form-group label-floating">
+                                                                @Html.LabelFor(model => model.HFOOfferCompanyName, new { @class = "required control-label" })
+                                                                @Html.TextBoxFor(model => model.HFOOfferCompanyName, new { @class = "form-control" })
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group label-floating">
+                                                                @Html.LabelFor(model => model.HFOOfferCompanyAddress, new { @class = "control-label" })
+                                                                @Html.TextBoxFor(model => model.HFOOfferCompanyAddress, new { @class = "form-control" })
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group label-floating">
+                                                                @Html.LabelFor(model => model.HFOOfferCompanyCity, new { @class = "control-label" })
+                                                                @Html.TextBoxFor(model => model.HFOOfferCompanyCity, new { @class = "form-control" })
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-1">
+                                                            <div class="form-group label-floating">
+                                                                @Html.LabelFor(model => model.HFOOfferCompanyPostalCode, new { @class = "control-label" })
+                                                                @Html.TextBoxFor(model => model.HFOOfferCompanyPostalCode, new { @class = "form-control", data_mask = "99-999" })
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group label-floating">
+                                                                @Html.LabelFor(model => model.HFOOfferCompanyNIP, new { @class = "control-label" })
+                                                                @Html.TextBoxFor(model => model.HFOOfferCompanyNIP, new { @class = "form-control", data_mask = "999-99-99-999" })
+                                                            </div>
+                                                        </div>
+                                                        @Html.HiddenFor(model => model.HFOOfferId)
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-success" style="margin-top:20px">
+                                                <div class="panel-heading">Dane obiektu</div>
+                                                <div class="panel-body">
+                                                    <div class="row">
+                                                        @*<div class="col-md-2">
+                                                                <div class="form-group label-floating">
+                                                                    <div class="checkbox">
+                                                                        <label>
+                                                                            @Html.CheckBoxAwesome("ChBAddNewHFOInstallationObject", new { @class = "control-label" })
+                                                                            @Html.Label("Dodaj nowy obiekt")
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>*@
+                                                        @*<div class="col-md-3" id="ColHFOInstallationObjectsDropDown">
+                                                            <div class="form-group label-floating">
+                                                                @Html.LabelFor(model => model.HFOInstallationObjectName, new { @class = "control-label" })
+                                                                <input id="HFOOfferSearchInstallationObject" class="form-control autocompleteSearch autocompleteSearchFullWidth" readonly>*@
+                                                        @*<button type="button" class="btn btn-white btn-round btn-just-icon btn-round-small" id="btnClearHFOOfferSearchInstallationObject">
+                                                                <i class="material-icons">clear</i>
+                                                                <div class="ripple-container"></div>
+                                                            </button>*@
+                                                        @Html.HiddenFor(model => model.HFOInstallationObjectId)
+                                                        @*@Html.Hidden("HFOOfferInstallationObjectTempName")*@
+                                                        @*</div>
+                                                            </div>*@
+                                                        <div class="col-md-3" @*id="ColInstallationObjectName"*@>
+                                                            <div class="form-group label-floating">
+                                                                @Html.LabelFor(model => model.HFOInstallationObjectName, new { @class = "required control-label" })
+                                                                @Html.TextBoxFor(model => model.HFOInstallationObjectName, new { @class = "form-control" })
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group label-floating">
+                                                                @Html.LabelFor(model => model.HFOInstallationObjectAddress, new { @class = "control-label" })
+                                                                @Html.TextBoxFor(model => model.HFOInstallationObjectAddress, new { @class = "form-control" })
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group label-floating">
+                                                                @Html.LabelFor(model => model.HFOInstallationObjectCity, new { @class = "required control-label" })
+                                                                @Html.TextBoxFor(model => model.HFOInstallationObjectCity, new { @class = "form-control" })
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-1">
+                                                            <div class="form-group label-floating">
+                                                                @Html.LabelFor(model => model.HFOInstallationObjectPostalCode, new { @class = "control-label" })
+                                                                @Html.TextBoxFor(model => model.HFOInstallationObjectPostalCode, new { @class = "form-control", data_mask = "99-999" })
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group label-floating">
+                                                                @Html.LabelFor(model => model.HFOInstallationObjectCountry, new { @class = "control-label" })
+                                                                @Html.TextBoxFor(model => model.HFOInstallationObjectCountry, new { @class = "form-control" })
+                                                            </div>
+                                                        </div>
+                                                        @*</div>*@
+                                                        @*<div class="row">*@
+                                                        <div class="col-md-2">
+                                                            <div class="form-group label-floating">
+                                                                @Html.LabelFor(model => model.HFOInstallationObjectType, new { @class = "control-label" })
+                                                                @Html.DropDownListFor(model => model.HFOInstallationObjectType, Model.InstallationObjectTypes, "Wybierz typ obiektu", new { @class = "selectpicker", data_style = "select-with-transition" })
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-warning" style="margin-top:20px">
+                                                <div class="panel-heading">Gwarancja (lata)</div>
+                                                <div class="panel-body">
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <div class="form-group label-static">
+                                                                @Html.LabelFor(model => model.HFOGuaranteeYearsHoods, new { @class = "control-label" })
+                                                                <div style="width:45px;" class="touchSpinWrapper">
+                                                                    @Html.TextBoxFor(model => model.HFOGuaranteeYearsHoods, new
+                                                                    {
+                                                                        @class = "touchSpin",
+                                                                        data_min = "1",
+                                                                        data_max = "100"
+                                                                    })
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group label-static">
+                                                                @Html.LabelFor(model => model.HFOGuaranteeYearsVentilators, new { @class = "control-label" })
+                                                                <div style="width:45px;" class="touchSpinWrapper">
+                                                                    @Html.TextBoxFor(model => model.HFOGuaranteeYearsVentilators, new
+                                                                    {
+                                                                        @class = "touchSpin",
+                                                                        data_min = "1",
+                                                                        data_max = "100"
+                                                                    })
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group label-static">
+                                                                @Html.LabelFor(model => model.HFOGuaranteeYearsCookAir, new { @class = "control-label" })
+                                                                <div style="width:45px;" class="touchSpinWrapper">
+                                                                    @Html.TextBoxFor(model => model.HFOGuaranteeYearsCookAir, new
+                                                                    {
+                                                                        @class = "touchSpin",
+                                                                        data_min = "1",
+                                                                        data_max = "100"
+                                                                    })
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group label-static">
+                                                                @Html.LabelFor(model => model.HFOGuaranteeYearsSmoki, new { @class = "control-label" })
+                                                                <div style="width:45px;" class="touchSpinWrapper">
+                                                                    @Html.TextBoxFor(model => model.HFOGuaranteeYearsSmoki, new
+                                                                    {
+                                                                        @class = "touchSpin",
+                                                                        data_min = "1",
+                                                                        data_max = "100"
+                                                                    })
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group label-static">
+                                                                @Html.LabelFor(model => model.HFOGuaranteeYearsAnsul, new { @class = "control-label" })
+                                                                <div style="width:45px;" class="touchSpinWrapper">
+                                                                    @Html.TextBoxFor(model => model.HFOGuaranteeYearsAnsul, new
+                                                                    {
+                                                                        @class = "touchSpin",
+                                                                        data_min = "1",
+                                                                        data_max = "100"
+                                                                    })
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group label-static">
+                                                                @Html.LabelFor(model => model.HFOGuaranteeYearsKES, new { @class = "control-label" })
+                                                                <div style="width:45px;" class="touchSpinWrapper">
+                                                                    @Html.TextBoxFor(model => model.HFOGuaranteeYearsKES, new
+                                                                    {
+                                                                        @class = "touchSpin",
+                                                                        data_min = "1",
+                                                                        data_max = "100"
+                                                                    })
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="padding: 0px 16px;">
+                                                <div class="col-md-2">
+                                                    <div class="form-group label-static">
+                                                        @Html.LabelFor(model => model.HFODiscount, new { @class = "control-label" })
+                                                        <div style="width:55px;" class="touchSpinWrapper">
+                                                            @Html.TextBoxFor(model => model.HFODiscount, new
+                                                            {
+                                                                @class = "touchSpin",
+                                                                data_min = "0",
+                                                                data_max = "100",
+                                                                data_step = "1",
+                                                                data_decimals = "1",
+                                                                data_forcestepdivisibility = "none"
+                                                            })
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="form-group label-static">
+                                                        @Html.LabelFor(model => model.HFOPrepaymentPercent, new { @class = "control-label" })
+                                                        <div style="width:45px;" class="touchSpinWrapper">
+                                                            @Html.TextBoxFor(model => model.HFOPrepaymentPercent, new
+                                                            {
+                                                                @class = "touchSpin",
+                                                                data_min = "0",
+                                                                data_max = "100"
+                                                            })
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="form-group label-static">
+                                                        @Html.LabelFor(model => model.HFOPaymentType, new { @class = "control-label" })
+                                                        @Html.DropDownListFor(model => model.HFOPaymentType, Model.PaymentTypes, new { @class = "selectpicker", data_style = "select-with-transition" })
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="form-group label-static">
+                                                        @Html.LabelFor(model => model.HFODeliveryTime, new { @class = "control-label" })
+                                                        @Html.TextBoxFor(model => model.HFODeliveryTime, new { @class = "form-control" })
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group label-floating">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                @Html.CheckBoxAwesomeFor(model => model.HFOHideDiscountInPdfFile, new { @class = "control-label" })
+                                                                @Html.LabelFor(model => model.HFOHideDiscountInPdfFile)
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    @*< div class="form-group label-static">*@
+                                                    @*@Html.LabelFor(model => model.HFOHideDiscountInPdfFile, new { @class = "control-label" })
+                                                        @Html.TextBoxFor(model => model.HFODeliveryTime, new { @class = "form-control" })*@
+                                                    @*</div>*@
+                                                </div>
+                                            </div>
+                                            <div class="row" style="padding: 0px 16px;">
+                                                <div class="col-md-12">
+                                                    <div class="form-group label-floating">
+                                                        @Html.LabelFor(model => model.HFOComment, new { @class = "control-label controlLabelTextArea" })
+                                                        @Html.TextAreaFor(model => model.HFOComment, new { @class = "form-control" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="pillHFOOfferElements">
+                                    <div class="row" id="pnlSearchProductsForOffer">
+                                        <div class="col-sm-2">
+                                            <div class="form-group" style="padding-top: 8px;">
+                                                @Html.DropDownList("HFOSearchProductsForOfferGroupId", Model.Groups, "DOWOLNY TYP PRODUKTU", new { @class = "selectpicker", data_style = "select-with-transition" })
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <input id="HFOSearchProductsForOffer" class="form-control" placeholder="Wyszukaj, aby dodać nowy produkt">
+                                                <button type="button" class="btn btn-white btn-round btn-just-icon btn-round-small">
+                                                    <i class="material-icons">clear</i>
+                                                    <div class="ripple-container"></div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 text-danger hidden text-right" id="divHFOFixedValueAfterAllDiscountsInfo" style="padding-top: 30px;">
+                                            Została wpisana stała wartość netto - brak możliwości edycji
+                                        </div>
+                                    </div>
+
+                                    <div id="hfoOfferElementsTableWrapper" class="material-datatables" style="opacity:0">
+                                        <table id="hfoOfferElementsTable" class="table table-striped table-no-bordered table-hover dataTable" cellspacing="0" style="width:100%;display: none;">
+                                            <thead>
+                                                <tr>
+                                                    <th>LP</th>
+                                                    <th>Kod</th>
+                                                    <th>Nazwa</th>
+                                                    <th>Szt</th>
+                                                    <th>
+                                                        Cena<br /> zakupowa<br />netto
+                                                    </th>
+                                                    <th>
+                                                        Mnożnik
+                                                    </th>
+                                                    @*<th>
+                                                            Czas<br />
+                                                            realizacji
+                                                        </th>*@
+                                                    <th>Cena<br />katalogowa<br />netto</th>
+                                                    <th>Rabat</th>
+                                                    <th>Cena<br />po rabacie<br />netto</th>
+                                                    <th>Wartość netto</th>
+                                                    <th>Zdjęcie</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="btnHFOFinishOffer" class="btn btn-warning hidden" style="width:150px; margin-right: 50px">Zakończ</button>
+                    <button type="button" id="btnHFOOrderOffer" class="btn btn-danger hidden" style="width:150px; margin-right: 50px">Zamów</button>
+                    <button type="button" class="btn btn-success" style="width:150px; margin-right: 50px" data-dismiss="modal">Zamknij</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

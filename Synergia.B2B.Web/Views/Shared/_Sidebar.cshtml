@@ -1,0 +1,340 @@
+﻿<div class="sidebar" data-active-color="blue" data-background-color="white" data-image="../../Images/Template/sidebar-1.jpg">
+    <!--
+        Tip 1: You can change the color of active element of the sidebar using: data-active-color="purple | blue | green | orange | red | rose"
+        Tip 2: you can also add an image using data-image tag
+        Tip 3: you can change the color of the sidebar with data-background-color="white | black"
+    -->
+    <div class="logo backgroundSynergia">
+        @*<div class="logo" style="background-color:#01A4E7">*@
+        <a href="http://www.Synergia.pl" class="simple-text logo-mini">
+
+        </a>
+        <a style="color:white" href="http://www.Synergia.pl" class="simple-text logo-normal">
+            <strong>LIDERPOOL</strong>
+            @*<img style="margin-left:auto; margin-right:auto; display:block" src="~/Images/logo.jpg" />*@
+        </a>
+    </div>
+    <div>
+
+    </div>
+    <div class="sidebar-wrapper">
+        <div class="user">
+            <div class="photo">
+                <img src="~/Images/person_icon_small.png" />
+            </div>
+            <div class="info">
+                <a data-toggle="collapse" href="#collapseExample" class="collapsed">
+                    <span id="loggedUserName">
+                        @string.Format("{0} {1}", SessionHelper.LoggedUser.FirstName, SessionHelper.LoggedUser.Surname)
+                        @*<b class="caret"></b>*@
+                    </span>
+                </a>
+                <div class="clearfix"></div>
+                @*<div class="collapse" id="collapseExample">
+                        <ul class="nav">
+                            <li>
+                                <a href="#">
+                                    <span class="sidebar-mini">MP</span>
+                                    <span class="sidebar-normal">Mój profil</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="sidebar-mini">EP</span>
+                                    <span class="sidebar-normal">Edytuj profil</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="sidebar-mini">S</span>
+                                    <span class="sidebar-normal">Ustawienia</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>*@
+            </div>
+        </div>
+        <ul class="nav">
+            @if (Request.IsAuthenticated)
+            {
+                if (User.IsInRole(UserRoleType.Admin.ToString()) || User.IsInRole(UserRoleType.Products.ToString()))
+                {
+
+                    <li class="@Html.SetMenuItemActive("Customers", "CustomerDetails")">
+                        <a href="@Url.Action("CustomerDetails", "Customers")">
+                            @*<i class="material-icons">group_work</i>*@
+                            <i class="material-icons">description</i>
+                            <p>Warunki handlowe</p>
+                        </a>
+                    </li>
+
+                    <li class="@Html.SetMenuItemActive("Products", "Index")">
+                        <a href="@Url.Action("Index", "Products")">
+                            <i class="material-icons">chrome_reader_mode</i>
+                            <p>Produkty</p>
+                        </a>
+                    </li>
+                    <!--<li>
+                <a data-toggle="collapse" href="#products">
+                    <i class="material-icons">group_work</i>
+                    <p>-->
+                    @*Produkty
+                <b class="caret"></b>*@
+                    <!--<a href="@Url.Action("Index", "Products")">-->
+                    @*<span class="sidebar-mini">PP</span>*@
+                    <!--<span class="sidebar-normal">Produkty</span>
+                        </a>
+
+                    </p>
+                </a>
+                <div class="collapse @Html.SetupMultilevelMenu("Products;PersonalProducts")" id="products">
+                <ul class="nav">
+                    <li class="@Html.SetMenuItemActive("Products", "Index;ProductDetails")">
+                        <a href="@Url.Action("Index", "Products")">
+                            <span class="sidebar-mini">PP</span>
+                            <span class="sidebar-normal">Produkty podstawowe</span>
+                        </a>
+                    </li>
+                    <li class="@Html.SetMenuItemActive("PersonalProducts", "Index")">
+                        <a href="@Url.Action("Index", "PersonalProducts")">
+                            <span class="sidebar-mini">PW</span>
+                            <span class="sidebar-normal">Produkty własne</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            </li>-->
+                }
+                <!--if (User.IsInRole(UserRoleType.Admin.ToString()) || User.IsInRole(UserRoleType.Clients.ToString()))
+        {
+            <li>
+                <a data-toggle="collapse" href="#customers">
+                    <i class="material-icons">account_box</i>
+                    <p>
+                        Klienci
+                        <b class="caret"></b>
+                    </p>
+                </a>
+                <div class="collapse @Html.SetupMultilevelMenu("Customers;Contacts;InstallationObjects")" id="customers">
+                    <ul class="nav">
+                        <li class="@Html.SetMenuItemActive("Customers", "Index")">
+                            <a href="@Url.Action("Index", "Customers")">
+                                <span class="sidebar-mini">F</span>
+                                <span class="sidebar-normal">Firmy</span>
+                            </a>
+                        </li>
+                        <li class="@Html.SetMenuItemActive("Contacts", "Index")">
+                            <a href="@Url.Action("Index", "Contacts")">
+                                <span class="sidebar-mini">K</span>
+                                <span class="sidebar-normal">Kontakty</span>
+                            </a>
+                        </li>-->
+                @*<li class="@Html.SetMenuItemActive("InstallationObjects", "Index")">
+                <a href="@Url.Action("Index", "InstallationObjects")">
+                    <span class="sidebar-mini">O</span>
+                    <span class="sidebar-normal">Obiekty</span>
+                </a>
+            </li>*@
+                <!--</ul>
+                </div>
+            </li>
+        }-->
+                if (User.IsInRole(UserRoleType.Admin.ToString()) || User.IsInRole(UserRoleType.MarenoOffersAndOrders.ToString()))
+                {
+                    <li class="@Html.SetMenuItemActive("Offers", "Index")">
+                        <a href="@Url.Action("Index", "Offers")">
+                            <i class="material-icons">chrome_reader_mode</i>
+                            <p>Oferty</p>
+                        </a>
+                    </li>
+                    <li class="@Html.SetMenuItemActive("Orders", "Index")">
+                        <a href="@Url.Action("Index", "Orders")">
+                            <i class="material-icons">content_paste</i>
+                            <p>Zamówienia</p>
+                        </a>
+                    </li>
+                }
+                if (User.IsInRole(UserRoleType.Admin.ToString()) || User.IsInRole(UserRoleType.Documents.ToString()))
+                {
+                    <li>
+                        <a data-toggle="collapse" href="#documents">
+                            <i class="material-icons">description</i>
+                            <p>
+                                Dokumenty
+                                <b class="caret"></b>
+                            </p>
+                        </a>
+                        <div class="collapse @Html.SetupMultilevelMenu("Documents")" id="documents">
+                            <ul class="nav">
+                                <li class="@Html.SetMenuItemActive("Documents", "GetInvoices")">
+                                    <a href="@Url.Action("GetInvoices", "Documents")">
+                                        <span class="sidebar-mini">F</span>
+                                        <span class="sidebar-normal">Faktury</span>
+                                    </a>
+                                </li>
+                                @*<li class="@Html.SetMenuItemActive("Documents", "GetWZDocs")">
+                                <a href="@Url.Action("GetWZDocs", "Documents")">
+                                    <span class="sidebar-mini">W</span>
+                                    <span class="sidebar-normal">Dokumenty WZ</span>
+                                </a>
+                            </li>*@
+                            </ul>
+                        </div>
+                    </li>
+                }
+                @*if (User.IsInRole(UserRoleType.Admin.ToString()) || User.IsInRole(UserRoleType.PlansAndReports.ToString()))
+            {
+                <li class="@Html.SetMenuItemActive("WeeklyPlans", "Index")">
+                    <a href="@Url.Action("Index", "WeeklyPlans")">
+                        <i class="material-icons">note</i>
+                        <p>Plany</p>
+                    </a>
+                </li>
+                <li class="@Html.SetMenuItemActive("MonthlyReports", "Index")">
+                    <a href="@Url.Action("Index", "MonthlyReports")">
+                        <i class="material-icons">reorder</i>
+                        <p>Raporty</p>
+                    </a>
+                </li>
+            }*@
+                @*if (User.IsInRole(UserRoleType.Admin.ToString()) || User.IsInRole(UserRoleType.HoodOffersAndOrders.ToString())
+                || User.IsInRole(UserRoleType.HoodSelection.ToString()))
+            {
+                <li>
+                    <a data-toggle="collapse" href="#hoodSelectionPanel">
+                        <i class="material-icons">transform</i>
+                        <p>
+                            Okapy
+                            <b class="caret"></b>
+                        </p>
+                    </a>
+                    <div class="collapse @Html.SetupMultilevelMenu("HoodSelection")" id="hoodSelectionPanel">
+                        <ul class="nav">
+                            @if (User.IsInRole(UserRoleType.Admin.ToString()) || User.IsInRole(UserRoleType.HoodSelection.ToString()))
+                            {
+                                <li class="@Html.SetMenuItemActive("HoodSelection", "HoodSelectionOfferList")">
+                                    <a href="@Url.Action("HoodSelectionOfferList", "HoodSelection")">
+                                        <span class="sidebar-mini">D</span>
+                                        <span class="sidebar-normal">Dobory</span>
+                                    </a>
+                                </li>
+                            }
+                            <li class="@Html.SetMenuItemActive("HoodSelection", "HoodSelectionFinishedOfferList")">
+                                <a href="@Url.Action("HoodSelectionFinishedOfferList", "HoodSelection")">
+                                    <span class="sidebar-mini">D</span>
+                                    <span class="sidebar-normal">Dobory zakończone</span>
+                                </a>
+                            </li>
+                            @if (User.IsInRole(UserRoleType.Admin.ToString()) || User.IsInRole(UserRoleType.HoodOffersAndOrders.ToString()))
+                            {
+                                <li class="@Html.SetMenuItemActive("HoodSelection", "HoodSelectionFinalOfferList")">
+                                    <a href="@Url.Action("HoodSelectionFinalOfferList", "HoodSelection")">
+                                        <i class="material-icons">O</i>
+                                        <p>Oferty okapów</p>
+                                    </a>
+                                </li>
+                                <li class="@Html.SetMenuItemActive("HoodSelection", "HoodSelectionHoodOrderList")">
+                                    <a href="@Url.Action("HoodSelectionHoodOrderList", "HoodSelection")">
+                                        <i class="material-icons">Z</i>
+                                        <p>Zamówienia okapów</p>
+                                    </a>
+                                </li>
+                            }
+                            @if (User.IsInRole(UserRoleType.Admin.ToString()) || User.IsInRole(UserRoleType.HoodSelection.ToString()))
+                            {
+                                <li class="@Html.SetMenuItemActive("HoodSelection", "HoodsList")">
+                                    <a href="@Url.Action("HoodsList", "HoodSelection")">
+                                        <span class="sidebar-mini">L</span>
+                                        <span class="sidebar-normal">Lista okapów</span>
+                                    </a>
+                                </li>
+                                <li class="@Html.SetMenuItemActive("HoodSelection", "HoodPartsPriceList")">
+                                    <a href="@Url.Action("HoodPartsPriceList", "HoodSelection")">
+                                        <span class="sidebar-mini">C</span>
+                                        <span class="sidebar-normal">Cennik elementów</span>
+                                    </a>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </li>
+            }
+            if (User.IsInRole(UserRoleType.Admin.ToString()) || User.IsInRole(UserRoleType.ManagerSection.ToString()))
+            {
+                <li>
+                    <a data-toggle="collapse" href="#managerPanel">
+                        <i class="material-icons">image</i>
+                        <p>
+                            Panel menedżera
+                            <b class="caret"></b>
+                        </p>
+                    </a>
+                    <div class="collapse @Html.SetupMultilevelMenu("SubmittedPlans;SubmittedReports;ActivitiesAnalysis;DetailedAnalysis;Campaigns")" id="managerPanel">
+                        <ul class="nav">
+                            <li class="@Html.SetMenuItemActive("SubmittedPlans", "Index")">
+                                <a href="@Url.Action("Index", "SubmittedPlans")">
+                                    <span class="sidebar-mini">Z</span>
+                                    <span class="sidebar-normal">Złożone plany</span>
+                                </a>
+                            </li>
+                            <li class="@Html.SetMenuItemActive("SubmittedReports", "Index")">
+                                <a href="@Url.Action("Index", "SubmittedReports")">
+                                    <span class="sidebar-mini">Z</span>
+                                    <span class="sidebar-normal">Złożone raporty</span>
+                                </a>
+                            </li>
+                            <li class="@Html.SetMenuItemActive("ActivitiesAnalysis", "Index")">
+                                <a href="@Url.Action("Index", "ActivitiesAnalysis")">
+                                    <span class="sidebar-mini">A</span>
+                                    <span class="sidebar-normal">Analiza aktywności</span>
+                                </a>
+                            </li>
+                            <li class="@Html.SetMenuItemActive("DetailedAnalysis", "Index")">
+                                <a href="@Url.Action("Index", "DetailedAnalysis")">
+                                    <span class="sidebar-mini">A</span>
+                                    <span class="sidebar-normal">Analiza szczegółowa</span>
+                                </a>
+                            </li>
+                            <li class="@Html.SetMenuItemActive("Campaigns", "Index")">
+                                <a href="@Url.Action("CampaignsList", "Campaigns")">
+                                    <span class="sidebar-mini">M</span>
+                                    <span class="sidebar-normal">Mailing</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            }*@
+                if (User.IsInRole(UserRoleType.Admin.ToString()) || User.IsInRole(UserRoleType.AdministrationSection.ToString()))
+                {
+                    <li>
+                        <a data-toggle="collapse" href="#administration">
+                            <i class="material-icons">build</i>
+                            <p>
+                                Administracja
+                                <b class="caret"></b>
+                            </p>
+                        </a>
+                        <div class="collapse @Html.SetupMultilevelMenu("Users;Configuration")" id="administration">
+                            <ul class="nav">
+                                <li class="@Html.SetMenuItemActive("Users", "Index")">
+                                    <a href="@Url.Action("Index", "Users")">
+                                        <span class="sidebar-mini">U</span>
+                                        <span class="sidebar-normal">Użytkownicy</span>
+                                    </a>
+                                </li>
+                                <li class="@Html.SetMenuItemActive("Configuration", "Index")">
+                                    <a href="@Url.Action("Index", "Configuration")">
+                                        <span class="sidebar-mini">K</span>
+                                        <span class="sidebar-normal">Konfiguracja</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+    <div class="sidebar-background" style="background-image: url('../../Images/Template/sidebar-1.jpg');"></div>
+</div>

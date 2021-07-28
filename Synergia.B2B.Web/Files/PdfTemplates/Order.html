@@ -1,0 +1,549 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <style>
+        body {
+            font-size: 10pt;
+            font-family: "Times New Roman";
+        }
+
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .bordered {
+            border: 1px solid black;
+        }
+
+        .pull-left {
+            float: left;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .font-bold {
+            font-weight: bold;
+        }
+
+        .text-big {
+            font-size: 14pt;
+        }
+
+        .full-width {
+            width: 100%;
+        }
+
+        .text-small {
+            font-size: 10pt;
+        }
+
+        .valign-top {
+            vertical-align: top;
+        }
+
+        .sign {
+            margin: 0 auto;
+        }
+
+        .sign-description {
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            right: 0;
+        }
+
+        .border-collapse {
+            border-collapse: collapse;
+        }
+
+        #tblOrderElements {
+            font-size: 9pt;
+            margin-top: 30px;
+        }
+
+            #tblOrderElements th,
+            #tblOrderElements td {
+                border: 1px solid black;
+                padding: 2px 4px;
+            }
+
+            #tblOrderElements th {
+                white-space: nowrap;
+            }
+
+        .no-border {
+            border: none !important;
+        }
+
+        #tblOrderSummary {
+            float: right;
+            width: 60%;
+            margin-top: 30px;
+            clear: both;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        #tblOrderSummary td,
+        #tblOrderSummary th {
+            font-size: 10pt;
+            border: 1px solid black;
+            padding: 2px 4px;
+            background-clip: padding-box; /* Add this line */
+        }
+
+        #tblOrderSummary th {
+            background-color: #F5F5F5;
+        }
+
+        #imgLogo {
+            max-height: 80px;
+        }
+
+        .imgProduct {
+            max-height: 60px;
+        }
+
+        .avoid-page-break {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-inside: avoid;
+        }
+
+        .nowrap {
+            white-space: nowrap;
+        }
+
+        .newPage {
+            page-break-before: always;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <table class="full-width text-center">
+        <tr>
+            <td rowspan="3" class="bordered" style="width:33%">
+                <img id="imgLogo" src="#Logo#" />
+            </td>
+            <td rowspan="2" class="bordered text-big" style="width:33%; background-color:#CCCCCC">
+                ZAMÓWIENIE - MARENO
+            </td>
+            <td class="bordered">
+                Nr <span class="font-bold text-big" style="width:33%"> ZAM/#OrderNumber#</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="text-big">
+                ORYGINAŁ
+            </td>
+        </tr>
+        <tr>
+            <td class="bordered">
+                <div>#Date# #City#</div>
+                <div class="text-small">data i miejsce wystawienia dokumentu</div>
+            </td>
+            <td class="bordered"></td>
+        </tr>
+    </table>
+    <table class="full-width text-left">
+        <tr>
+            <td style="width:50%" class="bordered">
+                <table>
+                    <tr>
+                        <td>
+                            Sprzedawca:
+                        </td>
+                        <td class="font-bold" colspan="3">
+                            #SellerName#
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Adres:
+                        </td>
+                        <td class="font-bold" colspan="3">
+                            #SellerAddress#
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            NIP:
+                        </td>
+                        <td class="font-bold" colspan="3">
+                            #SellerNIP#
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Telefon:
+                        </td>
+                        <td class="font-bold">
+                            #SellerPhone#
+                        </td>
+                        <td style="padding-left:20px;">
+                            Fax:
+                        </td>
+                        <td class="font-bold">
+                            #SellerFax#
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width:50%" class="bordered valign-top">
+                <table>
+                    <tr>
+                        <td>
+                            Nabywca:
+                        </td>
+                        <td class="font-bold">
+                            #CustomerName#
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Adres:
+                        </td>
+                        <td class="font-bold">
+                            #CustomerAddress#
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            NIP:
+                        </td>
+                        <td class="font-bold">
+                            #CustomerNIP#
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <div class="text-center" style="padding: 20px">
+        Dziękując za zainteresowanie naszą firmą i jej produktami mamy przyjemność <br /> przedstawić zamówienie na dostawę produktów firmy MARENO.
+    </div>
+    <div class="font-bold text-center text-big" style="padding: 10px">
+        ZAMÓWIENIE NR ZAM/#OrderNumber#
+    </div>
+    <ol style="padding:10px">
+        <li>
+            Przedmiot i zakres zamówienia:<br />
+            <strong>Wartość zamowienia: #FinalValueAfterAllDiscountsNet# zł</strong><br />
+            Cena nie uwzględnia podatku VAT<br />
+            Wartość poszczególnych produktów oraz wysokość udzielonego rabatu – załącznik nr 1<br />
+            Zmówienie obejmuje:
+            <ul style="list-style-type:disc">
+                <li>dostawę okapów loco budowa,</li>
+                <li>
+                    bezpłatny odbiór gwarancyjny obejmujący:
+                    <ul style="list-style-type:disc">
+                        <li>sprawdzenie poprawności montażu,</li>
+                        <li>szkolenie z obsługi i eksploatacji,</li>
+                    </ul>
+                </li>
+            </ul>
+            Zamówienie nie uwzględnia:
+            <ul style="list-style-type:disc">
+                <li>rozładunku wewnętrznego,</li>
+                <li>prac konstrukcyjno-budowlanych,</li>
+                <li>doprowadzenia zasilania elektrycznego.</li>
+            </ul>
+        </li>
+        <li>
+            Warunki gwarancji:
+            <ul style="list-style-type:disc">
+                <li>warunkiem udzielenia gwarancji jest dokonanie bezpłatnego odbioru gwarancyjnego przez serwis oraz podpisanie umowy serwisowej na okres trwania gwarancji (płatne wg cennika serwisu),</li>
+                <li>okres gwarancji: 24 miesiące od daty dostawy.</li>
+            </ul>
+        </li>
+        <li>
+            Warunki realizacji zamówienia:
+            <ul style="list-style-type:disc">
+                <li>dostawa loco: budowa obiektu,</li>
+                <li>termin dostawy: #DeliveryTimeDays#</li>
+            </ul>
+        </li>
+        <li>
+            Warunki płatności:
+            <ul style="list-style-type:disc">
+                <li>zadatek w wysokości #PrepaymentPercent#% wartości brutto przedmiotu zamówienia, płatny w dniu złożenia zamówienia,</li>
+                <li>pozostała należność #RestOfPaymentPercent#% wartości przedmiotu zamówienia, płatna w przededniu ekspedycji produktów na budowę obiektu,</li>
+                <li>forma płatności – #PaymentType#</li>
+            </ul>
+        </li>
+        <li>
+            Termin ważności zamówienia: 30 dni od daty zamówienia.
+        </li>
+        <li>
+            Uwagi:
+            <ul style="list-style-type:disc">
+                <li>treść niniejszego zamówienia jest objęta tajemnicą handlową i nie może być udostępniana osobom trzecim,</li>
+                <li>niniejsze zamówienie jest obowiązujące pod warunkiem podpisania umowy zawierającej wszystkie uzgodnienia najdalej w terminie 14 dni po złożeniu zamówienia.</li>
+            </ul>
+        </li>
+    </ol>
+    <div class="clearfix">
+        <div style="float:right">
+            <div class="text-left" style="padding: 20px">
+                Z poważaniem <br />
+                #FirstName# #Surname# <br />
+                <div>#Position#</div>
+                <!--BeginPhoneRow-->
+                tel. #Phone# <br />
+                <!--EndPhoneRow-->
+                email: #Mail# <br />
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="font-bold newPage">
+        ZAŁĄCZNIK NR 1 <br />
+        DO ZAMÓWIENIA NR ZAM/#OrderNumber#
+    </div>
+
+    <table class="full-width border-collapse" id="tblOrderElements">
+        <thead>
+            <tr>
+                <th>
+                    Lp
+                </th>
+                <th>
+                    Kod<br />
+                    Model
+                </th>
+                <th>
+                    Nazwa
+                </th>
+                <th class="#HasOnlyInnoSavaProductsClass#">
+                    Gabaryt (mm)<br />
+                    (dł/szer/wys)
+                </th>
+                <th>
+                    Szt
+                </th>
+                <th class="#HasOnlyInnoSavaProductsClass#">
+                    Przyłącze
+                </th>
+                <th class="#HasOnlyInnoSavaProductsClass#">
+                    Moc<br />
+                    gaz
+                </th>
+                <th class="#HasOnlyInnoSavaProductsClass#">
+                    Moc gaz<br />
+                    SUMA
+                </th>
+                <th class="#HasOnlyInnoSavaProductsClass#">
+                    Moc<br />
+                    prąd
+                </th>
+                <th class="#HasOnlyInnoSavaProductsClass#">
+                    Moc prąd<br />
+                    SUMA
+                </th>
+                <th>
+                    Cena<br />
+                    netto
+                </th>
+                <th>
+                    Wartość<br />
+                    netto
+                </th>
+                <th>
+                    Zdjęcie
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <!--BeginOrderElementRow-->
+            <tr>
+                <td class="text-center valign-top">
+                    #No#
+                </td>
+                <td class="text-left valign-top">
+                    #ProductCode#
+                </td>
+                <td class="text-left valign-top">
+                    #ProductName#
+                </td>
+                <td class="text-center valign-top #HasOnlyInnoSavaProductsClass#">
+                    #ProductDimensions#
+                </td>
+                <td class="text-right valign-top">
+                    #Quantity#
+                </td>
+                <td class="text-left valign-top #HasOnlyInnoSavaProductsClass#">
+                    #ProductTerminal#
+                </td>
+                <td class="text-right valign-top #HasOnlyInnoSavaProductsClass#">
+                    #ProductPowerGas#
+                </td>
+                <td class="text-right valign-top #HasOnlyInnoSavaProductsClass#">
+                    #ProductPowerGasSum#
+                </td>
+                <td class="text-right valign-top #HasOnlyInnoSavaProductsClass#">
+                    #ProductPowerElectricity#
+                </td>
+                <td class="text-right valign-top #HasOnlyInnoSavaProductsClass#">
+                    #ProductPowerElectricitySum#
+                </td>
+                <td class="text-right valign-top nowrap">
+                    #PriceAfterDiscountNet#
+                </td>
+                <td class="text-right valign-top nowrap">
+                    #FinalValueNet#
+                </td>
+                <td class="text-center">
+                    <img class="imgProduct #ProductClass#" src="#ProductImage#" />
+                </td>
+            </tr>
+            <!--EndOrderElementRow-->
+            <tr class="#HasOnlyInnoSavaProductsClass#">
+                <td colspan="6" class="no-border"></td>
+                <td class="text-right">
+                    Gaz:
+                </td>
+                <td class="text-right">
+                    #SummaryProductPowerGasSum#
+                </td>
+                <td class="text-right">
+                    Prąd:
+                </td>
+                <td class="text-right">
+                    #SummaryProductPowerElectricitySum#
+                </td>
+                <td colspan="3" class="no-border"></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="avoid-page-break">
+        <div class="clearfix">
+            <table id="tblOrderSummary" class="border-collapse avoid-page-break">
+                <thead>
+                    <tr>
+                        <th>
+                            Opis wartości
+                        </th>
+                        <th>
+                            Netto PLN
+                        </th>
+                        <th>
+                            VAT PLN
+                        </th>
+                        <th>
+                            Brutto PLN
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Łączna wartość katalogowa
+                        </td>
+                        <td class="text-right">
+                            #CatalogValueNet#
+                        </td>
+                        <td class="text-right">
+                            #CatalogValueGross#
+                        </td>
+                        <td class="text-right">
+                            #CatalogValueVat#
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Wartość po rabacie podstawowym
+                        </td>
+                        <td class="text-right">
+                            #ValueAfterPrimaryDiscountNet#
+                        </td>
+                        <td class="text-right">
+                            #ValueAfterPrimaryDiscountGross#
+                        </td>
+                        <td class="text-right">
+                            #ValueAfterPrimaryDiscountVat#
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Wartość z premią za przedpłatę
+                        </td>
+                        <td class="text-right">
+                            #FinalValueAfterAllDiscountsNet#
+                        </td>
+                        <td class="text-right">
+                            #FinalValueAfterAllDiscountsGross#
+                        </td>
+                        <td class="text-right">
+                            #FinalValueAfterAllDiscountsVat#
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <table class="full-width text-center avoid-page-break" style="margin-top: 30px;">
+            <tr>
+                <td style="width:50%;">
+                    <div class="bordered sign" style="height: 100px; width: 70%;">
+                        <div class="text-small sign-description">
+                            nazwisko i podpis osoby upoważnionej do odebrania dokumentu
+                        </div>
+                    </div>
+                </td>
+                <td style="width:50%;">
+                    <div class="bordered sign" style="height: 100px; width: 70%; ">
+                        <div class="text-small sign-description">
+                            Wystawił(a): #FirstName# #Surname#
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+    <!--BeginPageFooterHtml-->
+    <div style="border-top: 1px solid black;font-size: 10pt;">
+        <table style="width: 100%;">
+            <tr>
+                <td style="width: 50%;">
+                    Zamówienie: ZAM/#OrderNumber#
+                </td>
+                <td style="width:50%;text-align:right">
+                    Strona <span class="page"></span>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!--EndPageFooterHtml-->
+</body>
+</html>
